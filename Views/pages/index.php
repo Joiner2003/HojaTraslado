@@ -342,8 +342,21 @@ if (isset($_GET['IdServicio'])) {
               <div class="card-body">
                 <div class="form-group row text-center">
                   <div class="col-sm-4 img">
-                    <img src="data:image/jpg;base64,<?php if($data != NULL) echo $data->__GET('Sv_Firma_Pte2'); ?>" alt="">
-                    <input type="file" name="Sv_Firma_Pte" value="" class="form-control" accept=".png, .jpg, .jpeg">
+                  
+                   <!-- <img src="data:image/jpg;base64,</*?php if($data != NULL) echo $data->__GET('Sv_Firma_Pte2'); ?*/>" alt="">
+                    <input type="file" name="Sv_Firma_Pte" value="" class="form-control" accept=".png, .jpg, .jpeg">-->
+                    <!--<button type='button' onclick='LimpiarTrazado()'>Borrar</button>
+                    <button type='button' onclick='GuardarTrazado()'>Guardar</button>-->
+                    <canvas id='canvas' width="200" height="200" style='border: 1px solid #CCC;'>
+    <p>Tu navegador no soporta canvas</p>
+</canvas>
+                    
+                    <form id='formCanvas' method='post' action='guarda_imagen.php' ENCTYPE='multipart/form-data'>
+    <button type='button' onclick='LimpiarTrazado()'>Borrar</button>
+    <button type='button' onclick='GuardarTrazado()'>Guardar</button>
+    <input type='hidden' name='imagen' id='imagen' />
+</form>
+
                     <label>Paciente o Acudiente</label>
                   </div>
                   <div class="col-sm-4 img">

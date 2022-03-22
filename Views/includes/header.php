@@ -8,7 +8,6 @@ if(!isset($_SESSION["Usuario"])){
 <html lang="es">
 
 <head>
-
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -25,6 +24,7 @@ if(!isset($_SESSION["Usuario"])){
     <!-- Custom styles for this template-->
     <link href="../Resource/css/sb-admin-2.min.css" rel="stylesheet">
     <link href="../Resource/css/style.css" rel="stylesheet">
+    <script src="../Resource/js/firma1.js"></script>
 
 </head>
 <style type="text/css">

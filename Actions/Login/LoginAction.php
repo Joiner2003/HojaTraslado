@@ -17,7 +17,7 @@
 	$usuario = $_POST['usuario'];
 
 	if ($Usuario = $HomeController->VerxUsuarioOta_Usuario($usuario)) {
-		if ($Usuario->__GET('Clave') == md5($_POST['password'])) {
+		if ($Usuario->__GET('Clave') == ($_POST['password'])) {
 			$_SESSION['IdUsuario'] = $Usuario->__GET('IdUsuario');
 			$_SESSION['Usuario'] = $Usuario->__GET('Usuario');
 			

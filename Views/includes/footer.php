@@ -1,5 +1,6 @@
     <!-- Bootstrap core JavaScript-->
     <script src="../Resource/vendor/jquery/jquery.min.js"></script>
+    
     <script src="../Resource/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
     <!-- Core plugin JavaScript-->
@@ -10,6 +11,7 @@
     <!-- Custom scripts for all pages-->
     <script src="../Resource/js/sb-admin-2.min.js"></script>
     <script src="../Resource/js/script.js"></script>
+
 
 </body>
 

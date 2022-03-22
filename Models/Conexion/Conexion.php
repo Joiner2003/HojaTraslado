@@ -9,15 +9,15 @@
 		public static function Conectar()
 		{
 			// configurar la coneccion
-			//$dsn = 'sqlsrv:Server=' .DB_HOST. ';Database=' .DB_DATABASE;
+			$dsn = 'sqlsrv:Server=' .DB_HOST. ';Database=' .DB_DATABASE;
 			//$dsn = new PDO("sqlsrv:Server=localhost;Database=testdb", "NombreUsuario", "Contraseña");
 
 			try
 			{	
-			//	$pdo = new PDO($dsn, DB_USERNAME, DB_PASSWORD);
-			$pdo = new PDO('sqlsrv:Server=190.242.112.94; Database=sena', 'Ota', 'Sena2022*');
+				$pdo = new PDO($dsn, DB_USERNAME, DB_PASSWORD);
+			//$pdo = new PDO('sqlsrv:Server=190.242.112.94; Database=sena', 'Ota', 'Sena2022*');
 
-				$pdo->exec('set names utf8');
+				//$pdo->exec('SET names utf8');
 				return $pdo;
 			}catch(PDOException $e)
 			{
