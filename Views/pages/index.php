@@ -334,45 +334,40 @@ if (isset($_GET['IdServicio'])) {
           </div>
           <div class="card shadow mb-4">
             <!-- Card Header - Accordion -->
-            <a href="#collapseCardFirmas" class="d-block card-header py-3 bg-gradient-light" data-toggle="collapse" role="button" aria-expanded="true" aria-controls="collapseCardFirmas">
+            <a class="d-block card-header py-3 bg-gradient-light" data-toggle="collapse" role="button" aria-expanded="true" aria-controls="collapseCardFirmas">
               <h6 class="m-0 font-weight-bold text-primary">FIRMAS</h6>
             </a>
+            <a class="btn btn-success"href="firma/firma_p_a.php"></a>
+            <br>
+            <a class="btn btn-success"href="firma/firmame_recibe.php"></a>
             <!-- Card Content - Collapse -->
-            <div class="collapse show" id="collapseCardFirmas">
+          <!--  <div class="collapse show" id="collapseCardFirmas">
               <div class="card-body">
                 <div class="form-group row text-center">
-                  <div class="col-sm-4 img">
+                  <div class="col-sm-4 img">-->
                   
                    <!-- <img src="data:image/jpg;base64,</*?php if($data != NULL) echo $data->__GET('Sv_Firma_Pte2'); ?*/>" alt="">
                     <input type="file" name="Sv_Firma_Pte" value="" class="form-control" accept=".png, .jpg, .jpeg">-->
-                    <!--<button type='button' onclick='LimpiarTrazado()'>Borrar</button>
-                    <button type='button' onclick='GuardarTrazado()'>Guardar</button>-->
-                    <canvas id='canvas' width="200" height="200" style='border: 1px solid #CCC;'>
-    <p>Tu navegador no soporta canvas</p>
-</canvas>
-                    
-                    <form id='formCanvas' method='post' action='guarda_imagen.php' ENCTYPE='multipart/form-data'>
-    <button type='button' onclick='LimpiarTrazado()'>Borrar</button>
-    <button type='button' onclick='GuardarTrazado()'>Guardar</button>
-    <input type='hidden' name='imagen' id='imagen' />
-</form>
+                  <!--  <a class="btn btn-primary" href="firma/guarda_imagen.php">Firmas</a>-->
 
-                    <label>Paciente o Acudiente</label>
-                  </div>
-                  <div class="col-sm-4 img">
-                    <img src="data:image/jpg;base64,<?php if($data != NULL) echo $data->__GET('En_Firma2'); ?>" alt="">
+                 <!--    <label>Paciente o Acudiente</label>
+                  </div> -->
+                <!--  <div class="col-sm-4 img">
+                    <img src="data:image/jpg;base64,</*?php if($data != NULL) echo $data->__GET('En_Firma2'); ?>" alt="">
                     <input type="file" name="En_Firma" value="" class="form-control" accept=".png, .jpg, .jpeg">
                     <label>Medico o Enfermera que Recibe</label>
                   </div>
                   <div class="col-sm-4 img">
-                    <img src="data:image/jpg;base64,<?php if($data != NULL) echo $data->__GET('Sv_Firma_Entrega2'); ?>" alt="">
+                    <img src="data:image/jpg;base64,</*?php if($data != NULL) echo $data->__GET('Sv_Firma_Entrega2'); ?>" alt="">
                     <input type="file" name="Sv_Firma_Entrega" value="" class="form-control" accept=".png, .jpg, .jpeg">
-                    <label>Medico o Enfermera que Entrega</label>
-                  </div>
+                    <label>Medico o Enfermera que Entrega</label>-->
+                <!--  </div>
                 </div>
               </div>
             </div>
-          </div>
+          </div>-->
+          <br>
+          
           <div class="card shadow mb-4">
             <!-- Card Header - Accordion -->
             <a href="#collapseCardExamenFisico" class="d-block card-header py-3 bg-gradient-light" data-toggle="collapse" role="button" aria-expanded="true" aria-controls="collapseCardExamenFisico">
@@ -577,7 +572,7 @@ if (isset($_GET['IdServicio'])) {
     <footer class="sticky-footer bg-white">
       <div class="container my-auto">
         <div class="copyright text-center my-auto">
-          <a href="https://www.instagram.com/albertoroal17/" target="_blank"><span>Copyright &copy; 2021 Ing Alberto Rodriguez</span></a>
+        <span>Copyright &copy; 2022 Ota Ortoclinic</span>
         </div>
       </div>
     </footer>
