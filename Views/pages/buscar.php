@@ -101,11 +101,7 @@ $msg = new \Plasticbrain\FlashMessages\FlashMessages();
                   
 
                     <!-- Nav Item - Messages -->
-<<<<<<< HEAD
                     
-=======
-                   
->>>>>>> 838484ba4c8ceb984acd43de83450424dc2e7462
 
                     <div class="topbar-divider d-none d-sm-block"></div>
 

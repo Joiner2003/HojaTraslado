@@ -21,7 +21,7 @@ require_once('../../Models/Conexion/Conexion.php');
 		public function Agregar($Fecha1, $Fecha2, $Pte_NumDoc, $Pte_TipoDoc, $Pte_FechaNac, $Pte_Edad, $Pte_Ap1, $Pte_Ap2, $PteNom1, $Pte_Nom2, $Aco_Nombres, $Aco_Apellidos, $Aco_Documento, $Aco_Perentezco, $Sv_Origen, $Sv_Origen1, $Sv_Origen2, $Sv_Origen3, $Sv_Llegada, $Sv_Llegada1, $Sv_Llegada2, $Sv_Llegada3, $Sv_Salida, $Sv_Salida1, $Sv_Salida2, $Sv_Salida3, $Sv_Complejidad, $Sv_TipoServicio, $Sv_ExamenSolicitado, $Ef_Ta, $Ef_Fr, $Ef_Temp, $Ef_Glasgow, $Ef_Dx1, $Ef_Dx2, $Ef_HallazgoPos1, $Ef_Antecedentes1, $Ef_Gin1, $Ef_Gin2, $Ef_Gin3, $Ef_Gin4, $Ef_Gin5)
 		{
 			try {
-				$sql = ("INSERT INTO Ota_Informe_Traslado (Fecha1, Fecha2, Pte_NumDoc, Pte_TipoDoc, Pte_FechaNac, Pte_Edad, Pte_Ap1, Pte_Ap2, PteNom1, Pte_Nom2, Aco_Nombres, Aco_Apellidos, Aco_Documento, Aco_Perentezco, Sv_Origen, Sv_Origen1, Sv_Origen2, Sv_Origen3, Sv_Llegada, Sv_Llegada1, Sv_Llegada2, Sv_Llegada3, Sv_Salida, Sv_Salida1, Sv_Salida2, Sv_Salida3, Sv_Complejidad, Sv_TipoServicio, Sv_ExamenSolicitado, Ef_Ta, Ef_Fr, Ef_Temp, Ef_Glasgow, Ef_Dx1, Ef_Dx2, Ef_HallazgoPos1, Ef_Antecedentes1, Ef_Gin1, Ef_Gin2, Ef_Gin3, Ef_Gin4, Ef_Gin5) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)");
+				$sql = ("INSERT INTO Ota_Informe_Traslado (Fecha1, Fecha2, Pte_NumDoc, Pte_TipoDoc, Pte_FechaNac, Pte_Edad, Pte_Ap1, Pte_Ap2, PteNom1, Pte_Nom2, Aco_Nombres, Aco_Apellidos, Aco_Documento, Aco_Perentezco, Sv_Origen, Sv_Origen1, Sv_Origen2, Sv_Origen3, Sv_Llegada, Sv_Llegada1, Sv_Llegada2, Sv_Llegada3, Sv_Salida, Sv_Salida1, Sv_Salida2, Sv_Salida3, Sv_Complejidad, Sv_TipoServicio, Sv_ExamenSolicitado, Ef_Ta, Ef_Fr, Ef_Temp, Ef_Glasgow, Ef_Dx1, Ef_Dx2, Ef_HallazgoPos1, Ef_Antecedentes1, Ef_Gin1, Ef_Gin2, Ef_Gin3, Ef_Gin4, Ef_Gin5) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)");
 				$stm = $this->pdo->prepare($sql)->execute(array($Fecha1, $Fecha2, $Pte_NumDoc, $Pte_TipoDoc, $Pte_FechaNac, $Pte_Edad, $Pte_Ap1, $Pte_Ap2, $PteNom1, $Pte_Nom2, $Aco_Nombres, $Aco_Apellidos, $Aco_Documento, $Aco_Perentezco, $Sv_Origen, $Sv_Origen1, $Sv_Origen2, $Sv_Origen3, $Sv_Llegada, $Sv_Llegada1, $Sv_Llegada2, $Sv_Llegada3, $Sv_Salida, $Sv_Salida1, $Sv_Salida2, $Sv_Salida3, $Sv_Complejidad, $Sv_TipoServicio, $Sv_ExamenSolicitado, $Ef_Ta, $Ef_Fr, $Ef_Temp, $Ef_Glasgow, $Ef_Dx1, $Ef_Dx2, $Ef_HallazgoPos1, $Ef_Antecedentes1, $Ef_Gin1, $Ef_Gin2, $Ef_Gin3, $Ef_Gin4, $Ef_Gin5));
 				if($stm){
 					return true;
@@ -94,8 +94,7 @@ require_once('../../Models/Conexion/Conexion.php');
 					$entity->__SET('Sv_TipoServicio',$r->Sv_TipoServicio);
 					$entity->__SET('Sv_Medico',$r->Sv_Medico);
 					$entity->__SET('Sv_ExamenSolicitado',$r->Sv_ExamenSolicitado);
-					$entity->__SET('Sv_Firma_Pte',$r->Sv_Firma_Pte);
-					$entity->__SET('Sv_Firma_Entrega',$r->Sv_Firma_Entrega);
+					
 					$entity->__SET('Ef_Ta',$r->Ef_Ta);
 					$entity->__SET('Ef_Fr',$r->Ef_Fr);
 					$entity->__SET('Ef_Temp',$r->Ef_Temp);
@@ -119,13 +118,9 @@ require_once('../../Models/Conexion/Conexion.php');
 					$entity->__SET('En_Estado',$r->En_Estado);
 					$entity->__SET('En_Observaciones',$r->En_Observaciones);
 					$entity->__SET('En_RecibeNombre',$r->En_RecibeNombre);
-					$entity->__SET('En_Firma',$r->En_Firma);
 					$entity->__SET('Tp_Paramedico',$r->Tp_Paramedico);
 					$entity->__SET('Tp_Comandante',$r->Tp_Comandante);
 					$entity->__SET('Tp_Medico',$r->Tp_Medico);
-					$entity->__SET('Sv_Firma_Pte2',$r->Sv_Firma_Pte2);
-					$entity->__SET('Sv_Firma_Entrega2',$r->Sv_Firma_Entrega2);
-					$entity->__SET('En_Firma2',$r->En_Firma2);
 					
 					$Array[] = $entity;
 				}
@@ -182,8 +177,7 @@ require_once('../../Models/Conexion/Conexion.php');
 					$entity->__SET('Sv_TipoServicio',$r->Sv_TipoServicio);
 					$entity->__SET('Sv_Medico',$r->Sv_Medico);
 					$entity->__SET('Sv_ExamenSolicitado',$r->Sv_ExamenSolicitado);
-					$entity->__SET('Sv_Firma_Pte',$r->Sv_Firma_Pte);
-					$entity->__SET('Sv_Firma_Entrega',$r->Sv_Firma_Entrega);
+					
 					$entity->__SET('Ef_Ta',$r->Ef_Ta);
 					$entity->__SET('Ef_Fr',$r->Ef_Fr);
 					$entity->__SET('Ef_Temp',$r->Ef_Temp);
@@ -207,13 +201,10 @@ require_once('../../Models/Conexion/Conexion.php');
 					$entity->__SET('En_Estado',$r->En_Estado);
 					$entity->__SET('En_Observaciones',$r->En_Observaciones);
 					$entity->__SET('En_RecibeNombre',$r->En_RecibeNombre);
-					$entity->__SET('En_Firma',$r->En_Firma);
+				
 					$entity->__SET('Tp_Paramedico',$r->Tp_Paramedico);
 					$entity->__SET('Tp_Comandante',$r->Tp_Comandante);
 					$entity->__SET('Tp_Medico',$r->Tp_Medico);
-					$entity->__SET('Sv_Firma_Pte2',$r->Sv_Firma_Pte2);
-					$entity->__SET('Sv_Firma_Entrega2',$r->Sv_Firma_Entrega2);
-					$entity->__SET('En_Firma2',$r->En_Firma2);
 					return $entity;
 
 				}

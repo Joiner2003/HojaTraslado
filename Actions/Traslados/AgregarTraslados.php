@@ -23,8 +23,8 @@ if(!isset($_SESSION["Usuario"])){
 	date_default_timezone_set('America/Bogota');
 
 	// $IdServicio = $_POST['IdServicio'];
-	$Fecha1 = $_POST['Fecha1'].'T'.$_POST['Fecha1Hora'].':00';
-	if($_POST['Fecha2'] != ''){$Fecha2 = $_POST['Fecha2'].'T'.$_POST['Fecha2Hora'].':00';}else{$Fecha2 = NULL;}
+	$Fecha1 = $_POST['Fecha1'].' '.$_POST['Fecha1Hora'].':00';
+	if($_POST['Fecha2'] != ''){$Fecha2 = $_POST['Fecha2'].' '.$_POST['Fecha2Hora'].':00';}else{$Fecha2 = NULL;}
 	$Pte_NumDoc = $_POST['Pte_NumDoc'];
 	$Pte_TipoDoc = strtoupper($_POST['Pte_TipoDoc']);
 	if($_POST['Pte_FechaNac'] != ''){$Pte_FechaNac = $_POST['Pte_FechaNac'];}else{$Pte_FechaNac = NULL;}
@@ -102,21 +102,21 @@ if(!isset($_SESSION["Usuario"])){
 		$Sv_Firma_Entrega2 = '';
 	}*/
 
-	// var_dump($Fecha1, $Fecha2, $Pte_NumDoc, $Pte_TipoDoc, $Pte_FechaNac, $Pte_Edad, $Pte_Ap1, $Pte_Ap2, $PteNom1, $Pte_Nom2, $Aco_Nombres, $Aco_Apellidos, $Aco_Documento, $Aco_Perentezco, $Sv_Origen, $Sv_Origen1, $Sv_Origen2, $Sv_Origen3, $Sv_Llegada, $Sv_Llegada1, $Sv_Llegada2, $Sv_Llegada3, $Sv_Salida, $Sv_Salida1, $Sv_Salida2, $Sv_Salida3, $Sv_Complejidad, $Sv_TipoServicio, $Sv_ExamenSolicitado, $Sv_Firma_Pte2, $En_Firma2, $Sv_Firma_Entrega2, $Ef_Ta, $Ef_Fr, $Ef_Temp, $Ef_Glasgow, $Ef_Dx1, $Ef_Dx2, $Ef_HallazgoPos1, $Ef_Antecedentes1, $Ef_Gin1, $Ef_Gin2, $Ef_Gin3, $Ef_Gin4, $Ef_Gin5);
+	 var_dump($Fecha1, $Fecha2, $Pte_NumDoc, $Pte_TipoDoc, $Pte_FechaNac, $Pte_Edad, $Pte_Ap1, $Pte_Ap2, $PteNom1, $Pte_Nom2, $Aco_Nombres, $Aco_Apellidos, $Aco_Documento, $Aco_Perentezco, $Sv_Origen, $Sv_Origen1, $Sv_Origen2, $Sv_Origen3, $Sv_Llegada, $Sv_Llegada1, $Sv_Llegada2, $Sv_Llegada3, $Sv_Salida, $Sv_Salida1, $Sv_Salida2, $Sv_Salida3, $Sv_Complejidad, $Sv_TipoServicio, $Sv_ExamenSolicitado, $Ef_Ta, $Ef_Fr, $Ef_Temp, $Ef_Glasgow, $Ef_Dx1, $Ef_Dx2, $Ef_HallazgoPos1, $Ef_Antecedentes1, $Ef_Gin1, $Ef_Gin2, $Ef_Gin3, $Ef_Gin4, $Ef_Gin5);
 
-	/*if($HomeController->AgregarOta_Informe_Traslado($Fecha1, $Fecha2, $Pte_NumDoc, $Pte_TipoDoc, $Pte_FechaNac, $Pte_Edad, $Pte_Ap1, $Pte_Ap2, $PteNom1, $Pte_Nom2, $Aco_Nombres, $Aco_Apellidos, $Aco_Documento, $Aco_Perentezco, $Sv_Origen, $Sv_Origen1, $Sv_Origen2, $Sv_Origen3, $Sv_Llegada, $Sv_Llegada1, $Sv_Llegada2, $Sv_Llegada3, $Sv_Salida, $Sv_Salida1, $Sv_Salida2, $Sv_Salida3, $Sv_Complejidad, $Sv_TipoServicio, $Sv_ExamenSolicitado, $Sv_Firma_Pte2, $En_Firma2, $Sv_Firma_Entrega2, $Ef_Ta, $Ef_Fr, $Ef_Temp, $Ef_Glasgow, $Ef_Dx1, $Ef_Dx2, $Ef_HallazgoPos1, $Ef_Antecedentes1, $Ef_Gin1, $Ef_Gin2, $Ef_Gin3, $Ef_Gin4, $Ef_Gin5) == true){
+	if($HomeController->AgregarOta_Informe_Traslado($Fecha1, $Fecha2, $Pte_NumDoc, $Pte_TipoDoc, $Pte_FechaNac, $Pte_Edad, $Pte_Ap1, $Pte_Ap2, $PteNom1, $Pte_Nom2, $Aco_Nombres, $Aco_Apellidos, $Aco_Documento, $Aco_Perentezco, $Sv_Origen, $Sv_Origen1, $Sv_Origen2, $Sv_Origen3, $Sv_Llegada, $Sv_Llegada1, $Sv_Llegada2, $Sv_Llegada3, $Sv_Salida, $Sv_Salida1, $Sv_Salida2, $Sv_Salida3, $Sv_Complejidad, $Sv_TipoServicio, $Sv_ExamenSolicitado,$Ef_Ta, $Ef_Fr, $Ef_Temp, $Ef_Glasgow, $Ef_Dx1, $Ef_Dx2, $Ef_HallazgoPos1, $Ef_Antecedentes1, $Ef_Gin1, $Ef_Gin2, $Ef_Gin3, $Ef_Gin4, $Ef_Gin5) == true){
 
 		$msg->success('!Agregado con exito¡');
-		unlink("Sv_Firma_Pte.png");
+	/*	unlink("Sv_Firma_Pte.png");
 		unlink("En_Firma.png");
-		unlink("Sv_Firma_Entrega.png");
+		unlink("Sv_Firma_Entrega.png");*/
 		header("location: ../../Views/pages/buscar.php");
 	}else{
 		$msg->error('¡ERROR, no se Agrego!..');
-		unlink("Sv_Firma_Pte.png");
+	/*	unlink("Sv_Firma_Pte.png");
 		unlink("En_Firma.png");
-		unlink("Sv_Firma_Entrega.png");
+		unlink("Sv_Firma_Entrega.png");*/
 		header("location: ../../Views/pages/buscar.php");
-	}*/
+	}
 }
 ?>
