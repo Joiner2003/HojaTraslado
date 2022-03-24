@@ -19,7 +19,7 @@ include("conexion.php");
 </canvas>
 
 <!-- creamos el form para el envio -->
-<form id='formCanvas' method='post' action='guarda_imagen.php' ENCTYPE='multipart/form-data'>
+<form id='formCanvas' method='post' action='firmame_recibe.php' ENCTYPE='multipart/form-data'>
     <button type='button' onclick='LimpiarTrazado()'>Borrar</button>
     <button type='button' onclick='GuardarTrazado()'>Guardar</button>
     <input type='hidden' name='imagen' id='imagen' />
@@ -155,6 +155,7 @@ if (isset($_POST['imagen'])) {
     
     if ($result) {
       # code...
+      echo "<script language='javascript' type ='text/javascript'> window.close();</script>";
      // echo '<img src="'.$_POST['imagen'].'" border="1">';
      // echo "Con base 64 es". $baseImage;
     }else{
