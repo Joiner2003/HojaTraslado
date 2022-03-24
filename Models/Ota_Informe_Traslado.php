@@ -44,8 +44,6 @@
 		private $Sv_TipoServicio;
 		private $Sv_Medico;
 		private $Sv_ExamenSolicitado;
-		private $Sv_Firma_Pte;
-		private $Sv_Firma_Entrega;
 		private $Ef_Ta;
 		private $Ef_Fr;
 		private $Ef_Temp;
@@ -69,7 +67,6 @@
 		private $En_Estado;
 		private $En_Observaciones;
 		private $En_RecibeNombre;
-		private $En_Firma;
 		private $Tp_Paramedico;
 		private $Tp_Comandante;
 		private $Tp_Medico;

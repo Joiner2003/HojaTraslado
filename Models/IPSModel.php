@@ -40,7 +40,7 @@ require_once('../../Models/Conexion/Conexion.php');
 					$entity->__SET('CodMpio',$r->CodMpio);
 					$entity->__SET('TipoNit2',$r->TipoNit2);
 					$entity->__SET('IdEmpresa',$r->IdEmpresa);
-					$entity->__SET('IdEmpresa',$r->IdEmpresa);
+				//	$entity->__SET('IdEmpresa',$r->IdEmpresa);
 					return $entity;
 
 				}
