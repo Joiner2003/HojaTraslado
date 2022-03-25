@@ -142,9 +142,9 @@ require_once('../../Models/Conexion/Conexion.php');
 
 					$entity->__SET('IdServicio',$r->IdServicio);
 					$entity->__SET('Fecha1',$r->Fecha1);
-					// $entity->__SET('Fecha1Hora',$r->Fecha1Hora);
+					$entity->__SET('Fecha1Hora',$r->Fecha1Hora);
 					$entity->__SET('Fecha2',$r->Fecha2);
-					// $entity->__SET('Fecha2Hora',$r->Fecha2Hora);
+					$entity->__SET('Fecha2Hora',$r->Fecha2Hora);
 					$entity->__SET('Pte_Ap1',$r->Pte_Ap1);
 					$entity->__SET('Pte_Ap2',$r->Pte_Ap2);
 					$entity->__SET('PteNom1',$r->PteNom1);
