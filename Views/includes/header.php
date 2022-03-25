@@ -13,7 +13,7 @@ if(!isset($_SESSION["Usuario"])){
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <meta name="author" content="">
-
+    <link href="../Resource/img/logota1.png" rel="icon">
     <title>Traslados</title>
 
     <!-- Custom fonts for this template-->
