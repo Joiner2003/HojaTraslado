@@ -3,9 +3,8 @@
 <?php 
 
 include("conexion.php");
-if( isset($_GET["IdServicio"]) ){
-  $IdServicio=($_GET['IdServicio']);
-}
+
+$consulta=($_GET['IdServicio']);
 ?>
 
 <html lang="es">
@@ -14,16 +13,17 @@ if( isset($_GET["IdServicio"]) ){
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Ejemplo canvas mano alzada</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
 </head>
 <body>
-
 <div class="form-group row">
             <!-- <div class="col-sm-8"></div> -->
   <label class="col-sm-10 text-left">No Servicio</label>
   <div class="col-sm-2">
-  <input type="text" class="form-control text-left" id="" name="IdServicio" value="<?= $IdServicio ?>" readonly>
+  <input type="text" class="form-control text-left" id="" name="IdServicio" value="<?= $consulta ?>" readonly>
   </div>
 </div>
+
 
 <!-- creamos el camvas -->
 <canvas id='canvas' width="200" height="200" style='border: 1px solid #CCC;'>
@@ -35,7 +35,6 @@ if( isset($_GET["IdServicio"]) ){
     <button type='button' onclick='LimpiarTrazado()'>Borrar</button>
     <button type='button' onclick='GuardarTrazado()'>Guardar</button>
     <input type='hidden' name='imagen' id='imagen' />
-    
 </form>
 
 <script type="text/javascript">
