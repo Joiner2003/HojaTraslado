@@ -8,7 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <meta name="author" content="">
-
+    <link href="../Resource/img/logota1.png" rel="icon">
     <title>Login</title>
 
     <!-- Custom fonts for this template-->
@@ -49,12 +49,14 @@ $msg = new \Plasticbrain\FlashMessages\FlashMessages();
                         <!-- Nested Row within Card Body -->
                         <div class="row">
                             <div class="col-lg-6 d-none d-lg-block bg-login-image"></div>
+                            
                             <div class="col-lg-6">
                                 <div class="p-5">
                                     <div class="text-center">
                                         <h1 class="h4 text-gray-900 mb-4">BIENVENIDO</h1>
                                         <?php $msg->display() ?>
                                     </div>
+
                                     <form action="../../Actions/Login/LoginAction.php" method="POST" class="user">
                                         <div class="form-group">
                                             <input type="text" class="form-control form-control-user" name="usuario" id="" placeholder="Ingrese su usuario..." value="<?php if(isset($_GET['user'])) echo $_GET['user'] ?>" autocomplete="off">
