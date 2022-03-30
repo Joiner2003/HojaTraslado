@@ -287,19 +287,20 @@ if (isset($_GET['IdServicio'])) {
             <a class="btn btn-success"href="firma/firma3.php?IdServicio=<?php echo urlencode($IdServicio);?>" target="_blank">Firma paciente o acompañante</a>
             <br>
             <a class="btn btn-success"href="firma/firmame_recibe.php?IdServicio=<?php echo urlencode($IdServicio);?>" target="_blank">Firma medico que recibe</a>
+          
             <!-- Card Content - Collapse -->
-          <!--  <div class="collapse show" id="collapseCardFirmas">
+          <div class="collapse show" id="collapseCardFirmas">
               <div class="card-body">
                 <div class="form-group row text-center">
-                  <div class="col-sm-4 img">-->
+                  <div class="col-sm-4 img">
                   
-                   <!-- <img src="data:image/jpg;base64,</*?php if($data != NULL) echo $data->__GET('Sv_Firma_Pte2'); ?*/>" alt="">
-                    <input type="file" name="Sv_Firma_Pte" value="" class="form-control" accept=".png, .jpg, .jpeg">-->
-                  <!--  <a class="btn btn-primary" href="firma/guarda_imagen.php">Firmas</a>-->
+                    <img src="data:image/png;base64,<?php if($data != NULL) echo $data->__GET('Firma1'); ?>" alt="">
+                  <!--  <input type="file" name="Sv_Firma_Pte" value="" class="form-control" accept=".png, .jpg, .jpeg">
+                   <a class="btn btn-primary" href="firma/guarda_imagen.php">Firmas</a>-->
 
-                 <!--    <label>Paciente o Acudiente</label>
-                  </div> -->
-                <!--  <div class="col-sm-4 img">
+               <!--      <label>Paciente o Acudiente</label>
+                  </div> 
+                  <div class="col-sm-4 img">
                     <img src="data:image/jpg;base64,</*?php if($data != NULL) echo $data->__GET('En_Firma2'); ?>" alt="">
                     <input type="file" name="En_Firma" value="" class="form-control" accept=".png, .jpg, .jpeg">
                     <label>Medico o Enfermera que Recibe</label>
@@ -308,11 +309,11 @@ if (isset($_GET['IdServicio'])) {
                     <img src="data:image/jpg;base64,</*?php if($data != NULL) echo $data->__GET('Sv_Firma_Entrega2'); ?>" alt="">
                     <input type="file" name="Sv_Firma_Entrega" value="" class="form-control" accept=".png, .jpg, .jpeg">
                     <label>Medico o Enfermera que Entrega</label>-->
-                <!--  </div>
+                <!--  </div>-->
                 </div>
               </div>
             </div>
-          </div>-->
+          </div>
           <br>
           
           <div class="card shadow mb-4">

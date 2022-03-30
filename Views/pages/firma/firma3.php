@@ -3,6 +3,9 @@
 <?php 
 
 include("conexion.php");
+$Ids = $_GET['IdServicio'];
+
+echo $Ids;
 ?>
 
 <html lang="es">
@@ -148,14 +151,17 @@ if (isset($_POST['imagen'])) {
 
     $baseImage = $_POST['imagen']; 
     
-   // $blobImage = base64_decode($baseImage);
-    $insertar = "INSERT INTO  firma3(firma3) 
-        VALUES ('$baseImage')";
+    //$blobImage = base64_decode($baseImage);
+    $insertar = "UPDATE Ota_Informe_Traslado
+    SET Firma1='$baseImage'
+    WHERE IdServicio='$Ids'";
     $result = sqlsrv_query($conn,$insertar);
     
     if ($result) {
+
       # code...
-      echo "<script language='javascript' type ='text/javascript'> window.close();</script>";
+      print $result;
+      //echo "<script language='javascript' type ='text/javascript'> window.close();</script>";
      // echo '<img src="'.$_POST['imagen'].'" border="1">';
      // echo "Con base 64 es". $baseImage;
     }else{
