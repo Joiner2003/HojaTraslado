@@ -284,7 +284,7 @@ if (isset($_GET['IdServicio'])) {
             <a class="d-block card-header py-3 bg-gradient-light" data-toggle="collapse" role="button" aria-expanded="true" aria-controls="collapseCardFirmas">
               <h6 class="m-0 font-weight-bold text-primary">FIRMAS</h6>
             </a>
-            <a class="btn btn-success"href="firma/firma_p_a.php?IdServicio=<?php echo urlencode($IdServicio);?>" target="_blank">Firma paciente o acompañante</a>
+            <a class="btn btn-success"href="firma/firma3.php?IdServicio=<?php echo urlencode($IdServicio);?>" target="_blank">Firma paciente o acompañante</a>
             <br>
             <a class="btn btn-success"href="firma/firmame_recibe.php?IdServicio=<?php echo urlencode($IdServicio);?>" target="_blank">Firma medico que recibe</a>
             <!-- Card Content - Collapse -->

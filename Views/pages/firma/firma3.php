@@ -19,7 +19,7 @@ include("conexion.php");
 </canvas>
 
 <!-- creamos el form para el envio -->
-<form id='formCanvas' method='post' action='firma_p_a.php' ENCTYPE='multipart/form-data'>
+<form id='formCanvas' method='post' action='firma3.php' ENCTYPE='multipart/form-data'>
     <button type='button' onclick='LimpiarTrazado()'>Borrar</button>
     <button type='button' onclick='GuardarTrazado()'>Guardar</button>
     <input type='hidden' name='imagen' id='imagen' />
@@ -149,7 +149,7 @@ if (isset($_POST['imagen'])) {
     $baseImage = $_POST['imagen']; 
     
    // $blobImage = base64_decode($baseImage);
-    $insertar = "INSERT INTO  firma_p_a(firma_p_a) 
+    $insertar = "INSERT INTO  firma3(firma3) 
         VALUES ('$baseImage')";
     $result = sqlsrv_query($conn,$insertar);
     
