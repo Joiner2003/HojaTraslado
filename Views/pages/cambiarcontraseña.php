@@ -82,7 +82,7 @@ if (isset($_GET['IdServicio'])) {
         <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3"><i class="fa fa-bars"></i></button>
 
         <div class="d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100 navbar-search">
-          <h2> Crear Usuario</h2>
+          <h2> Cambiar Contraseña</h2>
         </div>
 
         <!-- Topbar Navbar -->
@@ -129,50 +129,28 @@ if (isset($_GET['IdServicio'])) {
           <div class="card shadow mb-4">
             <!-- Card Header - Accordion -->
             <a href="#crearusuario" class="d-block card-header py-3 bg-gradient-light" data-toggle="collapse" role="button" aria-expanded="true" aria-controls="DatosPaciente">
-              <h6 class="m-0 font-weight-bold text-primary">INFORMACION PARA CREAR USUARIO</h6>
+              <h6 class="m-0 font-weight-bold text-primary">INFORMACION PARA CAMBIAR CONTRASEÑA</h6>
             </a>
             <!-- Card Content - Collapse -->
             <div class="collapse show" id="crearusuario">
               <div class="card-body">
-              <div class="form-group row">
-                  <div class="col-sm-6 mb-6">
-                    <label>Primer Apellido</label>
-                    <input type="text" class="form-control" id="" name="Us_Ape1" style="text-transform:uppercase;" required value="<?php if($data != NULL) echo $data->__GET('Pte_Ap1') ?>">
-                  </div>
-                  <div class="col-sm-6 mb-6">
-                    <label>Segundo Apellido</label>
-                    <input type="text" class="form-control" id="" name="Us_Ape2" style="text-transform:uppercase;" value="<?php if($data != NULL) echo $data->__GET('Pte_Ap2') ?>">
-                  </div>
-                  </div>
-                  <br>
-                  <div class="form-group row">
-                  <div class="col-sm-6 mb-6">
-                    <label>Primer Nombre</label>
-                    <input type="text" class="form-control" id="" name="Us_Nom1" style="text-transform:uppercase;" required value="<?php if($data != NULL) echo $data->__GET('PteNom1') ?>">
-                  </div>
-                  <div class="col-sm-6 mb-6">
-                    <label>Segundo Nombre</label>
-                    <input type="text" class="form-control" id="" name="Us_Nom2" style="text-transform:uppercase;" value="<?php if($data != NULL) echo $data->__GET('Pte_Nom2') ?>">
-                  </div>
-                  </div>
-                <br>
                 <div class="form-group row">
                   <div class="col-sm-4 mb-4">
-                    <label>Registro</label>
+                    <label>Contraseña Anterior</label>
                     <input type="text" class="form-control" id="" name="Registro" required>
                   </div>
                   <div class="col-sm-4 mb-4">
-                    <label>Usuario</label>
+                    <label>Nueva Contraseña</label>
                     <input type="text" class="form-control" id="" name="Usuario" required>
                   </div>
                   <div class="col-sm-4 mb-4">
-                    <label>Clave</label>
+                    <label>Corfirmar Contraseña</label>
                     <input type="text" class="form-control" id="" name="Clave" required>
                   </div>
                 </div>
-                
+
                 <hr>
-                <button type="submit" class="btn btn-primary btn-block">CREAR USUARIO</button>
+                <button type="submit" class="btn btn-primary btn-block">CAMBIAR CONTRASEÑA</button>
           <hr>
               </div>
             </div>
