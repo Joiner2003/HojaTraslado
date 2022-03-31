@@ -155,8 +155,10 @@ if (isset($_POST['imagen'])) {
     
     if ($result) {
       # code...
-      echo "<script language='javascript' type ='text/javascript'> window.close();</script>";
-     // echo '<img src="'.$_POST['imagen'].'" border="1">';
+     // echo "<script language='javascript' type ='text/javascript'> window.close();</script>";
+      echo '<img src="'.$_POST['imagen'].'" border="1">';
+      $id = $_GET['IdServicio'];
+      echo "$id";
      // echo "Con base 64 es". $baseImage;
     }else{
       echo "No se pudo guardar";
