@@ -17,6 +17,20 @@ require_once('../../Models/Conexion/Conexion.php');
 				die($e->getMessage());
 			}
 		}
+		public function Agregar($Us_Nom1, $Us_Nom2, $Us_Ape1, $Us_Ape2, $Registro, $Usuario, $Clave )
+		{
+			try {
+				$sql = ("INSERT INTO Ota_Usuario (Us_Nom1, Us_Nom2, Us_Ape1, Us_Ape2, Registro, Usuario, Clave) VALUES (?, ?, ?, ?, ?, ?, ?)");
+				$stm = $this->pdo->prepare($sql)->execute(array($Us_Nom1, $Us_Nom2, $Us_Ape1, $Us_Ape2, $Registro, $Usuario, $Clave));
+				if($stm){
+					return true;
+				} else {
+					return false;
+				}
+			} catch (Exception $e) {
+				die($e->getMessage()." ->Ota_UsuarioModel->Agregar()");
+			}
+		}
 
 		public function Ver($IdUsuario)
 		{
