@@ -82,8 +82,8 @@ if (isset($_GET['IdServicio'])) {
         <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3"><i class="fa fa-bars"></i></button>
 
         <div class="d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100 navbar-search">
-          <h2>Informe de Traslado</h2>
-        </div>
+                    <h2>Informe de Traslado</h2>
+         </div>
 
         <!-- Topbar Navbar -->
         <ul class="navbar-nav ml-auto">
@@ -112,14 +112,16 @@ if (isset($_GET['IdServicio'])) {
           <li class="nav-item dropdown no-arrow">
                         <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
                         data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span class="mr-2 d-none d-lg-inline text-gray-600 small"><?= $HomeController->VerOta_Usuario($_SESSION['IdUsuario'])->__GET('Us_Ape1').' '.$HomeController->VerOta_Usuario($_SESSION['IdUsuario'])->__GET('Us_Ape2').' '.$HomeController->VerOta_Usuario($_SESSION['IdUsuario'])->__GET('Us_Nom1').' '.$HomeController->VerOta_Usuario($_SESSION['IdUsuario'])->__GET('Us_Nom2') ?></span><img class="img-profile rounded-circle"src="../Resource/img/undraw_profile.svg"></a>
+
                         <!-- Dropdown - User Information -->
                         <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"aria-labelledby="userDropdown">
-                            <a class="dropdown-item" href="#"><i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>Perfil</a>
+                            <a class="dropdown-item" href="cambiarcontraseña.php"><i class="fas fa-solid fa-unlock fa-fw mr-2 text-gray-400"></i>Cambiar contraseña</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="crearusuario.php"><i class="fas fa-solid fa-user-plus fa-fw mr-2 text-gray-400"></i>Crear Usuario</a>
                             <div class="dropdown-divider"></div>
                             <a class="dropdown-item" href="../../Actions/Login/logout.php" ><i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>Cerrar Sesion</a>
                         </div>
                     </li>
-
         </ul>
       </nav>
       <!-- End of Topbar -->
