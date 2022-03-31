@@ -146,17 +146,17 @@ if (isset($_GET['IdServicio'])) {
                 <div class="form-group row">
                   <label class="col-sm-2">Fecha y Hora Inicial</label>
                   <div class="col-sm-2">
-                    <input type="date" class="form-control" id="" name="Fecha1" required value="<?php if($data != NULL) echo (new DateTime($data->__GET('Fecha1')))->format('Y-m-d H:i'); else echo date('Y-m-d H:i'); ?>">
+                    <input type="date" class="form-control" id="" name="Fecha1" required value="<?php if($data != NULL) echo (new DateTime($data->__GET('Fecha1')))->format('Y-m-d'); else echo date('Y-m-d'); ?>">
                   </div>
                   <div class="col-sm-2">
-                   <input type="time" class="form-control" id="" name="Fecha1Hora" required value="</*?php if($data != NULL) echo (new DateTime($data->__GET('Fecha1')))->format('H:i'); else echo date('H:i'); ?>*/">
+                   <input type="time" class="form-control" id="" name="Fecha1Hora" required value="<?php if($data != NULL) echo (new DateTime($data->__GET('Fecha1')))->format('H:i'); else echo date('H:i'); ?>">
                   </div>
                   <label class="col-sm-2">Fecha y Hora Final</label>
                   <div class="col-sm-2">
                     <input type="date" class="form-control" id="" name="Fecha2" value="<?php if($data != NULL && $data->__GET('Fecha2') != NULL) echo (new DateTime($data->__GET('Fecha2')))->format('Y-m-d H:i') ?>">
                   </div>
                   <div class="col-sm-2">
-                    <input type="time" class="form-control" id="" name="Fecha2Hora" value="</*?php if($data != NULL && $data->__GET('Fecha2') != NULL) echo (new DateTime($data->__GET('Fecha2')))->format('H:i') ?>*/">
+                    <input type="time" class="form-control" id="" name="Fecha2Hora" value="<?php if($data != NULL && $data->__GET('Fecha2') != NULL) echo (new DateTime($data->__GET('Fecha2')))->format('H:i') ?>">
                   </div>
                 </div>
                 <div class="form-group row">
@@ -279,47 +279,7 @@ if (isset($_GET['IdServicio'])) {
               </div>
             </div>
           </div>
-<<<<<<< HEAD
- 
-=======
-          <div class="card shadow mb-4">
-            <!-- Card Header - Accordion -->
-            <a class="d-block card-header py-3 bg-gradient-light" data-toggle="collapse" role="button" aria-expanded="true" aria-controls="collapseCardFirmas">
-              <h6 class="m-0 font-weight-bold text-primary">FIRMAS</h6>
-            </a>
-            <a class="btn btn-success"href="firma/firma3.php?IdServicio=<?php echo urlencode($IdServicio);?>" target="_blank">Firma paciente o acompañante</a>
-            <br>
-            <a class="btn btn-success"href="firma/firmame_recibe.php?IdServicio=<?php echo urlencode($IdServicio);?>" target="_blank">Firma medico que recibe</a>
           
-            <!-- Card Content - Collapse -->
-          <div class="collapse show" id="collapseCardFirmas">
-              <div class="card-body">
-                <div class="form-group row text-center">
-                  <div class="col-sm-4 img">
-                  
-                    <img src="data:image/png;base64,<?php if($data != NULL) echo $data->__GET('Firma1'); ?>" alt="">
-                  <!--  <input type="file" name="Sv_Firma_Pte" value="" class="form-control" accept=".png, .jpg, .jpeg">
-                   <a class="btn btn-primary" href="firma/guarda_imagen.php">Firmas</a>-->
-
-               <!--      <label>Paciente o Acudiente</label>
-                  </div> 
-                  <div class="col-sm-4 img">
-                    <img src="data:image/jpg;base64,</*?php if($data != NULL) echo $data->__GET('En_Firma2'); ?>" alt="">
-                    <input type="file" name="En_Firma" value="" class="form-control" accept=".png, .jpg, .jpeg">
-                    <label>Medico o Enfermera que Recibe</label>
-                  </div>
-                  <div class="col-sm-4 img">
-                    <img src="data:image/jpg;base64,</*?php if($data != NULL) echo $data->__GET('Sv_Firma_Entrega2'); ?>" alt="">
-                    <input type="file" name="Sv_Firma_Entrega" value="" class="form-control" accept=".png, .jpg, .jpeg">
-                    <label>Medico o Enfermera que Entrega</label>-->
-                <!--  </div>-->
-                </div>
-              </div>
-            </div>
-          </div>
-          <br>
-          
->>>>>>> 57a858a4380c35a66d681a2254beabb24e54835f
           <div class="card shadow mb-4">
             <!-- Card Header - Accordion -->
             <a href="#collapseCardExamenFisico" class="d-block card-header py-3 bg-gradient-light" data-toggle="collapse" role="button" aria-expanded="true" aria-controls="collapseCardExamenFisico">
