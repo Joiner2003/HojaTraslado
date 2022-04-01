@@ -130,4 +130,11 @@ spl_autoload_register(function($nombreClase)
 			$var = $model->Ver();
 			return $var;
 		}
+
+		public function BuscarPaciente()
+		{
+			$model = new Ota_PacienteModel();
+			$var = $model->Listar();
+			return $var;
+		}
 	}

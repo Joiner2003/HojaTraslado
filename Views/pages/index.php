@@ -155,7 +155,7 @@ if (isset($_GET['IdServicio'])) {
                   </div>
                   <label class="col-sm-2">Fecha y Hora Final</label>
                   <div class="col-sm-2">
-                    <input type="date" class="form-control" id="" name="Fecha2" value="<?php if($data != NULL && $data->__GET('Fecha2') != NULL) echo (new DateTime($data->__GET('Fecha2')))->format('Y-m-d H:i') ?>">
+                    <input type="date" class="form-control" id="" name="Fecha2" value="<?php if($data != NULL && $data->__GET('Fecha2') != NULL) echo (new DateTime($data->__GET('Fecha2')))->format('Y-m-d') ?>">
                   </div>
                   <div class="col-sm-2">
                     <input type="time" class="form-control" id="" name="Fecha2Hora" value="<?php if($data != NULL && $data->__GET('Fecha2') != NULL) echo (new DateTime($data->__GET('Fecha2')))->format('H:i') ?>">
@@ -164,7 +164,7 @@ if (isset($_GET['IdServicio'])) {
                 <div class="form-group row">
                   <div class="col-sm-4 mb-3">
                     <label>Numero Doc</label>
-                    <input type="text" class="form-control" id="" name="Pte_NumDoc" required value="<?php if($data != NULL) echo $data->__GET('Pte_NumDoc') ?>">
+                    <input type="text" class="form-control" id="Pte_NumDoc" name="Pte_NumDoc" required value="<?php if($data != NULL) echo $data->__GET('Pte_NumDoc') ?>">
                   </div>
                   <div class="col-sm-2 mb-3">
                     <label>Tipo Doc</label>
@@ -538,5 +538,34 @@ if (isset($_GET['IdServicio'])) {
 <a class="scroll-to-top rounded" href="#page-top">
   <i class="fas fa-angle-up"></i>
 </a>
+
+<script type="text/javascript">
+	function buscar() 
+  {
+    Pte_NumDoc = $("#Pte_NumDoc").val();
+   // variable_2 = $("#id_campo2").val();
+    
+    var parametros = 
+    {
+      "buscar": "1",
+      "Pte_NumDoc" : Pte_NumDoc
+     // "variable_2" : variable_2
+    };
+    $.ajax(
+    {
+      data:  parametros,
+      url:   '../../Actions/buscardoc/buscardoc.php',
+      type:  'post',
+      beforeSend: function() 
+      {alert("enviando");}, 
+      error: function()
+      {alert("Error");},
+      complete: function() 
+      {alert("¡Listo!");},
+      success:  function (mensaje) 
+      {$('.resultados').html(mensaje);}
+    }) 
+  }
+</script>
 
 <?php include '../includes/footer.php'; ?>
