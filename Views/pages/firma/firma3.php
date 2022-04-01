@@ -3,9 +3,17 @@
 <?php 
 
 include("conexion.php");
-$Ids = $_GET['IdServicio'];
+$IdServicio = 0;
+$IdServicio =$_GET['IdServicio'];
 
-echo $Ids;
+//$_SESSION['IdServicio']=$IdServicio;
+echo $IdServicio;
+//$Ids = $_GET['IdServicio'];
+//echo $IdServicio;
+/*$Idserv = array();
+$Idserv[0] = $Ids;
+//echo $Idserv[0];//Devuelve el valor Manzana.
+//echo $Ids;*/
 ?>
 
 <html lang="es">
@@ -149,24 +157,32 @@ echo $Ids;
 // comprovamos si se envió la imagen
 if (isset($_POST['imagen'])) {
 
-    $baseImage = $_POST['imagen']; 
-    
+    $baseImage = $_POST['imagen'];
+    echo dato;
+    echo $baseImage;
+  /*  $im1= file_get_contents("En_firma.png");
+    $En_firma2 = base64_encode($im1);*/
     //$blobImage = base64_decode($baseImage);
     $insertar = "UPDATE Ota_Informe_Traslado
     SET Firma1='$baseImage'
-    WHERE IdServicio='$Ids'";
+    WHERE IdServicio= 4";
     $result = sqlsrv_query($conn,$insertar);
+
+    
     
     if ($result) {
-
+      echo $_SESSION['IdServicio'];
+   //  echo $Idserv[0];
       # code...
      // echo "<script language='javascript' type ='text/javascript'> window.close();</script>";
-      echo '<img src="'.$_POST['imagen'].'" border="1">';
-      $id = $_GET['IdServicio'];
-      echo "$id";
+      echo '<img src="'.$_POST['imagen'].'" border="1">';// Esta linea genera la imagen
+    //  $id = $_GET['IdServicio'];
+    //  echo "$id";
      // echo "Con base 64 es". $baseImage;
     }else{
+      echo $_SESSION['IdServicio'];
       echo "No se pudo guardar";
+     // echo $Idserv[0];
     }
 
    
@@ -196,5 +212,6 @@ if (isset($_POST['imagen'])) {
    // uploadImgBase64($_POST['imagen'], 'mi_imagen_'.date('d_m_Y_H_i_s').'.png' );
 }
 ?>
+
 </body>
 </html>

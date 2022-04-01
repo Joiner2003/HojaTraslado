@@ -371,17 +371,17 @@ if (isset($_GET['IdServicio'])) {
             <a class="d-block card-header py-3 bg-gradient-light" data-toggle="collapse" role="button" aria-expanded="true" aria-controls="collapseCardFirmas">
               <h6 class="m-0 font-weight-bold text-primary">FIRMAS</h6>
             </a>
-            <a class="btn btn-success"href="firma/firma3.php?IdServicio=<?php echo urlencode($IdServicio);?>" target="_blank">Firma paciente o acompañante</a>
+            <a class="btn btn-success"href="firma/firma3.php?IdServicio=<?php echo $IdServicio;?>" target="_blank">Firma paciente o acompañante</a>
             <br>
-            <a class="btn btn-success"href="firma/firmame_recibe.php?IdServicio=<?php echo urlencode($IdServicio);?>" target="_blank">Firma medico que recibe</a>
+            <a class="btn btn-success"href="firma/firmame_recibe.php?IdServicio=<?php echo $IdServicio;?>" target="_blank">Firma medico que recibe</a>
             <!-- Card Content - Collapse -->
           <!--  <div class="collapse show" id="collapseCardFirmas">
               <div class="card-body">
                 <div class="form-group row text-center">
                   <div class="col-sm-4 img">-->
                   
-                   <!-- <img src="data:image/jpg;base64,</*?php if($data != NULL) echo $data->__GET('Sv_Firma_Pte2'); ?*/>" alt="">
-                    <input type="file" name="Sv_Firma_Pte" value="" class="form-control" accept=".png, .jpg, .jpeg">-->
+                    <img src="<?php if($data != NULL) echo $data->__GET('Firma1'); ?>" alt="">
+                  <!--  <input type="file" name="Sv_Firma_Pte" value="" class="form-control" accept=".png, .jpg, .jpeg">-->
                   <!--  <a class="btn btn-primary" href="firma/guarda_imagen.php">Firmas</a>-->
 
                  <!--    <label>Paciente o Acudiente</label>
