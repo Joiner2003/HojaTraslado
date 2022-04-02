@@ -7,7 +7,7 @@ $IdServicio = 0;
 $IdServicio =$_GET['IdServicio'];
 
 //$_SESSION['IdServicio']=$IdServicio;
-echo $IdServicio;
+//echo $IdServicio;
 //$Ids = $_GET['IdServicio'];
 //echo $IdServicio;
 /*$Idserv = array();
@@ -158,7 +158,7 @@ $Idserv[0] = $Ids;
 if (isset($_POST['imagen'])) {
 
     $baseImage = $_POST['imagen'];
-    echo dato;
+    //echo dato;
     echo $baseImage;
   /*  $im1= file_get_contents("En_firma.png");
     $En_firma2 = base64_encode($im1);*/
@@ -171,7 +171,7 @@ if (isset($_POST['imagen'])) {
     
     
     if ($result) {
-      echo $_SESSION['IdServicio'];
+      echo $_GET ['IdServicio'];
    //  echo $Idserv[0];
       # code...
      // echo "<script language='javascript' type ='text/javascript'> window.close();</script>";
@@ -180,7 +180,7 @@ if (isset($_POST['imagen'])) {
     //  echo "$id";
      // echo "Con base 64 es". $baseImage;
     }else{
-      echo $_SESSION['IdServicio'];
+      echo $_GET['IdServicio'];
       echo "No se pudo guardar";
      // echo $Idserv[0];
     }

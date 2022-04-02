@@ -127,5 +127,20 @@ require_once('../../Models/Conexion/Conexion.php');
 				die($e->getMessage()." -> Ota_UsuarioModel->Eliminar()");
 			}
 		}
+
+		public function Modificar_Password($IdUsuario, $Clave)
+		{
+			try {
+				$sql = ("UPDATE Ota_Usuario SET Clave = ? WHERE IdUsuario = ?");
+				$stm = $this->pdo->prepare($sql)->execute(array($IdUsuario, $Clave));
+				if($stm){
+					return true;
+				} else {
+					return false;
+				}
+			} catch (Exception $e) {
+				die($e->getMessage()." ->Ota_UsuarioModel->Modificar()");
+			}
+		}
 	}
 	?>
