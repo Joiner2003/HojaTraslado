@@ -164,7 +164,11 @@ if (isset($_GET['IdServicio'])) {
                 <div class="form-group row">
                   <div class="col-sm-4 mb-3">
                     <label>Numero Doc</label>
+<<<<<<< HEAD
                     <input type="text" class="form-control" id="Pte_NumDoc" onblur="buscar();" name="Pte_NumDoc" required value="<?php if($data != NULL) echo $data->__GET('Pte_NumDoc') ?>  ">
+=======
+                    <input type="number" class="form-control" id="Pte_NumDoc" name="Pte_NumDoc" required value="<?php if($data != NULL) echo $data->__GET('Pte_NumDoc') ?>">
+>>>>>>> 1d4d7cb4cc7f05ad149609bcdcb967debd9d4dd0
                   </div>
                   <div class="col-sm-2 mb-3">
                     <label>Tipo Doc</label>
@@ -176,7 +180,7 @@ if (isset($_GET['IdServicio'])) {
                   </div>
                   <div class="col-sm-2 mb-3">
                     <label>Edad</label>
-                    <input type="text" class="form-control" id="" name="Pte_Edad" value="<?php if($data != NULL) echo $data->__GET('Pte_Edad') ?>">
+                    <input type="number" class="form-control" id="" name="Pte_Edad" value="<?php if($data != NULL) echo $data->__GET('Pte_Edad') ?>">
                   </div>
                 </div>
                 <div class="form-group row">
@@ -211,7 +215,7 @@ if (isset($_GET['IdServicio'])) {
                 <div class="form-group row">
                   <label class="col-sm-3">No Documento</label>
                   <div class="col-sm-3 mb-3">
-                    <input type="text" class="form-control" id="" name="Aco_Documento" value="<?php if($data != NULL) echo $data->__GET('Aco_Documento') ?>">
+                    <input type="number" class="form-control" id="" name="Aco_Documento" value="<?php if($data != NULL) echo $data->__GET('Aco_Documento') ?>">
                   </div>
                   <label class="col-sm-3">Parentesco</label>
                   <div class="col-sm-3 mb-3">
@@ -371,17 +375,17 @@ if (isset($_GET['IdServicio'])) {
             <a class="d-block card-header py-3 bg-gradient-light" data-toggle="collapse" role="button" aria-expanded="true" aria-controls="collapseCardFirmas">
               <h6 class="m-0 font-weight-bold text-primary">FIRMAS</h6>
             </a>
-            <a class="btn btn-success"href="firma/firma3.php?IdServicio=<?php echo urlencode($IdServicio);?>" target="_blank">Firma paciente o acompañante</a>
+            <a class="btn btn-success"href="firma/firma3.php?IdServicio=<?php echo $IdServicio;?>" target="_blank">Firma paciente o acompañante</a>
             <br>
-            <a class="btn btn-success"href="firma/firmame_recibe.php?IdServicio=<?php echo urlencode($IdServicio);?>" target="_blank">Firma medico que recibe</a>
+            <a class="btn btn-success"href="firma/firmame_recibe.php?IdServicio=<?php echo $IdServicio;?>" target="_blank">Firma medico que recibe</a>
             <!-- Card Content - Collapse -->
           <!--  <div class="collapse show" id="collapseCardFirmas">
               <div class="card-body">
                 <div class="form-group row text-center">
                   <div class="col-sm-4 img">-->
                   
-                   <!-- <img src="data:image/jpg;base64,</*?php if($data != NULL) echo $data->__GET('Sv_Firma_Pte2'); ?*/>" alt="">
-                    <input type="file" name="Sv_Firma_Pte" value="" class="form-control" accept=".png, .jpg, .jpeg">-->
+                    <img src="<?php if($data != NULL) echo $data->__GET('Firma1'); ?>" alt="">
+                  <!--  <input type="file" name="Sv_Firma_Pte" value="" class="form-control" accept=".png, .jpg, .jpeg">-->
                   <!--  <a class="btn btn-primary" href="firma/guarda_imagen.php">Firmas</a>-->
 
                  <!--    <label>Paciente o Acudiente</label>

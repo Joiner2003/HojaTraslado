@@ -33,6 +33,13 @@ spl_autoload_register(function($nombreClase)
 			return $var;
 		}
 
+		public function Modificar_Password($IdUsuario, $Clave)
+		{
+			$model = new Ota_UsuarioModel();
+			$var = $model->Modificar_Password($IdUsuario, $Clave);
+			return $var;
+		}
+
 		public function VerOta_Usuario($IdUsuario)
 		{
 			$model = new Ota_UsuarioModel();

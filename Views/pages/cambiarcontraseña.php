@@ -137,20 +137,20 @@ if (isset($_GET['IdServicio'])) {
                 <div class="form-group row">
                   <div class="col-sm-4 mb-4">
                     <label>Contraseña Anterior</label>
-                    <input type="text" class="form-control" id="" name="Registro" required>
+                    <input type="password" class="form-control" id="" name="C_Anterior" required>
                   </div>
                   <div class="col-sm-4 mb-4">
                     <label>Nueva Contraseña</label>
-                    <input type="text" class="form-control" id="" name="Usuario" required>
+                    <input type="password" class="form-control" id="" name="C_Nueva" required>
                   </div>
                   <div class="col-sm-4 mb-4">
                     <label>Corfirmar Contraseña</label>
-                    <input type="text" class="form-control" id="" name="Clave" required>
+                    <input type="password" class="form-control" id="" name="Confirmar_C" required>
                   </div>
                 </div>
 
                 <hr>
-                <button type="submit" class="btn btn-primary btn-block">CAMBIAR CONTRASEÑA</button>
+                <button type="submit" class="btn btn-primary btn-block">ACTUALIZAR CONTRASEÑA</button>
           <hr>
               </div>
             </div>
