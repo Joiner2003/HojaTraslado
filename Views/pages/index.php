@@ -164,7 +164,7 @@ if (isset($_GET['IdServicio'])) {
                 <div class="form-group row">
                   <div class="col-sm-4 mb-3">
                     <label>Numero Doc</label>
-                    <input type="text" class="form-control" id="Pte_NumDoc" name="Pte_NumDoc" required value="<?php if($data != NULL) echo $data->__GET('Pte_NumDoc') ?>">
+                    <input type="number" class="form-control" id="Pte_NumDoc" name="Pte_NumDoc" required value="<?php if($data != NULL) echo $data->__GET('Pte_NumDoc') ?>">
                   </div>
                   <div class="col-sm-2 mb-3">
                     <label>Tipo Doc</label>
@@ -176,7 +176,7 @@ if (isset($_GET['IdServicio'])) {
                   </div>
                   <div class="col-sm-2 mb-3">
                     <label>Edad</label>
-                    <input type="text" class="form-control" id="" name="Pte_Edad" value="<?php if($data != NULL) echo $data->__GET('Pte_Edad') ?>">
+                    <input type="number" class="form-control" id="" name="Pte_Edad" value="<?php if($data != NULL) echo $data->__GET('Pte_Edad') ?>">
                   </div>
                 </div>
                 <div class="form-group row">
@@ -211,7 +211,7 @@ if (isset($_GET['IdServicio'])) {
                 <div class="form-group row">
                   <label class="col-sm-3">No Documento</label>
                   <div class="col-sm-3 mb-3">
-                    <input type="text" class="form-control" id="" name="Aco_Documento" value="<?php if($data != NULL) echo $data->__GET('Aco_Documento') ?>">
+                    <input type="number" class="form-control" id="" name="Aco_Documento" value="<?php if($data != NULL) echo $data->__GET('Aco_Documento') ?>">
                   </div>
                   <label class="col-sm-3">Parentesco</label>
                   <div class="col-sm-3 mb-3">
