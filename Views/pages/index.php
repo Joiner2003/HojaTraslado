@@ -166,9 +166,6 @@ if (isset($_GET['IdServicio'])) {
                     <label>Numero Doc</label>
 <<<<<<< HEAD
                     <input type="text" class="form-control" id="Pte_NumDoc" onblur="buscar();" name="Pte_NumDoc" required value="<?php if($data != NULL) echo $data->__GET('Pte_NumDoc') ?>  ">
-=======
-                    <input type="number" class="form-control" id="Pte_NumDoc" name="Pte_NumDoc" required value="<?php if($data != NULL) echo $data->__GET('Pte_NumDoc') ?>">
->>>>>>> 1d4d7cb4cc7f05ad149609bcdcb967debd9d4dd0
                   </div>
                   <div class="col-sm-2 mb-3">
                     <label>Tipo Doc</label>
