@@ -124,7 +124,7 @@ if (isset($_GET['IdServicio'])) {
 
       <!-- Begin Page Content -->
       <div class="container-fluid">
-        <form action="../../Actions/Usuarios/crearusuario.php" method="POST" enctype="multipart/form-data">
+        <form action="../../Actions/Usuarios/actualizarp.php" method="POST" enctype="multipart/form-data">
           
           <div class="card shadow mb-4">
             <!-- Card Header - Accordion -->
@@ -132,20 +132,20 @@ if (isset($_GET['IdServicio'])) {
               <h6 class="m-0 font-weight-bold text-primary">INFORMACION PARA CAMBIAR CONTRASEÑA</h6>
             </a>
             <!-- Card Content - Collapse -->
-            <div class="collapse show" id="crearusuario">
+            <div class="collapse show" id="cambiarcontraseña">
               <div class="card-body">
                 <div class="form-group row">
                   <div class="col-sm-4 mb-4">
                     <label>Contraseña Anterior</label>
-                    <input type="password" class="form-control" id="" name="C_Anterior" required>
+                    <input type="password" class="form-control" id="C_Anterior" name="C_Anterior" required>
                   </div>
                   <div class="col-sm-4 mb-4">
                     <label>Nueva Contraseña</label>
-                    <input type="password" class="form-control" id="" name="C_Nueva" required>
+                    <input type="password" class="form-control" id="C_Nueva" name="C_Nueva" required>
                   </div>
                   <div class="col-sm-4 mb-4">
                     <label>Corfirmar Contraseña</label>
-                    <input type="password" class="form-control" id="" name="Confirmar_C" required>
+                    <input type="password" class="form-control" id="Confirmar_C" name="Confirmar_C" required>
                   </div>
                 </div>
 

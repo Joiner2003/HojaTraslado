@@ -128,11 +128,12 @@ require_once('../../Models/Conexion/Conexion.php');
 			}
 		}
 
-		public function Modificar_Password($IdUsuario, $Clave)
+
+			public function Modificar_Password ($IdUsuario, $C_Nueva)
 		{
 			try {
 				$sql = ("UPDATE Ota_Usuario SET Clave = ? WHERE IdUsuario = ?");
-				$stm = $this->pdo->prepare($sql)->execute(array($IdUsuario, $Clave));
+				$stm = $this->pdo->prepare($sql)->execute(array($C_Nueva, $IdUsuario ));
 				if($stm){
 					return true;
 				} else {
@@ -142,5 +143,6 @@ require_once('../../Models/Conexion/Conexion.php');
 				die($e->getMessage()." ->Ota_UsuarioModel->Modificar()");
 			}
 		}
-	}
+		}
+	
 	?>

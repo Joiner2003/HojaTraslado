@@ -172,7 +172,7 @@ $msg = new \Plasticbrain\FlashMessages\FlashMessages();
                                                 <td><?= $key->__GET('Pte_Ap1').' '.$key->__GET('Pte_Ap2').' '.$key->__GET('PteNom1').' '.$key->__GET('Pte_Nom2') ?></td>
                                                 <td><?= $key->__GET('Pte_NumDoc') ?></td>
                                                 <td><?= $key->__GET('Sv_Origen') ?></td>
-                                                <td align="center" style="padding: 0;"> <a href="index.php?IdServicio=<?= $key->__GET('IdServicio') ?>" title="Ver" class="btn btn-success"><i class="fa fa-eye"></i></a> <a href="info_traslado.php?IdServicio=<?= $key->__GET('IdServicio') ?>" title="Imprimir" class="btn btn-primary" target="_blank"><i class="fa fa-print"></i></a></td>
+                                                <td align="center" style="padding: 0;"> <a href="index.php?IdServicio=<?= $key->__GET('IdServicio') ?>" title="Ver" target="_blank" class="btn btn-success"><i class="fa fa-eye"></i></a> <a href="info_traslado.php?IdServicio=<?= $key->__GET('IdServicio') ?>" title="Imprimir" class="btn btn-primary" target="_blank"><i class="fa fa-print"></i></a></td>
                                             </tr>
                                         <?php } ?>
                                     <?php } ?>
