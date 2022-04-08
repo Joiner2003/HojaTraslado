@@ -6,8 +6,8 @@ include("conexion.php");
 $IdServicio = 0;
 $IdServicio =$_GET['IdServicio'];
 
-//$_SESSION['IdServicio']=$IdServicio;
-//echo $IdServicio;
+$_SESSION['IdServicio']=$IdServicio;
+echo $IdServicio;
 //$Ids = $_GET['IdServicio'];
 //echo $IdServicio;
 /*$Idserv = array();
@@ -165,7 +165,7 @@ if (isset($_POST['imagen'])) {
     //$blobImage = base64_decode($baseImage);
     $insertar = "UPDATE Ota_Informe_Traslado
     SET Firma1='$baseImage'
-    WHERE IdServicio= 4";
+    WHERE IdServicio= IdServicio";
     $result = sqlsrv_query($conn,$insertar);
 
     
