@@ -22,6 +22,15 @@ if(!isset($_SESSION["Usuario"])){
 	$msg = new \Plasticbrain\FlashMessages\FlashMessages();
 	date_default_timezone_set('America/Bogota');
 
+	if (isset($_GET['Usuario'])) {
+		$IdUsuario = $_GET['Usuario'];
+		$data = $HomeController->VerOta_Usuario($IdUsuario);
+	  }else{
+		$IdUsuario = $HomeController->VerOta_Usuario($IdUsuario);
+		$data = NULL;
+	  }
+
+	//$IdUsuario= $_POST['IdServicio'];
 	$C_Anterior = $_POST['C_Anterior'];
 	$C_Nueva = $_POST['C_Nueva'];
 	$Confirmar_C = $_POST['Confirmar_C'];

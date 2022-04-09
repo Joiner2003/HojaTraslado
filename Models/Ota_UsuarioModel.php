@@ -133,7 +133,7 @@ require_once('../../Models/Conexion/Conexion.php');
 		{
 			try {
 				$sql = ("UPDATE Ota_Usuario SET Clave = ? WHERE IdUsuario = ?");
-				$stm = $this->pdo->prepare($sql)->execute(array($C_Nueva, $IdUsuario));
+				$stm = $this->pdo->prepare($sql)->execute(array($C_Nueva, $IdUsuario ));
 				if($stm){
 					return true;
 				} else {

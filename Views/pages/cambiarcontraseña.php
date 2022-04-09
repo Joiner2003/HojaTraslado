@@ -14,11 +14,11 @@ if (!session_id()) @session_start();
 $msg = new \Plasticbrain\FlashMessages\FlashMessages();
 date_default_timezone_set('America/Bogota');
 
-if (isset($_GET['IdServicio'])) {
-  $IdServicio = $_GET['IdServicio'];
-  $data = $HomeController->VerOta_Informe_Traslado($IdServicio);
+if (isset($_GET['Usuario'])) {
+  $IdUsuario = $_GET['Usuario'];
+  $data = $HomeController->VerOta_Usuario($IdUsuario);
 }else{
-  $IdServicio = $HomeController->MaximoOta_Informe_Traslado()->__GET('IdServicio')+1;
+  $IdUsuario = $HomeController->VerOta_Usuario($IdUsuario);
   $data = NULL;
 }
 ?>
