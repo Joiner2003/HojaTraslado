@@ -165,7 +165,7 @@ if (isset($_POST['imagen'])) {
     //$blobImage = base64_decode($baseImage);
     $insertar = "UPDATE Ota_Informe_Traslado
     SET Firma1='$baseImage'
-    WHERE IdServicio= IdServicio";
+    WHERE IdServicio= ";
     $result = sqlsrv_query($conn,$insertar);
 
     
