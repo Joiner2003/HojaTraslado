@@ -174,7 +174,7 @@ if (isset($_POST['imagen'])) {
       echo $_GET ['IdServicio'];
    //  echo $Idserv[0];
       # code...
-     // echo "<script language='javascript' type ='text/javascript'> window.close();</script>";
+      echo "<script language='javascript' type ='text/javascript'> window.close();</script>";
       echo '<img src="'.$_POST['imagen'].'" border="1">';// Esta linea genera la imagen
     //  $id = $_GET['IdServicio'];
     //  echo "$id";

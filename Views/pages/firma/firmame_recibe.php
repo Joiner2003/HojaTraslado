@@ -143,25 +143,35 @@ include("conexion.php");
 
 
 <?php 
-// comprovamos si se envió la imagen
 if (isset($_POST['imagen'])) {
 
-    $baseImage = $_POST['imagen']; 
-    
-   // $blobImage = base64_decode($baseImage);
-    $insertar = "INSERT INTO  firmame_recibe(firmame_recibe) 
-        VALUES ('$baseImage')";
-    $result = sqlsrv_query($conn,$insertar);
-    
-    if ($result) {
-      # code...
-      echo "<script language='javascript' type ='text/javascript'> window.close();</script>";
-     // echo '<img src="'.$_POST['imagen'].'" border="1">';
-     // echo "Con base 64 es". $baseImage;
-    }else{
-      echo "No se pudo guardar";
-    }
+  $baseImage = $_POST['imagen'];
+  //echo dato;
+  echo $baseImage;
+/*  $im1= file_get_contents("En_firma.png");
+  $En_firma2 = base64_encode($im1);*/
+  //$blobImage = base64_decode($baseImage);
+  $insertar = "UPDATE Ota_Informe_Traslado
+  SET Firma2='$baseImage'
+  WHERE IdServicio= IdServicio";
+  $result = sqlsrv_query($conn,$insertar);
 
+  
+  
+  if ($result) {
+    echo $_GET ['IdServicio'];
+ //  echo $Idserv[0];
+    # code...
+    echo "<script language='javascript' type ='text/javascript'> window.close();</script>";
+    echo '<img src="'.$_POST['imagen'].'" border="1">';// Esta linea genera la imagen
+  //  $id = $_GET['IdServicio'];
+  //  echo "$id";
+   // echo "Con base 64 es". $baseImage;
+  }else{
+    echo $_GET['IdServicio'];
+    echo "No se pudo guardar";
+   // echo $Idserv[0];
+  }
    
 
     // mostrar la imagen
