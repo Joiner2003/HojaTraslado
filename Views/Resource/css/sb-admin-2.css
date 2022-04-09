@@ -10861,9 +10861,12 @@ a:focus {
 }
 
 .bg-login-image {
-  background: url("https://source.unsplash.com/K4mSJ7kc0As/600x800");
+  background: url("https://source.unsplash.com/K4mSJ7kc0As/600x800") no-repeat center center fixed ;
   background-position: center;
   background-size: cover;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
 }
 
 .bg-register-image {
