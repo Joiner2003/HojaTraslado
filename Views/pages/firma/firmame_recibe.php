@@ -3,6 +3,17 @@
 <?php 
 
 include("conexion.php");
+$IdServicio = 0;
+$IdServicio =$_GET['IdServicio'];
+
+$_SESSION['IdServicio']=$IdServicio;
+echo $IdServicio;
+//$Ids = $_GET['IdServicio'];
+//echo $IdServicio;
+/*$Idserv = array();
+$Idserv[0] = $Ids;
+//echo $Idserv[0];//Devuelve el valor Manzana.
+//echo $Ids;*/
 ?>
 
 <html lang="es">
