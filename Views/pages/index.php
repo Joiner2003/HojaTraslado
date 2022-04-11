@@ -366,23 +366,35 @@ if (isset($_GET['IdServicio'])) {
           <button type="submit" class="btn btn-primary btn-block">GUARDAR REGISTRO</button>
           <hr>
         </form>
-        <div class="card shadow mb-4">
+        <div class="card shadow mb-12">
             <!-- Card Header - Accordion -->
             <a class="d-block card-header py-3 bg-gradient-light" data-toggle="collapse" role="button" aria-expanded="true" aria-controls="collapseCardFirmas">
               <h6 class="m-0 font-weight-bold text-primary">FIRMAS</h6>
             </a>
+            <br>
+            <div class="form-group row">
+            <div class="col mb-6">
             <form action="firma/firma3.php" method="post" target="_blank">
               <input type="hidden" name="IdServicio" value="<?= $IdServicio ?>">
-              
-              <button type="submit">firma paciente</button>
+              <button type="submit" class="btn btn-success">firma paciente</button>
+              <br>
+              <img src="<?php if($data != NULL) echo $data->__GET('Firma1'); ?>" alt="">
             </form>
-
+            </div>
+            </div>
+            <br>
+            <div class="form-group row">
+            <div class="col mb-6">
             <form action="firma/firma4.php" method="post" target="_blank">
               <input type="hidden" name="IdServicio" value="<?= $IdServicio ?>">
-              
-              <button type="submit">Firma medico que recibe</button>
+              <button type="submit" class="btn btn-success">Firma medico que recibe</button>
+              <br>
+              <img src="<?php if($data != NULL) echo $data->__GET('Firma2'); ?>" alt="">
             </form>
-            <br>
+            </div>
+            </div>
+            </div>
+            
           
             <!-- Card Content - Collapse -->
           <!--  <div class="collapse show" id="collapseCardFirmas">
@@ -390,8 +402,8 @@ if (isset($_GET['IdServicio'])) {
                 <div class="form-group row text-center">
                   <div class="col-sm-4 img">-->
                   
-                    <img src="<?php if($data != NULL) echo $data->__GET('Firma1'); ?>" alt="">
-                    <img src="<?php if($data != NULL) echo $data->__GET('Firma2'); ?>" alt="">
+                    
+                    
                   <!--  <input type="file" name="Sv_Firma_Pte" value="" class="form-control" accept=".png, .jpg, .jpeg">-->
                   <!--  <a class="btn btn-primary" href="firma/guarda_imagen.php">Firmas</a>-->
 
