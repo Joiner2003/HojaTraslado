@@ -2,7 +2,7 @@
 <?php 
 /**
   * Author:
-  * Ing Alberto Rodriguez
+  * Ing Joiner Escorcia Y Juan Gomez
 *
 **/
 require_once('../../Controllers/HomeController.php');
@@ -14,13 +14,6 @@ if (!session_id()) @session_start();
 $msg = new \Plasticbrain\FlashMessages\FlashMessages();
 date_default_timezone_set('America/Bogota');
 
-if (isset($_GET['Usuario'])) {
-  $IdUsuario = $_GET['Usuario'];
-  $data = $HomeController->VerOta_Usuario($IdUsuario);
-}else{
-  $IdUsuario = $HomeController->VerOta_Usuario($IdUsuario);
-  $data = NULL;
-}
 ?>
 <!-- Page Wrapper -->
 <div id="wrapper">

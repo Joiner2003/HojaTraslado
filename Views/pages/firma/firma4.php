@@ -3,11 +3,15 @@
 <?php 
 
 include("conexion.php");
-$IdServicio = 0;
-$IdServicio =$_GET['IdServicio'];
+ if (isset($_POST['IdServicio'])) {
+   # code...
+   $Ids = $_POST['IdServicio'];
+   echo $Ids;
+ }
 
-$_SESSION['IdServicio']=$IdServicio;
-echo $IdServicio;
+//$Doc_Pac =$_GET['Pte_NumDoc'];
+
+//echo $Ids;
 //$Ids = $_GET['IdServicio'];
 //echo $IdServicio;
 /*$Idserv = array();
@@ -30,10 +34,11 @@ $Idserv[0] = $Ids;
 </canvas>
 
 <!-- creamos el form para el envio -->
-<form id='formCanvas' method='post' action='firmame_recibe.php' ENCTYPE='multipart/form-data'>
+<form id='formCanvas' method='post' action='firma4.php' ENCTYPE='multipart/form-data'>
     <button type='button' onclick='LimpiarTrazado()'>Borrar</button>
     <button type='button' onclick='GuardarTrazado()'>Guardar</button>
     <input type='hidden' name='imagen' id='imagen' />
+    <input type="hidden" name="IdServicio" value="<?= $Ids ?>" id="<?= $Ids ?>">
 </form>
 
 <script type="text/javascript">
@@ -42,6 +47,7 @@ $Idserv[0] = $Ids;
     var idForm='formCanvas';
     var inputImagen='imagen';
     var estiloDelCursor='crosshair';
+    var inputservicio='IdServicio';
     var colorDelTrazo='#555';
     var colorDeFondo='#fff';
     var grosorDelTrazo=2;
@@ -51,7 +57,8 @@ $Idserv[0] = $Ids;
     var valX=0;
     var valY=0;
     var flag=false;
-    var imagen=document.getElementById(inputImagen); 
+    var imagen=document.getElementById(inputImagen);
+    var servicio = document.getElementsByName(inputservicio); 
     var anchoCanvas=document.getElementById(idCanvas).offsetWidth;
     var altoCanvas=document.getElementById(idCanvas).offsetHeight;
     var pizarraCanvas=document.getElementById(idCanvas);
@@ -148,41 +155,51 @@ $Idserv[0] = $Ids;
     function GuardarTrazado(){
       imagen.value=document.getElementById(idCanvas).toDataURL('image/png');
       document.forms[idForm].submit();
+
+      IdServicio.value=document.getElementsByName(IdServicio);
+      document.forms[idForm].submit();
+
+      
     }
 </script>
 
 
 
 <?php 
+// comprovamos si se envió la imagen
 if (isset($_POST['imagen'])) {
 
-  $baseImage = $_POST['imagen'];
-  //echo dato;
-  echo $baseImage;
-/*  $im1= file_get_contents("En_firma.png");
-  $En_firma2 = base64_encode($im1);*/
-  //$blobImage = base64_decode($baseImage);
-  $insertar = "UPDATE Ota_Informe_Traslado
-  SET Firma2='$baseImage'
-  WHERE IdServicio= IdServicio";
-  $result = sqlsrv_query($conn,$insertar);
+    $baseImage = $_POST['imagen'];
 
-  
-  
-  if ($result) {
-    echo $_GET ['IdServicio'];
- //  echo $Idserv[0];
-    # code...
-    echo "<script language='javascript' type ='text/javascript'> window.close();</script>";
-    echo '<img src="'.$_POST['imagen'].'" border="1">';// Esta linea genera la imagen
-  //  $id = $_GET['IdServicio'];
-  //  echo "$id";
-   // echo "Con base 64 es". $baseImage;
-  }else{
-    echo $_GET['IdServicio'];
-    echo "No se pudo guardar";
-   // echo $Idserv[0];
-  }
+    $Ids = $_POST['IdServicio'];
+    //echo dato;
+    echo $Ids;
+    echo $baseImage;
+  /*  $im1= file_get_contents("En_firma.png");
+    $En_firma2 = base64_encode($im1);*/
+    //$blobImage = base64_decode($baseImage);
+    $insertar = "UPDATE Ota_Informe_Traslado
+    SET Firma2='$baseImage'
+    WHERE IdServicio= '$Ids'";
+    $result = sqlsrv_query($conn,$insertar);
+
+    
+    
+    if ($result) {
+    // echo $_POST ['IdServicio'];
+   //  echo $Idserv[0];
+      # code...
+      echo "<script language='javascript' type ='text/javascript'> window.close();</script>";
+    //  echo '<img src="'.$_POST['imagen'].'" border="1">';// Esta linea genera la imagen
+    //  $id = $_GET['IdServicio'];
+    //  echo "$id";
+     // echo "Con base 64 es". $baseImage;
+    }else{
+    //  echo $_POST['IdServicio'];
+      echo "No se pudo guardar";
+     // echo $Idserv[0];
+    }
+
    
 
     // mostrar la imagen
@@ -210,5 +227,6 @@ if (isset($_POST['imagen'])) {
    // uploadImgBase64($_POST['imagen'], 'mi_imagen_'.date('d_m_Y_H_i_s').'.png' );
 }
 ?>
+
 </body>
 </html>
