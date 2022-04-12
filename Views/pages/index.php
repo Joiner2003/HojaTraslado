@@ -450,7 +450,7 @@ if (isset($_GET['IdServicio'])) {
                       </tr>
                     </thead>
                     <tbody>
-                      <form action="../../Actions/Signos/AgregarSignos.php?IdServicio=<?= $IdServicio ?>" method="POST">
+                      <form action="../../Actions/Signos/AgregarSignos.php" method="POST">
                         <tr align="center">
                           <td style="padding: 0;"><input type="date" name="FechaHora" value="<?= date('Y-m-d') ?>" class="form-control" required></td>
                           <td style="padding: 0;"><input type="time" name="FechaHora2" value="<?= date('H:i') ?>" class="form-control" required></td>
@@ -461,6 +461,7 @@ if (isset($_GET['IdServicio'])) {
                           <td style="padding: 0;"><input type="text" name="Sv_Glasgow" value="" class="form-control" style="width: 100px;"></td>
                           <td style="padding: 0;"><input type="text" name="Sv_SatO2" value="" class="form-control" style="width: 100px;"></td>
                           <td style="padding: 0;" align="center"><button type="submit" class="btn btn-success" <?php if($data == NULL) echo "disabled title='Guarde el formulario primero'"; ?>><i class="fa fa-plus"></i></button></td>
+                          <input type="hidden" name="IdServicio" id="" value="<?= $IdServicio ?>">
                         </tr>
                       </form>
                       <?php foreach ($HomeController->ListarxIdServicioOta_Informe_SignosVitales($IdServicio) as $key): ?>

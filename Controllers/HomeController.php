@@ -97,10 +97,10 @@ spl_autoload_register(function($nombreClase)
 			return $var;
 		}
 
-		public function AgregarOta_Informe_SignosVitales($FechaHora, $TA, $FC, $FR, $Temp, $Glasgow, $SatO2)
+		public function AgregarOta_Informe_SignosVitales($IdServicio,$FechaHora, $TA, $FC, $FR, $Temp, $Glasgow, $SatO2)
 		{
 			$model = new Ota_Informe_SignosVitalesModel();
-			$var = $model->Agregar($FechaHora, $TA, $FC, $FR, $Temp, $Glasgow, $SatO2);
+			$var = $model->Agregar($IdServicio,$FechaHora, $TA, $FC, $FR, $Temp, $Glasgow, $SatO2);
 			return $var;
 		}
 

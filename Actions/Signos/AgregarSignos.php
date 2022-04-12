@@ -22,7 +22,7 @@ if(!isset($_SESSION["Usuario"])){
 	$msg = new \Plasticbrain\FlashMessages\FlashMessages();
 	date_default_timezone_set('America/Bogota');
 
-	$IdServicio = $_GET['IdServicio'];
+	$IdServicio = $_POST['IdServicio'];
 	$FechaHora = $_POST['FechaHora'].'T'.$_POST['FechaHora2'].':00';
 	$TA = $_POST['Sv_TA'];
 	$FC = $_POST['Sv_FC'];

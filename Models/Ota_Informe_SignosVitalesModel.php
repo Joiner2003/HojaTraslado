@@ -18,11 +18,11 @@ require_once('../../Models/Conexion/Conexion.php');
 			}
 		}
 
-		public function Agregar( $FechaHora, $TA, $FC, $FR, $Temp, $Glasgow, $SatO2)
+		public function Agregar($IdServicio, $FechaHora, $TA, $FC, $FR, $Temp, $Glasgow, $SatO2)
 		{
 			try {
-				$sql = ("INSERT INTO Ota_Informe_SignosVitales (FechaHora, TA, FC, FR, Temp, Glasgow, SatO2) VALUES (?, ?, ?, ?, ?, ?, ?)");
-				$stm = $this->pdo->prepare($sql)->execute(array($FechaHora, $TA, $FC, $FR, $Temp, $Glasgow, $SatO2));
+				$sql = ("INSERT INTO Ota_Informe_SignosVitales (IdServicio,FechaHora, TA, FC, FR, Temp, Glasgow, SatO2) VALUES (?, ?, ?, ?,?, ?, ?, ?)");
+				$stm = $this->pdo->prepare($sql)->execute(array($IdServicio,$FechaHora, $TA, $FC, $FR, $Temp, $Glasgow, $SatO2));
 				if($stm){
 					return true;
 				} else {
