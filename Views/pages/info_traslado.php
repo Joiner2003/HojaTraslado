@@ -47,48 +47,36 @@ $html = '
 
 $content ='
 <table width="100%" border="1" style="font-size: 12px">
-    <tr>
-        
-        <td rowspan="4" colspan="4" align="center" valign="middle" width="60%">
-            <strong style="font-size: 16px">HOJA DE TRASLADOS</strong><br>
-            '.$data->__GET('IdServicio').' <br>
-            NIT. '.$data->__GET('Fecha1').'<br>
-            '.$data->__GET('Pte_Ap1').' '.$data->__GET('PteNom1').' '.$data->__GET('PteNom2').'<br>
-            Telefono: '.$data->__GET('Telefono').'
-        </td>
-        <td colspan="1"><strong>Codigo:</strong></td>
-        <td colspan="1" align="center"></td>
-    </tr>
-    <tr>
-        <td colspan="1"><strong>Version:</strong></td>
-        <td colspan="1" align="center"></td>
-    </tr>
-    <tr>
-        <td colspan="1"><strong>Fecha:</strong></td>
-        <td colspan="1" align="center">'.date('d/m/Y').'</td>
-    </tr>
-    <tr>
-        <td colspan="1"><strong>Pagina:</strong></td>
-        <td colspan="1" align="center">'."{PAGENO}"." De "."{nb}".'</td>
-    </tr>
-    
-</table><br>
+<tr>
+
+<th colspan=2>
+<strong style="font-size: 16px">INFORMACION GENERAL DEL PACIENTE</strong>
+</th> 
+</tr>
+
+<tr  align="center" valign="middle">
+<td>
+   Nombre:  '.$data->__GET('PteNom1').' 
+</td>
+<td>
+    Apellido. '.$data->__GET('PteApe1').'
+</td>
+</tr>
+
+<tr colspan="4" align="center" valign="middle" >
+<td colspan="2">
+   IDENTIFICACION:  '.$data->__GET('PteNom1').' 
+</td>
+<td>
+    Tipo Doc. '.$data->__GET('PteApe1').'
+</td>
+</tr>
 
 
-<table width="100%" border="1" style="font-size: 12px">
-    <tr>
-        
-        <td rowspan="4" colspan="4" align="center" valign="middle" width="60%">
-            <strong style="font-size: 16px">INFORMACION GENERAL DEL PACIENTE</strong><br>
-            '.$data->__GET('IdServicio').' <br>
-            NIT. '.$data->__GET('Fecha1').'<br>
-            '.$data->__GET('Pte_Ap1').' '.$data->__GET('PteNom1').' '.$data->__GET('PteNom2').'<br>
-            Telefono: '.$data->__GET('Telefono').'
-        </td>
-        <br>
-    </tr>
+ 
+</table>
 
-</table><br>
+
 
 
 
