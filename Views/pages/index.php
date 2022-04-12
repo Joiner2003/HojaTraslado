@@ -282,7 +282,13 @@ if (isset($_GET['IdServicio'])) {
             </div>
           </div>
           
-          <div class="card shadow mb-4">
+          
+          
+          <hr>
+          <button type="submit" class="btn btn-primary btn-block">GUARDAR REGISTRO</button>
+          <hr>
+        </form>
+        <div class="card shadow mb-4">
             <!-- Card Header - Accordion -->
             <a href="#collapseCardExamenFisico" class="d-block card-header py-3 bg-gradient-light" data-toggle="collapse" role="button" aria-expanded="true" aria-controls="collapseCardExamenFisico">
               <h6 class="m-0 font-weight-bold text-primary">EXAMEN FISICO</h6>
@@ -327,7 +333,7 @@ if (isset($_GET['IdServicio'])) {
               </div>
             </div>
           </div>
-          <div class="card shadow mb-4">
+        <div class="card shadow mb-4">
             <!-- Card Header - Accordion -->
             <a href="#collapseCardAntecedentes" class="d-block card-header py-3 bg-gradient-light" data-toggle="collapse" role="button" aria-expanded="true" aria-controls="collapseCardAntecedentes">
               <h6 class="m-0 font-weight-bold text-primary">ANTECEDENTES</h6>
@@ -362,10 +368,6 @@ if (isset($_GET['IdServicio'])) {
               </div>
             </div>
           </div>
-          <hr>
-          <button type="submit" class="btn btn-primary btn-block">GUARDAR REGISTRO</button>
-          <hr>
-        </form>
         <div class="card shadow mb-12">
             <!-- Card Header - Accordion -->
             <a class="d-block card-header py-3 bg-gradient-light" data-toggle="collapse" role="button" aria-expanded="true" aria-controls="collapseCardFirmas">
