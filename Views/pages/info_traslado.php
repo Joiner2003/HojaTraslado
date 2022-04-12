@@ -74,6 +74,24 @@ $content ='
     
 </table><br>
 
+
+<table width="100%" border="1" style="font-size: 12px">
+    <tr>
+        
+        <td rowspan="4" colspan="4" align="center" valign="middle" width="60%">
+            <strong style="font-size: 16px">INFORMACION GENERAL DEL PACIENTE</strong><br>
+            '.$data->__GET('IdServicio').' <br>
+            NIT. '.$data->__GET('Fecha1').'<br>
+            '.$data->__GET('Pte_Ap1').' '.$data->__GET('PteNom1').' '.$data->__GET('PteNom2').'<br>
+            Telefono: '.$data->__GET('Telefono').'
+        </td>
+        <br>
+    </tr>
+
+</table><br>
+
+
+
 ';
 $pdf->SetHeader($html);
 $pdf->WriteHTML($content); 
