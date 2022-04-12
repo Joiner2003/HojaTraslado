@@ -18,7 +18,7 @@ $html = '
 <table width="100%" border="1" style="font-size: 12px">
     <tr>
         <td rowspan="4" colspan="2" align="center">
-            <img src="../Resource/img/ambulancia.png" width="130" height="40">
+            <img src="../Resource/img/logoota2.jpg" width="120" height="120">
         </td>
         <td rowspan="4" colspan="4" align="center" valign="middle" width="60%">
             <strong style="font-size: 16px">HOJA DE TRASLADOS</strong><br>
@@ -71,6 +71,7 @@ $content ='
         <td colspan="1"><strong>Pagina:</strong></td>
         <td colspan="1" align="center">'."{PAGENO}"." De "."{nb}".'</td>
     </tr>
+    
 </table><br>
 
 ';
