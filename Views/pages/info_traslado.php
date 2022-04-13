@@ -62,13 +62,13 @@ $content ='
     <td>Fecha Nacimiento: '.$data->__GET('Pte_FechaNac').'</td>
   </tr>
   <tr>
-  <td>Entidad</td>
+  <td>Entidad: </td>
   <td></td>
   <td>Regimen</td>
   </tr>
   
    <tr>
-  <td>Telefono</td>
+  <td>Telefono: </td>
   <td></td>
   <td>Direccion</td>
   </tr>
@@ -77,14 +77,14 @@ $content ='
     <th colspan="4">Informacion Del Acompañante</th>
   </tr>
    <tr>
-    <td colspan="2">Nombres: </td>
-    <td colspan="2">Apellidos: </td>
+    <td colspan="2">Nombres: '.$data->__GET('Aco_Nombres').'</td>
+    <td colspan="2">Apellidos: '.$data->__GET('Aco_Apellidos').'</td>
  
   </tr>
   <tr>
-    <td>Identificación:</td>
+    <td>Identificación: '.$data->__GET('Aco_Documento').'</td>
     <td></td>
-    <td>Parentesco:</td>
+    <td>Parentesco: '.$data->__GET('Aco_Perentezco').'</td>
   </tr>
   </table>
   <br>
@@ -96,29 +96,28 @@ $content ='
    <td></td><td colspan="4">Desplazamientos </td>
    </tr>
   <tr>
-    <td>Origen 1:</td>
-     <td>Llegada:</td>
+    <td>Origen 1:  '.$data->__GET('Sv_Origen').'</td>
+     <td>Llegada:  '.$data->__GET('Sv_Llegada').'</td>
     <td></td>
-    <td>Salida:</td>
+    <td>Salida:  '.$data->__GET('Sv_Salida').'</td>
     </tr>
     <tr>
-    <td>Destino 1:</td>
-    <td>Llegada:</td>
+    <td>Destino 1:  '.$data->__GET('Sv_Origen1').'</td>
+    <td>Llegada:  '.$data->__GET('Sv_Llegada1').'</td>
     <td></td>
-    <td>Salida:</td>
+    <td>Salida:  '.$data->__GET('Sv_Salida1').'</td>
   </tr>
   <tr>
-    <td>Destino 2:</td>
-    <td>Llegada:</td>
+    <td>Destino 2:  '.$data->__GET('Sv_Origen2').'</td>
+    <td>Llegada:  '.$data->__GET('Sv_Llegada2').'</td>
     <td></td>
-    <td>Salida:</td>
+    <td>Salida:  '.$data->__GET('Sv_Salida2').'</td>
   </tr>
   <tr>
-   <td>Complejidad Del Servicio: </td>
-   <td>Tipo De Servicio: </td>
+   <td>Complejidad Del Servicio:  '.$data->__GET('Aco_Documento').'</td>
+   <td>Tipo De Servicio:  '.$data->__GET('Aco_Documento').'</td>
   </tr>
-  
-</table>
+
 </table>
 
 
