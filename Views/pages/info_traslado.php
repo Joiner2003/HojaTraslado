@@ -114,8 +114,8 @@ $content ='
     <td>Salida:  '.$data->__GET('Sv_Salida2').'</td>
   </tr>
   <tr>
-   <td>Complejidad Del Servicio:  '.$data->__GET('Aco_Documento').'</td>
-   <td>Tipo De Servicio:  '.$data->__GET('Aco_Documento').'</td>
+   <td>Complejidad Del Servicio:  '.$data->__GET('Sv_Complejidad').'</td>
+   <td>Tipo De Servicio:  '.$data->__GET('Sv_TipoServicio').'</td>
   </tr>
 
 </table>
