@@ -117,6 +117,65 @@ $content ='
    <td>Complejidad Del Servicio:  '.$data->__GET('Sv_Complejidad').'</td>
    <td>Tipo De Servicio:  '.$data->__GET('Sv_TipoServicio').'</td>
   </tr>
+  <tr>
+  <td>Examen Solicitado: </td>
+ </tr>
+</table>
+
+<br>
+ <table style="width:100% ">
+  <tr>
+   <th colspan="4">Examen Físico Pre-Traslado</th>
+ </tr>
+ <tr>
+   <td>T/A:</td>
+   <td>F.R:</td>
+   </tr>
+   <tr>
+   <td>TEMP:</td>
+   <td>GLASSGOW:</td>
+ </tr>
+ <tr>
+   <td>Diagnostico 1:</td>
+   <td>Diagnostico 2:</td>
+ </tr>
+ <tr>
+  <td>Hallazgos Positivos: </td>
+ </tr>
+ <tr>
+  <td>Antecedentes: </td>
+ </tr>
+ <tr>
+   <th colspan="4">Ginecológicos</th>
+ </tr>
+ <tr>
+   <td>G:</td>
+   <td>P:</td>
+   <td>C:</td>
+   </tr>
+   <tr>
+   <td>A:</td>
+   <td>V:</td>
+   </tr>
+   <tr>
+   <th colspan="4">Ventilacion Mecánica</th>
+ </tr>
+   <tr>
+  <td>Oxígeno:</td>
+   <td>VOL:</td>
+   <td>P.E.E.P.:</td>
+   </tr>
+   <tr>
+   <td>Inotropia:</td>
+   <td>FR:</td>
+   <td>FIOZ:</td>
+   </tr>
+   <tr>
+  <td>Firma Paciente o Acompañante:</td>
+   </tr>
+   <tr>
+  <td>Firma Médico o Enfermera(o) Que Entrega:</td>
+   </tr>
 
 </table>
 
