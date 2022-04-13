@@ -46,36 +46,33 @@ $html = '
 ';
 
 $content ='
-<table width="100%" border="1" style="font-size: 12px">
-<tr>
-
-<th colspan=2>
-<strong style="font-size: 16px">INFORMACION GENERAL DEL PACIENTE</strong>
-</th> 
-</tr>
-
-<tr  align="center" valign="middle">
-<td>
-   Nombre:  '.$data->__GET('PteNom1').' 
-</td>
-<td>
-    Apellido. '.$data->__GET('PteApe1').'
-</td>
-</tr>
-
-<tr colspan="4" align="center" valign="middle" >
-<td colspan="2">
-   IDENTIFICACION:  '.$data->__GET('PteNom1').' 
-</td>
-<td>
-    Tipo Doc. '.$data->__GET('PteApe1').'
-</td>
-</tr>
-
-
+<table style="width:100%">
+  <tr>
+    <th colspan="4">Informacion General Del Paciente</th>
+  </tr>
+  <tr>
+    <td colspan="2">Nombres: '.$data->__GET('PteNom1').' '.$data->__GET('Pte_Nom2').'</td>
+    <td colspan="2">Apellidos: '.$data->__GET('Pte_Ap1').' '.$data->__GET('Pte_Ap2').' </td>
  
+  </tr>
+  <tr>
+    <td>Identificación:  '.$data->__GET('Pte_NumDoc').'</td>
+    <td>T Identificación:  '.$data->__GET('Pte_TipoDoc').' </td>
+<td>Edad:  '.$data->__GET('Pte_Edad').'</td>
+    <td>Fecha Nacimiento: '.$data->__GET('Pte_FechaNac').'</td>
+  </tr>
+  <tr>
+  <td>Entidad</td>
+  <td></td>
+  <td>Regimen</td>
+  </tr>
+  
+   <tr>
+  <td>Telefono</td>
+  <td></td>
+  <td>Direccion</td>
+  </tr>
 </table>
-
 
 
 
