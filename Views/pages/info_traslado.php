@@ -118,7 +118,7 @@ $content ='
    <td>Tipo De Servicio:  '.$data->__GET('Sv_TipoServicio').'</td>
   </tr>
   <tr>
-  <td>Examen Solicitado: </td>
+  <td>Examen Solicitado: '.$data->__GET('Sv_ExamenSolicitado').'</td>
  </tr>
 </table>
 
@@ -171,10 +171,10 @@ $content ='
    <td>FIOZ:</td>
    </tr>
    <tr>
-  <td>Firma Paciente o Acompañante:</td>
+  <td>Firma Paciente o Acompañante:  <img src='. $data->__GET('Firma1').'></td>
    </tr>
    <tr>
-  <td>Firma Médico o Enfermera(o) Que Entrega:</td>
+  <td>Firma Médico o Enfermera(o) Que Entrega:  <img src='. $data->__GET('Firma2').'></td>
    </tr>
 
 </table>
