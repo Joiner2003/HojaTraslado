@@ -72,6 +72,53 @@ $content ='
   <td></td>
   <td>Direccion</td>
   </tr>
+
+  <tr>
+    <th colspan="4">Informacion Del Acompañante</th>
+  </tr>
+   <tr>
+    <td colspan="2">Nombres: </td>
+    <td colspan="2">Apellidos: </td>
+ 
+  </tr>
+  <tr>
+    <td>Identificación:</td>
+    <td></td>
+    <td>Parentesco:</td>
+  </tr>
+  </table>
+  <br>
+  <table style="width:100% ">
+   <tr>
+    <th colspan="4">Características Del Servicio</th>
+  </tr>
+   <tr>
+   <td></td><td colspan="4">Desplazamientos </td>
+   </tr>
+  <tr>
+    <td>Origen 1:</td>
+     <td>Llegada:</td>
+    <td></td>
+    <td>Salida:</td>
+    </tr>
+    <tr>
+    <td>Destino 1:</td>
+    <td>Llegada:</td>
+    <td></td>
+    <td>Salida:</td>
+  </tr>
+  <tr>
+    <td>Destino 2:</td>
+    <td>Llegada:</td>
+    <td></td>
+    <td>Salida:</td>
+  </tr>
+  <tr>
+   <td>Complejidad Del Servicio: </td>
+   <td>Tipo De Servicio: </td>
+  </tr>
+  
+</table>
 </table>
 
 
