@@ -176,7 +176,54 @@ $content ='
    <tr>
   <td>Firma Médico o Enfermera(o) Que Entrega:  <img src='. $data->__GET('Firma2').'></td>
    </tr>
-
+   </table>
+   <br>
+   <table style="width:100% ">
+     <tr>
+      <th colspan="4">Signos Vitales</th>
+    </tr>
+    <tr>
+      <td>Fecha:</td>
+      <td>Hora:</td>
+      <td>T/A:</td>
+      <td>F.C:</td>
+      </tr>
+      <tr>
+      <td>F.R:</td>
+      <td>Temp:</td>
+      <td>Glassgow:</td>
+      <td>SatO2:</td>
+    </tr>
+   </table>
+   <br>
+   <table style="width:100% ">
+     <tr>
+      <th colspan="4">Control De Liquidos Y Medicamentos</th>
+    </tr>
+    <tr>
+      <td>L.E.V:</td>
+      <td>Goteo:</td>
+      <td>Cantidad Infundida:</td>
+      </tr>
+      <tr>
+      <td>Inotrópico:</td>
+      <td>Goteo:</td>
+      <td>Cantidad Infundida:</td>
+    </tr>
+   </table>
+   <br>
+   <br>
+   <table style="width:100% ">
+   <tr>
+      <th colspan="4">Estado Del Paciente Al Finalizar Traslado</th>
+    </tr>
+     <tr>
+      <td>Estado Del Paciente Al Finalizar Traslado:</td>
+    </tr>
+    <tr>
+      <td>Observaciones Al Momento De La Entrega:</td>
+    </tr>
+   
 </table>
 
 
