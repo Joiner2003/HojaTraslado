@@ -62,13 +62,13 @@ $content ='
     </tr>
     <tr>
     <td>Fecha Nacimiento: '.$data->__GET('Pte_FechaNac').'</td>
-    <td>Entidad: </td>
-    <td>Regimen:</td>
+    <td>Entidad: '.$data->__GET('').'</td>
+    <td>Regimen: '.$data->__GET('Pte_Regimen').'</td>
   </tr>
    <tr>
-  <td>Telefono: </td>
+  <td>Telefono: '.$data->__GET('Pte_Telefono').' </td>
   <td></td>
-  <td>Direccion:</td>
+  <td>Direccion: '.$data->__GET('Pte_Direccion').'</td>
   </tr>
 
   <tr>
@@ -126,47 +126,47 @@ $content ='
    <th colspan="4">Examen Físico Pre-Traslado</th>
  </tr>
  <tr>
-   <td>T/A:</td>
-   <td>F.R:</td>
+   <td>T/A: '.$data->__GET('Sv_ExamenSolicitado').'</td>
+   <td>F.R: '.$data->__GET('Sv_ExamenSolicitado').'</td>
    </tr>
    <tr>
-   <td>TEMP:</td>
-   <td>GLASSGOW:</td>
+   <td>TEMP: '.$data->__GET('Sv_ExamenSolicitado').'</td>
+   <td>GLASSGOW: '.$data->__GET('Sv_ExamenSolicitado').'</td>
  </tr>
  <tr>
-   <td>Diagnostico 1:</td>
-   <td>Diagnostico 2:</td>
+   <td>Diagnostico 1: '.$data->__GET('Sv_ExamenSolicitado').'</td>
+   <td>Diagnostico 2: '.$data->__GET('Sv_ExamenSolicitado').'</td>
  </tr>
  <tr>
-  <td>Hallazgos Positivos: </td>
+  <td>Hallazgos Positivos: '.$data->__GET('Sv_ExamenSolicitado').'</td>
  </tr>
  <tr>
-  <td>Antecedentes: </td>
+  <td>Antecedentes: '.$data->__GET('Sv_ExamenSolicitado').'</td>
  </tr>
  <tr>
    <th colspan="4">Ginecológicos</th>
  </tr>
  <tr>
-   <td>G:</td>
-   <td>P:</td>
-   <td>C:</td>
+   <td>G: '.$data->__GET('Sv_ExamenSolicitado').'</td>
+   <td>P: '.$data->__GET('Sv_ExamenSolicitado').'</td>
+   <td>C: '.$data->__GET('Sv_ExamenSolicitado').'</td>
    </tr>
    <tr>
-   <td>A:</td>
-   <td>V:</td>
+   <td>A: '.$data->__GET('Sv_ExamenSolicitado').'</td>
+   <td>V: '.$data->__GET('Sv_ExamenSolicitado').'</td>
    </tr>
    <tr>
    <th colspan="4">Ventilacion Mecánica</th>
  </tr>
    <tr>
-  <td>Oxígeno:</td>
+  <td>Oxígeno: '.$data->__GET('Sv_ExamenSolicitado').'</td>
    <td>VOL:</td>
-   <td>P.E.E.P.:</td>
+   <td>P.E.E.P.: '.$data->__GET('Sv_ExamenSolicitado').'</td>
    </tr>
    <tr>
-   <td>Inotropia:</td>
-   <td>FR:</td>
-   <td>FIOZ:</td>
+   <td>Inotropia: '.$data->__GET('Sv_ExamenSolicitado').'</td>
+   <td>FR: '.$data->__GET('Sv_ExamenSolicitado').'</td>
+   <td>FIOZ: '.$data->__GET('Sv_ExamenSolicitado').'</td>
    </tr>
    <tr>
   <td>Firma Paciente o Acompañante:  <img src='. $data->__GET('Firma1').'></td>
@@ -181,16 +181,16 @@ $content ='
       <th colspan="4">Signos Vitales</th>
     </tr>
     <tr>
-      <td>Fecha:</td>
-      <td>Hora:</td>
-      <td>T/A:</td>
-      <td>F.C:</td>
+      <td>Fecha: '.$data->__GET('Sv_ExamenSolicitado').'</td>
+      <td>Hora: '.$data->__GET('Sv_ExamenSolicitado').'</td>
+      <td>T/A: '.$data->__GET('Sv_ExamenSolicitado').'</td>
+      <td>F.C: '.$data->__GET('Sv_ExamenSolicitado').'</td>
       </tr>
       <tr>
-      <td>F.R:</td>
-      <td>Temp:</td>
-      <td>Glassgow:</td>
-      <td>SatO2:</td>
+      <td>F.R: '.$data->__GET('Sv_ExamenSolicitado').'</td>
+      <td>Temp: '.$data->__GET('Sv_ExamenSolicitado').'</td>
+      <td>Glassgow: '.$data->__GET('Sv_ExamenSolicitado').'</td>
+      <td>SatO2: '.$data->__GET('Sv_ExamenSolicitado').'</td>
     </tr>
    </table>
    <br>
@@ -199,14 +199,14 @@ $content ='
       <th colspan="4">Control De Liquidos Y Medicamentos</th>
     </tr>
     <tr>
-      <td>L.E.V:</td>
-      <td>Goteo:</td>
-      <td>Cantidad Infundida:</td>
+      <td>L.E.V:'.$data->__GET('Sv_ExamenSolicitado').'</td>
+      <td>Goteo: '.$data->__GET('Sv_ExamenSolicitado').'</td>
+      <td>Cantidad Infundida: '.$data->__GET('Sv_ExamenSolicitado').'</td>
       </tr>
       <tr>
-      <td>Inotrópico:</td>
-      <td>Goteo:</td>
-      <td>Cantidad Infundida:</td>
+      <td>Inotrópico: '.$data->__GET('Sv_ExamenSolicitado').'</td>
+      <td>Goteo: '.$data->__GET('Sv_ExamenSolicitado').'</td>
+      <td>Cantidad Infundida: '.$data->__GET('Sv_ExamenSolicitado').'</td>
     </tr>
    </table>
    <br>
@@ -216,10 +216,10 @@ $content ='
       <th colspan="4">Estado Del Paciente Al Finalizar Traslado</th>
     </tr>
      <tr>
-      <td>Estado Del Paciente Al Finalizar Traslado:</td>
+      <td>Estado Del Paciente Al Finalizar Traslado: '.$data->__GET('Sv_ExamenSolicitado').'</td>
     </tr>
     <tr>
-      <td>Observaciones Al Momento De La Entrega:</td>
+      <td>Observaciones Al Momento De La Entrega: '.$data->__GET('Sv_ExamenSolicitado').'</td>
     </tr>
    
 </table>
