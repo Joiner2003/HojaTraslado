@@ -288,6 +288,8 @@ if (isset($_GET['IdServicio'])) {
           <button type="submit" class="btn btn-primary btn-block">GUARDAR REGISTRO</button>
           <hr>
         </form>
+        <form action="../../Actions/Traslados/EstadoPac.php" method="POST">   
+        <input type="hidden" name="IdServicio" id="" value="<?= $IdServicio ?>">
         <div class="card shadow mb-4">
             <!-- Card Header - Accordion -->
             <a href="#collapseCardExamenFisico" class="d-block card-header py-3 bg-gradient-light" data-toggle="collapse" role="button" aria-expanded="true" aria-controls="collapseCardExamenFisico">
@@ -368,6 +370,36 @@ if (isset($_GET['IdServicio'])) {
               </div>
             </div>
           </div>
+
+          <div class="card shadow mb-4">
+            <!-- Card Header - Accordion -->
+            <a href="#collapseCardEstadoPaciente" class="d-block card-header py-3 bg-gradient-light" data-toggle="collapse" role="button" aria-expanded="true" aria-controls="collapseCardEstadoPaciente">
+              <h6 class="m-0 font-weight-bold text-primary">ESTADO DEL PACIENTE AL FINALIZAR TRASLADO</h6>
+            </a>
+            <!-- Card Content - Collapse -->
+            <div class="collapse show" id="collapseCardEstadoPaciente">
+              <div class="card-body">
+                  <div class="form-group row">
+                  <div class="col-sm-12 col-md-12  ">
+                    <label>Estado Del Paciente Al Finalizar Traslado</label>
+                    <div class="col-sm-12">
+                      <label class="col-sm-4"><input type="radio" class="" id="Estable" name="Estado_ft" value="Estable" <?php if($data != NULL && $data->__GET('Estable') == 1) echo "checked"; ?>> Estable</label>
+                      <label class="col-sm-4"><input type="radio" class="" id="Mejoro" name="Estado_ft" value="Mejoro" <?php if($data != NULL && $data->__GET('Mejoro') == 3) echo "checked"; ?>> Mejoro</label>
+                      <label class="col-sm-4"><input type="radio" class="" id="Descompenso" name="Estado_ft" value="Descompenso" <?php if($data != NULL && $data->__GET('Descompenso') == 2) echo "checked"; ?>> Descompenso</label>
+                      <label class="col-sm-4"><input type="radio" class="" id="Fallecio" name="Estado_ft" value="Fallecio" <?php if($data != NULL && $data->__GET('Fallecio') == 4) echo "checked"; ?>> Fallecio</label>
+                    </div>
+                  </div>
+                  </div>
+
+                <div class="form-group row">
+                  <div class="col-sm-12 mb-3 text-center">
+                    <textarea class="form-control" name="Obs_entrega" rows="4" style="resize: vertical;" placeholder="Observaciones al momento de la entrega..."><?php if($data != NULL) echo $data->__GET('Obs_entrega') ?></textarea>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </form>
         <div class="card shadow mb-12">
             <!-- Card Header - Accordion -->
             <a class="d-block card-header py-3 bg-gradient-light" data-toggle="collapse" role="button" aria-expanded="true" aria-controls="collapseCardFirmas">
@@ -452,6 +484,7 @@ if (isset($_GET['IdServicio'])) {
                       </tr>
                     </thead>
                     <tbody>
+
                       <form action="../../Actions/Signos/AgregarSignos.php" method="POST">
                         <tr align="center">
                           <td style="padding: 0;"><input type="date" name="FechaHora" value="<?= date('Y-m-d') ?>" class="form-control" required></td>
