@@ -58,19 +58,17 @@ $content ='
   <tr>
     <td>Identificación:  '.$data->__GET('Pte_NumDoc').'</td>
     <td>T Identificación:  '.$data->__GET('Pte_TipoDoc').' </td>
-<td>Edad:  '.$data->__GET('Pte_Edad').'</td>
+    <td>Edad:  '.$data->__GET('Pte_Edad').'</td>
+    </tr>
+    <tr>
     <td>Fecha Nacimiento: '.$data->__GET('Pte_FechaNac').'</td>
+    <td>Entidad: </td>
+    <td>Regimen:</td>
   </tr>
-  <tr>
-  <td>Entidad: </td>
-  <td></td>
-  <td>Regimen</td>
-  </tr>
-  
    <tr>
   <td>Telefono: </td>
   <td></td>
-  <td>Direccion</td>
+  <td>Direccion:</td>
   </tr>
 
   <tr>
