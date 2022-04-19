@@ -206,6 +206,8 @@ require_once('../../Models/Conexion/Conexion.php');
 					$entity->__SET('Tp_Paramedico',$r->Tp_Paramedico);
 					$entity->__SET('Tp_Comandante',$r->Tp_Comandante);
 					$entity->__SET('Tp_Medico',$r->Tp_Medico);
+					$entity->__SET('Estado_ft',$r->Estado_ft);
+					$entity->__SET('Obs_entrega',$r->Obs_entrega);
 					return $entity;
 
 				}

@@ -126,47 +126,47 @@ $content ='
    <th colspan="4">Examen Físico Pre-Traslado</th>
  </tr>
  <tr>
-   <td>T/A: '.$data->__GET('Sv_ExamenSolicitado').'</td>
-   <td>F.R: '.$data->__GET('Sv_ExamenSolicitado').'</td>
+   <td>T/A: '.$data->__GET('Ef_Ta').'</td>
+   <td>F.R: '.$data->__GET('Ef_Fr').'</td>
    </tr>
    <tr>
-   <td>TEMP: '.$data->__GET('Sv_ExamenSolicitado').'</td>
-   <td>GLASSGOW: '.$data->__GET('Sv_ExamenSolicitado').'</td>
+   <td>TEMP: '.$data->__GET('Ef_Temp').'</td>
+   <td>GLASSGOW: '.$data->__GET('Ef_Glasgow').'</td>
  </tr>
  <tr>
-   <td>Diagnostico 1: '.$data->__GET('Sv_ExamenSolicitado').'</td>
-   <td>Diagnostico 2: '.$data->__GET('Sv_ExamenSolicitado').'</td>
+   <td>Diagnostico 1: '.$data->__GET('Ef_Dx1').'</td>
+   <td>Diagnostico 2: '.$data->__GET('Ef_Dx2').'</td>
  </tr>
  <tr>
-  <td>Hallazgos Positivos: '.$data->__GET('Sv_ExamenSolicitado').'</td>
+  <td>Hallazgos Positivos: '.$data->__GET('Ef_HallazgoPos1').'</td>
  </tr>
  <tr>
-  <td>Antecedentes: '.$data->__GET('Sv_ExamenSolicitado').'</td>
+  <td>Antecedentes: '.$data->__GET('Ef_Antecedentes1').'</td>
  </tr>
  <tr>
    <th colspan="4">Ginecológicos</th>
  </tr>
  <tr>
-   <td>G: '.$data->__GET('Sv_ExamenSolicitado').'</td>
-   <td>P: '.$data->__GET('Sv_ExamenSolicitado').'</td>
-   <td>C: '.$data->__GET('Sv_ExamenSolicitado').'</td>
+   <td>G: '.$data->__GET('Ef_Gin1').'</td>
+   <td>P: '.$data->__GET('Ef_Gin2').'</td>
+   <td>C: '.$data->__GET('Ef_Gin3').'</td>
    </tr>
    <tr>
-   <td>A: '.$data->__GET('Sv_ExamenSolicitado').'</td>
-   <td>V: '.$data->__GET('Sv_ExamenSolicitado').'</td>
+   <td>A: '.$data->__GET('Ef_Gin4').'</td>
+   <td>V: '.$data->__GET('Ef_Gin5').'</td>
    </tr>
    <tr>
    <th colspan="4">Ventilacion Mecánica</th>
  </tr>
    <tr>
-  <td>Oxígeno: '.$data->__GET('Sv_ExamenSolicitado').'</td>
+  <td>Oxígeno: '.$data->__GET('Ef_Modo1').'</td>
    <td>VOL:</td>
-   <td>P.E.E.P.: '.$data->__GET('Sv_ExamenSolicitado').'</td>
+   <td>P.E.E.P.: '.$data->__GET('Ef_Modo2').'</td>
    </tr>
    <tr>
-   <td>Inotropia: '.$data->__GET('Sv_ExamenSolicitado').'</td>
-   <td>FR: '.$data->__GET('Sv_ExamenSolicitado').'</td>
-   <td>FIOZ: '.$data->__GET('Sv_ExamenSolicitado').'</td>
+   <td>Inotropia: '.$data->__GET('Ef_Modo3').'</td>
+   <td>FR: '.$data->__GET('Ef_Modo4').'</td>
+   <td>FIOZ: '.$data->__GET('Ef_Modo5').'</td>
    </tr>
    <tr>
   <td>Firma Paciente o Acompañante:  <img src='. $data->__GET('Firma1').'></td>
@@ -192,18 +192,6 @@ $content ='
       <td>Glassgow: '.$data->__GET('Sv_ExamenSolicitado').'</td>
       <td>SatO2: '.$data->__GET('Sv_ExamenSolicitado').'</td>
 
-      <?php '.foreach ($HomeController->ListarxIdServicioOta_Informe_SignosVitales($IdServicio) as $key): '.?>
-        <tr class="text-center">
-          <td> '. (new DateTime($key->__GET('FechaHora')))->format('d/m/Y')  .'</td>
-          <td> '. (new DateTime($key->__GET('FechaHora')))->format('H:i') .'</td>
-          <td> '. $key->__GET('TA') .'</td>
-          <td> '. $key->__GET('FC') .'</td>
-          <td> '. $key->__GET('FR') .'</td>
-          <td> '. $key->__GET('Temp') .'</td>
-          <td> '. $key->__GET('Glasgow') .'</td>
-          <td> '. $key->__GET('SatO2') .'</td>
-         </tr>
-      <?php endforeach ?>
     </tr>
    </table>
    <br>
@@ -229,10 +217,10 @@ $content ='
       <th colspan="4">Estado Del Paciente Al Finalizar Traslado</th>
     </tr>
      <tr>
-      <td>Estado Del Paciente Al Finalizar Traslado: '.$data->__GET('Sv_ExamenSolicitado').'</td>
+      <td>Estado Del Paciente Al Finalizar Traslado: '.$data->__GET('Estado_ft').'</td>
     </tr>
     <tr>
-      <td>Observaciones Al Momento De La Entrega: '.$data->__GET('Sv_ExamenSolicitado').'</td>
+      <td>Observaciones Al Momento De La Entrega: '.$data->__GET('Obs_entrega').'</td>
     </tr>
    
 </table>
