@@ -191,6 +191,19 @@ $content ='
       <td>Temp: '.$data->__GET('Sv_ExamenSolicitado').'</td>
       <td>Glassgow: '.$data->__GET('Sv_ExamenSolicitado').'</td>
       <td>SatO2: '.$data->__GET('Sv_ExamenSolicitado').'</td>
+
+      <?php '.foreach ($HomeController->ListarxIdServicioOta_Informe_SignosVitales($IdServicio) as $key): '.?>
+        <tr class="text-center">
+          <td> '. (new DateTime($key->__GET('FechaHora')))->format('d/m/Y')  .'</td>
+          <td> '. (new DateTime($key->__GET('FechaHora')))->format('H:i') .'</td>
+          <td> '. $key->__GET('TA') .'</td>
+          <td> '. $key->__GET('FC') .'</td>
+          <td> '. $key->__GET('FR') .'</td>
+          <td> '. $key->__GET('Temp') .'</td>
+          <td> '. $key->__GET('Glasgow') .'</td>
+          <td> '. $key->__GET('SatO2') .'</td>
+         </tr>
+      <?php endforeach ?>
     </tr>
    </table>
    <br>

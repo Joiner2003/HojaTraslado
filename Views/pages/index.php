@@ -399,6 +399,7 @@ if (isset($_GET['IdServicio'])) {
               </div>
             </div>
           </div>
+          <button type="submit" class="btn btn-success" <?php if($data == NULL) echo "disabled title='Guarde el formulario primero'"; ?>><i class="fa fa-plus"></i></button>
         </form>
         <div class="card shadow mb-12">
             <!-- Card Header - Accordion -->
