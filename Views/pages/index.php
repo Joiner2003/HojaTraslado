@@ -383,10 +383,10 @@ if (isset($_GET['IdServicio'])) {
                   <div class="col-sm-12 col-md-12  ">
                     <label>Estado Del Paciente Al Finalizar Traslado</label>
                     <div class="col-sm-12">
-                      <label class="col-sm-4"><input type="radio" class="" id="Estable" name="Estado_ft" value="Estable" <?php if($data != NULL && $data->__GET('Estable') == 1) echo "checked"; ?>> Estable</label>
-                      <label class="col-sm-4"><input type="radio" class="" id="Mejoro" name="Estado_ft" value="Mejoro" <?php if($data != NULL && $data->__GET('Mejoro') == 3) echo "checked"; ?>> Mejoro</label>
-                      <label class="col-sm-4"><input type="radio" class="" id="Descompenso" name="Estado_ft" value="Descompenso" <?php if($data != NULL && $data->__GET('Descompenso') == 2) echo "checked"; ?>> Descompenso</label>
-                      <label class="col-sm-4"><input type="radio" class="" id="Fallecio" name="Estado_ft" value="Fallecio" <?php if($data != NULL && $data->__GET('Fallecio') == 4) echo "checked"; ?>> Fallecio</label>
+                      <label class="col-sm-4"><input type="radio" class="" id="Estado_ft" name="Estado_ft" value="Estable" <?php if($data != NULL && $data->__GET('Estado_ft') == 1) echo "checked"; ?>> Estable</label>
+                      <label class="col-sm-4"><input type="radio" class="" id="Estado_ft" name="Estado_ft" value="Mejoro" <?php if($data != NULL && $data->__GET('Estado_ft') == 3) echo "checked"; ?>> Mejoro</label>
+                      <label class="col-sm-4"><input type="radio" class="" id="Estado_ft" name="Estado_ft" value="Descompenso" <?php if($data != NULL && $data->__GET('Estado_ft') == 2) echo "checked"; ?>> Descompenso</label>
+                      <label class="col-sm-4"><input type="radio" class="" id="Estado_ft" name="Estado_ft" value="Fallecio" <?php if($data != NULL && $data->__GET('Estado_ft') == 4) echo "checked"; ?>> Fallecio</label>
                     </div>
                   </div>
                   </div>
