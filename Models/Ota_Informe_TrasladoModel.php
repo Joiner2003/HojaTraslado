@@ -235,7 +235,19 @@ require_once('../../Models/Conexion/Conexion.php');
 				die($e->getMessage()." -> Ota_Informe_TrasladoModel->Maximo()");
 			}
 		}
-		
+		public function AgregarEstPac($IdServicio, $Ef_Ta, $Ef_Fr, $Ef_Temp, $Ef_Glasgow, $Ef_Dx1, $Ef_Dx2, $Ef_HallazgoPos1, $Ef_Antecedentes1, $Ef_Gin1, $Ef_Gin2, $Ef_Gin3, $Ef_Gin4, $Ef_Gin5, $Estado_ft, $Obs_entrega ){
+			try {
+				$sql = ("UPDATE Ota_Informe_Traslado SET Ef_Ta = ?, Ef_Fr = ?, Ef_Temp= ?, Ef_Glasgow = ?, Ef_Dx1 = ?, Ef_Dx2 = ?, Ef_HallazgoPos1 = ?, Ef_Antecedentes1 = ?, Ef_Gin1 = ?, Ef_Gin2 = ?, Ef_Gin3 = ?, Ef_Gin4 = ?, Ef_Gin5 = ?, Estado_ft = ?, Obs_entrega = ? WHERE IdServicio = ?");
+				$stm = $this->pdo->prepare($sql)->execute(array($IdServicio, $Ef_Ta, $Ef_Fr, $Ef_Temp, $Ef_Glasgow, $Ef_Dx1, $Ef_Dx2, $Ef_HallazgoPos1, $Ef_Antecedentes1, $Ef_Gin1, $Ef_Gin2, $Ef_Gin3, $Ef_Gin4, $Ef_Gin5, $Estado_ft, $Obs_entrega ));
+				if($stm){
+					return true;
+				} else {
+					return false;
+				}
+			} catch (Exception $e) {
+				die($e->getMessage()." ->Ota_Informe_TrasladoModel->Modificar()");
+			} 
+		}
 		// public function Eliminar($IdFormapago) {
 		// 	try {
 		// 		$sql = $this->pdo->prepare("DELETE FROM Ota_Informe_Traslado WHERE IdFormapago = ?");
