@@ -2,7 +2,7 @@
 <?php 
 /**
   * Author:
-  * Ing Alberto Rodriguez
+  * Ing Joiner Escorcia Y Juan Gomez
 *
 **/
 require_once('../../Controllers/HomeController.php');
@@ -399,7 +399,9 @@ if (isset($_GET['IdServicio'])) {
               </div>
             </div>
           </div>
-          <button type="submit" class="btn btn-success" <?php if($data == NULL) echo "disabled title='Guarde el formulario primero'"; ?>><i class="fa fa-plus"></i></button>
+          <hr>
+          <button type="submit" class="btn btn-primary btn-block" <?php if($data == NULL) echo "disabled title='Guardar Informe'"; ?>> Guardar Informe Paciente</button>
+          <hr>
         </form>
         <div class="card shadow mb-12">
             <!-- Card Header - Accordion -->
