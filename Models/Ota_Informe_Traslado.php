@@ -70,6 +70,8 @@
 		private $Tp_Paramedico;
 		private $Tp_Comandante;
 		private $Tp_Medico;
+		private $Estado_ft;
+		private $Obs_entrega;
 
 		public function __GET($k)
 		{
