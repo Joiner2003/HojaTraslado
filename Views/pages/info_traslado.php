@@ -44,7 +44,6 @@ $html = '
     </tr>
 </table><br>
 ';
-
 $content ='
 <table style="width:100%">
   <tr>
@@ -53,7 +52,6 @@ $content ='
   <tr>
     <td colspan="2">Nombres: '.$data->__GET('PteNom1').' '.$data->__GET('Pte_Nom2').'</td>
     <td colspan="2">Apellidos: '.$data->__GET('Pte_Ap1').' '.$data->__GET('Pte_Ap2').' </td>
- 
   </tr>
   <tr>
     <td>Identificación:  '.$data->__GET('Pte_NumDoc').'</td>
@@ -70,14 +68,12 @@ $content ='
   <td></td>
   <td>Direccion: '.$data->__GET('Pte_Direccion').'</td>
   </tr>
-
   <tr>
     <th colspan="4">Informacion Del Acompañante</th>
   </tr>
    <tr>
     <td colspan="2">Nombres: '.$data->__GET('Aco_Nombres').'</td>
     <td colspan="2">Apellidos: '.$data->__GET('Aco_Apellidos').'</td>
- 
   </tr>
   <tr>
     <td>Identificación: '.$data->__GET('Aco_Documento').'</td>
@@ -91,7 +87,6 @@ $content ='
     <th colspan="4">Características Del Servicio</th>
   </tr>
    <tr>
-   <td></td><td colspan="4">Desplazamientos </td>
    </tr>
   <tr>
     <td>Origen 1:  '.$data->__GET('Sv_Origen').'</td>
@@ -119,7 +114,6 @@ $content ='
   <td>Examen Solicitado: '.$data->__GET('Sv_ExamenSolicitado').'</td>
  </tr>
 </table>
-
 <br>
  <table style="width:100% ">
   <tr>
@@ -143,6 +137,8 @@ $content ='
  <tr>
   <td>Antecedentes: '.$data->__GET('Ef_Antecedentes1').'</td>
  </tr>
+ </table>
+ <table style="width:100% ">
  <tr>
    <th colspan="4">Ginecológicos</th>
  </tr>
@@ -150,11 +146,11 @@ $content ='
    <td>G: '.$data->__GET('Ef_Gin1').'</td>
    <td>P: '.$data->__GET('Ef_Gin2').'</td>
    <td>C: '.$data->__GET('Ef_Gin3').'</td>
-   </tr>
-   <tr>
    <td>A: '.$data->__GET('Ef_Gin4').'</td>
    <td>V: '.$data->__GET('Ef_Gin5').'</td>
    </tr>
+   </table>
+ <table style="width:100% ">
    <tr>
    <th colspan="4">Ventilacion Mecánica</th>
  </tr>
@@ -170,12 +166,10 @@ $content ='
    </tr>
    <tr>
   <td>Firma Paciente o Acompañante:  <img src='. $data->__GET('Firma1').'></td>
-   </tr>
-   <tr>
+  <td></td>
   <td>Firma Médico o Enfermera(o) Que Entrega:  <img src='. $data->__GET('Firma2').'></td>
    </tr>
    </table>
-   <br>
    <table style="width:100% ">
      <tr>
       <th colspan="4">Signos Vitales</th>
@@ -194,7 +188,6 @@ $content ='
 
     </tr>
    </table>
-   <br>
    <table style="width:100% ">
      <tr>
       <th colspan="4">Control De Liquidos Y Medicamentos</th>
@@ -210,8 +203,6 @@ $content ='
       <td>Cantidad Infundida: '.$data->__GET('Sv_ExamenSolicitado').'</td>
     </tr>
    </table>
-   <br>
-   <br>
    <table style="width:100% ">
    <tr>
       <th colspan="4">Estado Del Paciente Al Finalizar Traslado</th>
