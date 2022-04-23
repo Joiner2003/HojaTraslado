@@ -162,6 +162,8 @@ if (isset($_GET['IdServicio'])) {
  <tr>
    <th colspan="4">Ginecológicos</th>
  </tr>
+</table>
+ <table style="width:100% ">
  <tr>
    <td><?php echo 'G: '.$data->__GET('Ef_Gin1')?></td>
    <td><?php echo 'P: '.$data->__GET('Ef_Gin2')?></td>
@@ -184,16 +186,13 @@ if (isset($_GET['IdServicio'])) {
    <td><?php echo 'FR: '.$data->__GET('Ef_Modo4')?></td>
    <td><?php echo 'FIOZ: '.$data->__GET('Ef_Modo5')?></td>
    </tr>
-   <tr>
-  <td><?php echo 'Firma Paciente o Acompañante:  <img src='. $data->__GET('Firma1')?>></td>
-  <td></td>
-  <td><?php echo 'Firma Médico o Enfermera(o) Que Entrega:  <img src='. $data->__GET('Firma2')?>></td>
-   </tr>
    </table>
    <table style="width:100% ">
      <tr>
       <th colspan="4">Signos Vitales</th>
     </tr>
+    </table>
+    <table style="width:100% ">
     <tr>
     <?php foreach ($HomeController->ListarxIdServicioOta_Informe_SignosVitales($IdServicio) as $key): ?>
                         <tr class="text-center">
@@ -213,6 +212,8 @@ if (isset($_GET['IdServicio'])) {
      <tr>
       <th colspan="4">Control De Liquidos Y Medicamentos</th>
     </tr>
+    </table>
+    <table style="width:100% ">
     <tr>
     <?php foreach ($HomeController->ListarxIdServicioOta_Informe_Liquidos($IdServicio) as $key): ?>
                         <tr class="text-center">
@@ -236,9 +237,14 @@ if (isset($_GET['IdServicio'])) {
     <tr>
       <td><?php echo 'Observaciones Al Momento De La Entrega: '.$data->__GET('Obs_entrega')?></td>
     </tr>
-
-   
 </table>
+<table style="width:100% ">
+<tr>
+  <td><?php echo 'Firma Paciente o Acompañante:  <img src='. $data->__GET('Firma1')?>></td>
+  <td></td>
+  <td><?php echo 'Firma Médico o Enfermera(o) Que Entrega:  <img src='. $data->__GET('Firma2')?>></td>
+   </tr>
+    </table>
 </body>
 </html>
 
