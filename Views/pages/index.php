@@ -153,14 +153,13 @@ if (isset($_GET['IdServicio'])) {
                   <div class="col-sm-2">
                    <input type="time" class="form-control" id="" name="Fecha1Hora" required value="<?php if($data != NULL) echo (new DateTime($data->__GET('Fecha1')))->format('H:i'); else echo date('H:i'); ?>">
                   </div>
-                  <label class="col-sm-2">Fecha y Hora Final</label>
-                  <div class="col-sm-2">
-                    <input type="date" class="form-control" id="" name="Fecha2" value="<?php if($data != NULL && $data->__GET('Fecha2') != NULL) echo (new DateTime($data->__GET('Fecha2')))->format('Y-m-d') ?>">
-                  </div>
-                  <div class="col-sm-2">
-                    <input type="time" class="form-control" id="" name="Fecha2Hora" value="<?php if($data != NULL && $data->__GET('Fecha2') != NULL) echo (new DateTime($data->__GET('Fecha2')))->format('H:i') ?>">
-                  </div>
+                  <label class="col-sm-1">Ficha</label>
+                  <div class="col-sm-4 mb-3">
+                    <input type="text" class="form-control" id="" name="Ficha" value="<?php if($data != NULL && $data->__GET('Ficha') != NULL) echo $data->__GET('Ficha')?>">
+                  </div>  
+                                 
                 </div>
+
                 <div class="form-group row">
                   <div class="col-sm-4 mb-3">
                     <label>Numero Doc</label>
@@ -177,6 +176,35 @@ if (isset($_GET['IdServicio'])) {
                   <div class="col-sm-2 mb-3">
                     <label>Edad</label>
                     <input type="number" class="form-control" id="" name="Pte_Edad" value="<?php if($data != NULL) echo $data->__GET('Pte_Edad') ?>">
+                  </div>
+                </div>
+
+                <div class="form-group row">
+                  <div class="col-sm-4 mb-3">
+                    <label>Entidad</label>
+                    <input type="text" class="form-control" id="Pte_NumDoc" onblur="buscar();" name="Pte_NumDoc" required value="<?php if($data != NULL) echo $data->__GET('Pte_NumDoc') ?>  ">
+                  </div>
+                  <div class="col-sm-6 mb-2">
+                    <label>Regimen</label>
+                    <br>
+                    <label class="col-sm-4"><input type="radio" class="" id="Sv_Complejidad" name="Sv_Complejidad" value="Basico" <?php if($data != NULL && $data->__GET('Sv_Complejidad') == 1) echo "checked"; ?>> Subsidiado</label>
+                    <label class="col-sm-4"><input type="radio" class="" id="Sv_Complejidad" name="Sv_Complejidad" value="Medicalizado" <?php if($data != NULL && $data->__GET('Sv_Complejidad') == 3) echo "checked"; ?>> Contributivo</label>  
+                  </div>
+                  <div class="col-sm-2 mb-4">
+                    <label>Sexo</label>
+                    <br>
+                    <label class="col-sm-3"><input type="radio" class="" id="Sv_Complejidad" name="Sv_Complejidad" value="Basico" <?php if($data != NULL && $data->__GET('Sv_Complejidad') == 1) echo "checked"; ?>> F</label>
+                    <label class="col-sm-3"><input type="radio" class="" id="Sv_Complejidad" name="Sv_Complejidad" value="Medicalizado" <?php if($data != NULL && $data->__GET('Sv_Complejidad') == 3) echo "checked"; ?>> M</label>  
+                  </div>
+                </div>
+                <div class="form-group row">
+                  <label class="col-sm-2">Télefono</label>
+                  <div class="col-sm-4 mb-3">
+                    <input type="text" class="form-control" id="" name="Aco_Nombres" style="text-transform:uppercase;" value="<?php if($data != NULL) echo $data->__GET('Aco_Nombres') ?>">
+                  </div>
+                  <label class="col-sm-2">Dirección</label>
+                  <div class="col-sm-4 mb-3">
+                    <input type="text" class="form-control" id="" name="Aco_Apellidos" style="text-transform:uppercase;" value="<?php if($data != NULL) echo $data->__GET('Aco_Apellidos') ?>">
                   </div>
                 </div>
                 <div class="form-group row">
