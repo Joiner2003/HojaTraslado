@@ -18,11 +18,11 @@ require_once('../../Models/Conexion/Conexion.php');
 			}
 		}
 
-		public function Agregar($Fecha1, $Ficha, $Pte_NumDoc, $Pte_TipoDoc, $Pte_FechaNac, $Pte_Edad, $Pte_Ap1, $Pte_Ap2, $PteNom1, $Pte_Nom2, $Aco_Nombres, $Aco_Apellidos, $Aco_Documento, $Aco_Perentezco, $Sv_Origen, $Sv_Origen1, $Sv_Origen2, $Sv_Origen3, $Sv_Llegada, $Sv_Llegada1, $Sv_Llegada2, $Sv_Llegada3, $Sv_Salida, $Sv_Salida1, $Sv_Salida2, $Sv_Salida3, $Sv_Complejidad, $Sv_TipoServicio, $Sv_ExamenSolicitado, $Ef_Ta, $Ef_Fr, $Ef_Temp, $Ef_Glasgow, $Ef_Dx1, $Ef_Dx2, $Ef_HallazgoPos1, $Ef_Antecedentes1, $Ef_Gin1, $Ef_Gin2, $Ef_Gin3, $Ef_Gin4, $Ef_Gin5)
+		public function Agregar($Fecha1, $Ficha, $Pte_NumDoc, $Pte_TipoDoc, $Pte_FechaNac, $Pte_Edad,$Entidad,$Pte_Regimen,$Pte_Sexo,$Pte_Telefono,$Pte_Direccion, $Pte_Ap1, $Pte_Ap2, $PteNom1, $Pte_Nom2, $Aco_Nombres, $Aco_Apellidos, $Aco_Documento, $Aco_Perentezco, $Sv_Origen, $Sv_Origen1, $Sv_Origen2, $Sv_Origen3, $Sv_Llegada, $Sv_Llegada1, $Sv_Llegada2, $Sv_Llegada3, $Sv_Salida, $Sv_Salida1, $Sv_Salida2, $Sv_Salida3, $Sv_Complejidad, $Sv_TipoServicio, $Sv_ExamenSolicitado, $Ef_Ta, $Ef_Fr, $Ef_Temp, $Ef_Glasgow, $Ef_Dx1, $Ef_Dx2, $Ef_HallazgoPos1, $Ef_Antecedentes1, $Ef_Gin1, $Ef_Gin2, $Ef_Gin3, $Ef_Gin4, $Ef_Gin5)
 		{
 			try {
-				$sql = ("INSERT INTO Ota_Informe_Traslado (Fecha1, Ficha, Pte_NumDoc, Pte_TipoDoc, Pte_FechaNac, Pte_Edad, Pte_Ap1, Pte_Ap2, PteNom1, Pte_Nom2, Aco_Nombres, Aco_Apellidos, Aco_Documento, Aco_Perentezco, Sv_Origen, Sv_Origen1, Sv_Origen2, Sv_Origen3, Sv_Llegada, Sv_Llegada1, Sv_Llegada2, Sv_Llegada3, Sv_Salida, Sv_Salida1, Sv_Salida2, Sv_Salida3, Sv_Complejidad, Sv_TipoServicio, Sv_ExamenSolicitado, Ef_Ta, Ef_Fr, Ef_Temp, Ef_Glasgow, Ef_Dx1, Ef_Dx2, Ef_HallazgoPos1, Ef_Antecedentes1, Ef_Gin1, Ef_Gin2, Ef_Gin3, Ef_Gin4, Ef_Gin5) VALUES ( ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)");
-				$stm = $this->pdo->prepare($sql)->execute(array($Fecha1, $Ficha, $Pte_NumDoc, $Pte_TipoDoc, $Pte_FechaNac, $Pte_Edad, $Pte_Ap1, $Pte_Ap2, $PteNom1, $Pte_Nom2, $Aco_Nombres, $Aco_Apellidos, $Aco_Documento, $Aco_Perentezco, $Sv_Origen, $Sv_Origen1, $Sv_Origen2, $Sv_Origen3, $Sv_Llegada, $Sv_Llegada1, $Sv_Llegada2, $Sv_Llegada3, $Sv_Salida, $Sv_Salida1, $Sv_Salida2, $Sv_Salida3, $Sv_Complejidad, $Sv_TipoServicio, $Sv_ExamenSolicitado, $Ef_Ta, $Ef_Fr, $Ef_Temp, $Ef_Glasgow, $Ef_Dx1, $Ef_Dx2, $Ef_HallazgoPos1, $Ef_Antecedentes1, $Ef_Gin1, $Ef_Gin2, $Ef_Gin3, $Ef_Gin4, $Ef_Gin5));
+				$sql = ("INSERT INTO Ota_Informe_Traslado (Fecha1, Ficha, Pte_NumDoc, Pte_TipoDoc, Pte_FechaNac, Pte_Edad,Entidad,Pte_Regimen,Pte_Sexo, Pte_Telefono,Pte_Direccion,Pte_Ap1, Pte_Ap2, PteNom1, Pte_Nom2, Aco_Nombres, Aco_Apellidos, Aco_Documento, Aco_Perentezco, Sv_Origen, Sv_Origen1, Sv_Origen2, Sv_Origen3, Sv_Llegada, Sv_Llegada1, Sv_Llegada2, Sv_Llegada3, Sv_Salida, Sv_Salida1, Sv_Salida2, Sv_Salida3, Sv_Complejidad, Sv_TipoServicio, Sv_ExamenSolicitado, Ef_Ta, Ef_Fr, Ef_Temp, Ef_Glasgow, Ef_Dx1, Ef_Dx2, Ef_HallazgoPos1, Ef_Antecedentes1, Ef_Gin1, Ef_Gin2, Ef_Gin3, Ef_Gin4, Ef_Gin5) VALUES ( ?,?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)");
+				$stm = $this->pdo->prepare($sql)->execute(array($Fecha1, $Ficha, $Pte_NumDoc, $Pte_TipoDoc, $Pte_FechaNac, $Pte_Edad,$Entidad,$Pte_Regimen,$Pte_Sexo,$Pte_Telefono,$Pte_Direccion, $Pte_Ap1, $Pte_Ap2, $PteNom1, $Pte_Nom2, $Aco_Nombres, $Aco_Apellidos, $Aco_Documento, $Aco_Perentezco, $Sv_Origen, $Sv_Origen1, $Sv_Origen2, $Sv_Origen3, $Sv_Llegada, $Sv_Llegada1, $Sv_Llegada2, $Sv_Llegada3, $Sv_Salida, $Sv_Salida1, $Sv_Salida2, $Sv_Salida3, $Sv_Complejidad, $Sv_TipoServicio, $Sv_ExamenSolicitado, $Ef_Ta, $Ef_Fr, $Ef_Temp, $Ef_Glasgow, $Ef_Dx1, $Ef_Dx2, $Ef_HallazgoPos1, $Ef_Antecedentes1, $Ef_Gin1, $Ef_Gin2, $Ef_Gin3, $Ef_Gin4, $Ef_Gin5));
 				if($stm){
 					return true;
 				} else {
@@ -33,11 +33,11 @@ require_once('../../Models/Conexion/Conexion.php');
 			}
 		}
 
-		public function Modificar($IdServicio, $Fecha1, $Ficha, $Pte_NumDoc, $Pte_TipoDoc, $Pte_FechaNac, $Pte_Edad, $Pte_Ap1, $Pte_Ap2, $PteNom1, $Pte_Nom2, $Aco_Nombres, $Aco_Apellidos, $Aco_Documento, $Aco_Perentezco, $Sv_Origen, $Sv_Origen1, $Sv_Origen2, $Sv_Origen3, $Sv_Llegada, $Sv_Llegada1, $Sv_Llegada2, $Sv_Llegada3, $Sv_Salida, $Sv_Salida1, $Sv_Salida2, $Sv_Salida3, $Sv_Complejidad, $Sv_TipoServicio, $Sv_ExamenSolicitado)
+		public function Modificar($IdServicio, $Fecha1, $Ficha, $Pte_NumDoc, $Pte_TipoDoc, $Pte_FechaNac, $Pte_Edad,$Entidad,$Pte_Regimen,$Pte_Sexo,$Pte_Telefono,$Pte_Direccion, $Pte_Ap1, $Pte_Ap2, $PteNom1, $Pte_Nom2, $Aco_Nombres, $Aco_Apellidos, $Aco_Documento, $Aco_Perentezco, $Sv_Origen, $Sv_Origen1, $Sv_Origen2, $Sv_Origen3, $Sv_Llegada, $Sv_Llegada1, $Sv_Llegada2, $Sv_Llegada3, $Sv_Salida, $Sv_Salida1, $Sv_Salida2, $Sv_Salida3, $Sv_Complejidad, $Sv_TipoServicio, $Sv_ExamenSolicitado)
 		{
 			try {
-				$sql = ("UPDATE Ota_Informe_Traslado SET Fecha1 = ?, Ficha = ?, Pte_NumDoc = ?, Pte_TipoDoc = ?, Pte_FechaNac = ?, Pte_Edad = ?, Pte_Ap1 = ?, Pte_Ap2 = ?, PteNom1 = ?, Pte_Nom2 = ?, Aco_Nombres = ?, Aco_Apellidos = ?, Aco_Documento = ?, Aco_Perentezco = ?, Sv_Origen = ?, Sv_Origen1 = ?, Sv_Origen2 = ?, Sv_Origen3 = ?, Sv_Llegada = ?, Sv_Llegada1 = ?, Sv_Llegada2 = ?, Sv_Llegada3 = ?, Sv_Salida = ?, Sv_Salida1 = ?, Sv_Salida2 = ?, Sv_Salida3 = ?, Sv_Complejidad = ?, Sv_TipoServicio = ?, Sv_ExamenSolicitado = ? WHERE IdServicio = ?");
-				$stm = $this->pdo->prepare($sql)->execute(array($Fecha1, $Ficha, $Pte_NumDoc, $Pte_TipoDoc, $Pte_FechaNac, $Pte_Edad, $Pte_Ap1, $Pte_Ap2, $PteNom1, $Pte_Nom2, $Aco_Nombres, $Aco_Apellidos, $Aco_Documento, $Aco_Perentezco, $Sv_Origen, $Sv_Origen1, $Sv_Origen2, $Sv_Origen3, $Sv_Llegada, $Sv_Llegada1, $Sv_Llegada2, $Sv_Llegada3, $Sv_Salida, $Sv_Salida1, $Sv_Salida2, $Sv_Salida3, $Sv_Complejidad, $Sv_TipoServicio, $Sv_ExamenSolicitado,  $IdServicio));
+				$sql = ("UPDATE Ota_Informe_Traslado SET Fecha1 = ?, Ficha = ?, Pte_NumDoc = ?, Pte_TipoDoc = ?, Pte_FechaNac = ?, Pte_Edad = ?, Entidad= ?, Pte_Regimen= ?,Pte_Sexo= ?, Pte_Telefono= ?,Pte_Direccion=?,Pte_Ap1 = ?, Pte_Ap2 = ?, PteNom1 = ?, Pte_Nom2 = ?, Aco_Nombres = ?, Aco_Apellidos = ?, Aco_Documento = ?, Aco_Perentezco = ?, Sv_Origen = ?, Sv_Origen1 = ?, Sv_Origen2 = ?, Sv_Origen3 = ?, Sv_Llegada = ?, Sv_Llegada1 = ?, Sv_Llegada2 = ?, Sv_Llegada3 = ?, Sv_Salida = ?, Sv_Salida1 = ?, Sv_Salida2 = ?, Sv_Salida3 = ?, Sv_Complejidad = ?, Sv_TipoServicio = ?, Sv_ExamenSolicitado = ? WHERE IdServicio = ?");
+				$stm = $this->pdo->prepare($sql)->execute(array($Fecha1, $Ficha, $Pte_NumDoc, $Pte_TipoDoc, $Pte_FechaNac, $Pte_Edad, $Entidad,$Pte_Regimen,$Pte_Sexo,$Pte_Telefono,$Pte_Direccion, $Pte_Ap1, $Pte_Ap2, $PteNom1, $Pte_Nom2, $Aco_Nombres, $Aco_Apellidos, $Aco_Documento, $Aco_Perentezco, $Sv_Origen, $Sv_Origen1, $Sv_Origen2, $Sv_Origen3, $Sv_Llegada, $Sv_Llegada1, $Sv_Llegada2, $Sv_Llegada3, $Sv_Salida, $Sv_Salida1, $Sv_Salida2, $Sv_Salida3, $Sv_Complejidad, $Sv_TipoServicio, $Sv_ExamenSolicitado,  $IdServicio));
 				if($stm){
 					return true;
 				} else {
@@ -70,10 +70,11 @@ require_once('../../Models/Conexion/Conexion.php');
 					$entity->__SET('Pte_NumDoc',$r->Pte_NumDoc);
 					$entity->__SET('Pte_FechaNac',$r->Pte_FechaNac);
 					$entity->__SET('Pte_Edad',$r->Pte_Edad);
+					$entity->__SET('Entidad',$r->Entidad);
 					$entity->__SET('Pte_Regimen',$r->Pte_Regimen);
 					$entity->__SET('Pte_Sexo',$r->Pte_Sexo);
-					$entity->__SET('Pte_Direccion',$r->Pte_Direccion);
 					$entity->__SET('Pte_Telefono',$r->Pte_Telefono);
+					$entity->__SET('Pte_Direccion',$r->Pte_Direccion);
 					$entity->__SET('Aco_Nombres',$r->Aco_Nombres);
 					$entity->__SET('Aco_Apellidos',$r->Aco_Apellidos);
 					$entity->__SET('Aco_Documento',$r->Aco_Documento);
@@ -155,10 +156,11 @@ require_once('../../Models/Conexion/Conexion.php');
 					$entity->__SET('Pte_NumDoc',$r->Pte_NumDoc);
 					$entity->__SET('Pte_FechaNac',$r->Pte_FechaNac);
 					$entity->__SET('Pte_Edad',$r->Pte_Edad);
+					$entity->__SET('Entidad',$r->Entidad);
 					$entity->__SET('Pte_Regimen',$r->Pte_Regimen);
 					$entity->__SET('Pte_Sexo',$r->Pte_Sexo);
-					$entity->__SET('Pte_Direccion',$r->Pte_Direccion);
 					$entity->__SET('Pte_Telefono',$r->Pte_Telefono);
+					$entity->__SET('Pte_Direccion',$r->Pte_Direccion);
 					$entity->__SET('Aco_Nombres',$r->Aco_Nombres);
 					$entity->__SET('Aco_Apellidos',$r->Aco_Apellidos);
 					$entity->__SET('Aco_Documento',$r->Aco_Documento);

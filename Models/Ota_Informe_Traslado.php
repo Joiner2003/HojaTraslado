@@ -19,6 +19,7 @@
 		private $Pte_NumDoc;
 		private $Pte_FechaNac;
 		private $Pte_Edad;
+		private $Entidad;
 		private $Pte_Regimen;
 		private $Pte_Sexo;
 		private $Pte_Direccion;
