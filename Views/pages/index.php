@@ -146,18 +146,19 @@ if (isset($_GET['IdServicio'])) {
             <div class="collapse show" id="DatosPaciente">
               <div class="card-body">
                 <div class="form-group row">
-                  <label class="col-sm-2">Fecha y Hora Inicial</label>
-                  <div class="col-sm-2">
-                    <input type="date" class="form-control" id="" name="Fecha1" required value="<?php if($data != NULL) echo (new DateTime($data->__GET('Fecha1')))->format('Y-m-d'); else echo date('Y-m-d'); ?>">
-                  </div>
-                  <div class="col-sm-2">
-                   <input type="time" class="form-control" id="" name="Fecha1Hora" required value="<?php if($data != NULL) echo (new DateTime($data->__GET('Fecha1')))->format('H:i'); else echo date('H:i'); ?>">
-                  </div>
-                  <label class="col-sm-1">Ficha</label>
-                  <div class="col-sm-4 mb-3">
-                    <input type="text" class="form-control" id="" name="Ficha" value="<?php if($data != NULL && $data->__GET('Ficha') != NULL) echo $data->__GET('Ficha')?>">
-                  </div>  
-                                 
+                <div class="col-sm-4 mb-3">
+                  <label>Fecha Inicial</label>
+                  <input type="date" class="form-control" id="" name="Fecha1" required value="<?php if($data != NULL) echo (new DateTime($data->__GET('Fecha1')))->format('Y-m-d'); else echo date('Y-m-d'); ?>">
+                </div>
+                <div class="col-sm-4 mb-3">
+                  <label>Hora Inicial</label>
+                  <input type="time" class="form-control" id="" name="Fecha1Hora" required value="<?php if($data != NULL) echo (new DateTime($data->__GET('Fecha1')))->format('H:i'); else echo date('H:i'); ?>">
+                </div>
+                <div class="col-sm-4 mb-3">
+                  <label>Ficha</label>
+                  <input type="text" class="form-control" id="" name="Ficha" value="<?php if($data != NULL && $data->__GET('Ficha') != NULL) echo $data->__GET('Ficha')?>">
+                </div>
+                        
                 </div>
 
                 <div class="form-group row">
