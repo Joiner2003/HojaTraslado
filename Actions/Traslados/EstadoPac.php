@@ -84,13 +84,13 @@ if(!isset($_SESSION["Usuario"])){
 	/*	unlink("Sv_Firma_Pte.png");
 		unlink("En_Firma.png");
 		unlink("Sv_Firma_Entrega.png");*/
-		header("location: ../../Views/pages/buscar.php");
+		header("location: ../../Views/pages/index.php?IdServicio=".$IdServicio);
 	}else{
 		$msg->error('¡ERROR, no se Agrego!..');
 	/*	unlink("Sv_Firma_Pte.png");
 		unlink("En_Firma.png");
 		unlink("Sv_Firma_Entrega.png");*/
-		header("location: ../../Views/pages/buscar.php");
+		header("location: ../../Views/pages/index.php?IdServicio=".$IdServicio);
 	}
 }
 ?>

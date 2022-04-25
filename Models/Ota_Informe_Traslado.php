@@ -10,8 +10,7 @@
 		private $IdServicio;
 		private $Fecha1;
 		private $Fecha1Hora;
-		private $Fecha2;
-		private $Fecha2Hora;
+		private $Ficha;
 		private $Pte_Ap1;
 		private $Pte_Ap2;
 		private $PteNom1;
