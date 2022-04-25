@@ -403,34 +403,36 @@ if (isset($_GET['IdServicio'])) {
 
           <div class="card shadow mb-4">
             <!-- Card Header - Accordion -->
-            <a href="#collapseCardEstadoPaciente" class="d-block card-header py-3 bg-gradient-light" data-toggle="collapse" role="button" aria-expanded="true" aria-controls="collapseCardEstadoPaciente">
-              <h6 class="m-0 font-weight-bold text-primary">ESTADO DEL PACIENTE AL FINALIZAR TRASLADO</h6>
+            <a href="#collapseCardConvenciones" class="d-block card-header py-3 bg-gradient-light" data-toggle="collapse" role="button" aria-expanded="true" aria-controls="collapseCardConvenciones">
+              <h6 class="m-0 font-weight-bold text-primary">CONVENCIONES</h6>
             </a>
             <!-- Card Content - Collapse -->
-            <div class="collapse show" id="collapseCardEstadoPaciente">
+            <div class="collapse show" id="collapseCardConvenciones">
               <div class="card-body">
                   <div class="form-group row">
                   <div class="col-sm-12 col-md-12  ">
-                    <label>Estado Del Paciente Al Finalizar Traslado</label>
+                    <label>Convenciones</label>
                     <div class="col-sm-12">
-                      <label class="col-sm-4"><input type="radio" class="" id="Estado_ft" name="Estado_ft" value="Estable" <?php if($data != NULL && $data->__GET('Estado_ft') == 1) echo "checked"; ?>> Estable</label>
-                      <label class="col-sm-4"><input type="radio" class="" id="Estado_ft" name="Estado_ft" value="Mejoro" <?php if($data != NULL && $data->__GET('Estado_ft') == 3) echo "checked"; ?>> Mejoro</label>
-                      <label class="col-sm-4"><input type="radio" class="" id="Estado_ft" name="Estado_ft" value="Descompenso" <?php if($data != NULL && $data->__GET('Estado_ft') == 2) echo "checked"; ?>> Descompenso</label>
-                      <label class="col-sm-4"><input type="radio" class="" id="Estado_ft" name="Estado_ft" value="Fallecio" <?php if($data != NULL && $data->__GET('Estado_ft') == 4) echo "checked"; ?>> Fallecio</label>
+                      <label class="col-sm-2"><input type="radio" class="" id="Convenciones" name="Convenciones" value="SATO2" <?php if($data != NULL && $data->__GET('Convenciones') == 1) echo "checked"; ?>> SATO2</label>
+                      <label class="col-sm-2"><input type="radio" class="" id="Convenciones" name="Convenciones" value="SIST" <?php if($data != NULL && $data->__GET('Convenciones') == 3) echo "checked"; ?>> SIST</label>
+                      <label class="col-sm-2"><input type="radio" class="" id="Convenciones" name="Convenciones" value="F.R" <?php if($data != NULL && $data->__GET('Convenciones') == 2) echo "checked"; ?>> F.R</label>
+                      <label class="col-sm-2"><input type="radio" class="" id="Convenciones" name="Convenciones" value="F.C" <?php if($data != NULL && $data->__GET('Convenciones') == 4) echo "checked"; ?>> F.C</label>
+                      <label class="col-sm-2"><input type="radio" class="" id="Convenciones" name="Convenciones" value="TEMP" <?php if($data != NULL && $data->__GET('Convenciones') == 5) echo "checked"; ?>> TEMP</label>
+                      <label class="col-sm-2"><input type="radio" class="" id="Convenciones" name="Convenciones" value="DIAS" <?php if($data != NULL && $data->__GET('Convenciones') == 6) echo "checked"; ?>> DÍAS</label>
                     </div>
                   </div>
                   </div>
 
                 <div class="form-group row">
                   <div class="col-sm-12 mb-3 text-center">
-                    <textarea class="form-control" name="Obs_entrega" rows="4" style="resize: vertical;" placeholder="Observaciones al momento de la entrega..."><?php if($data != NULL) echo $data->__GET('Obs_entrega') ?></textarea>
+                    <textarea class="form-control" name="Obs_conv" rows="4" style="resize: vertical;" placeholder="Observaciones..."><?php if($data != NULL) echo $data->__GET('Obs_conv') ?></textarea>
                   </div>
                 </div>
               </div>
             </div>
           </div>
 
-          
+
           <div class="card shadow mb-4">
             <!-- Card Header - Accordion -->
             <a href="#collapseCardEstadoPaciente" class="d-block card-header py-3 bg-gradient-light" data-toggle="collapse" role="button" aria-expanded="true" aria-controls="collapseCardEstadoPaciente">
@@ -459,6 +461,54 @@ if (isset($_GET['IdServicio'])) {
               </div>
             </div>
           </div>
+
+          <div class="card shadow mb-4">
+            <!-- Card Header - Accordion -->
+            <a href="#collapseCardTripulacion" class="d-block card-header py-3 bg-gradient-light" data-toggle="collapse" role="button" aria-expanded="true" aria-controls="collapseCardTripulacion">
+              <h6 class="m-0 font-weight-bold text-primary">TRIPILACION QUE REALIZA TRASLADO</h6>
+            </a>
+            <!-- Card Content - Collapse -->
+            <div class="collapse show" id="collapseCardTripulacion">
+              <div class="card-body">
+              <div class="form-group row">
+                    <label>Paramédico</label>
+                    <div class="col-sm-3 mb-3">
+                    <input type="text" class="form-control" id="" name="Parame" style="text-transform:uppercase;" required value="<?php if($data != NULL) echo $data->__GET('Parame') ?>">
+                  </div>     
+                    <label>C.C</label>
+                    <div class="col-sm-3 mb-3">
+                    <input type="number" class="form-control" id="" name="ccparame" style="text-transform:uppercase;" value="<?php if($data != NULL) echo $data->__GET('ccparame') ?>">
+                  </div>
+                </div>
+              </div>
+              <div class="card-body">
+              <div class="form-group row">
+                    <label>Comandante</label>
+                    <div class="col-sm-3 mb-3">
+                    <input type="text" class="form-control" id="" name="Coman" style="text-transform:uppercase;" required value="<?php if($data != NULL) echo $data->__GET('Coman') ?>">
+                  </div>     
+                    <label>C.C</label>
+                    <div class="col-sm-3 mb-3">
+                    <input type="number" class="form-control" id="" name="ccoman" style="text-transform:uppercase;" value="<?php if($data != NULL) echo $data->__GET('ccoman') ?>">
+                  </div>
+                </div>
+              </div>
+              <div class="card-body">
+              <div class="form-group row">
+                    <label>Médico</label>
+                    <div class="col-sm-3 mb-3">
+                    <input type="text" class="form-control" id="" name="Medico" style="text-transform:uppercase;" required value="<?php if($data != NULL) echo $data->__GET('Medico') ?>">
+                  </div>     
+                    <label>C.C</label>
+                    <div class="col-sm-3 mb-3">
+                    <input type="number" class="form-control" id="" name="ccmedico" style="text-transform:uppercase;" value="<?php if($data != NULL) echo $data->__GET('ccmedico') ?>">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
           <hr>
           <button type="submit" class="btn btn-primary btn-block" <?php if($data == NULL) echo "disabled title='Guardar Informe'"; ?>> Guardar Informe Paciente</button>
           <hr>
