@@ -185,13 +185,14 @@ if (isset($_GET['IdServicio'])) {
                     <label>Entidad</label>
                     <input type="text" class="form-control" id="Pte_NumDoc" onblur="buscar();" name="Pte_NumDoc" required value="<?php if($data != NULL) echo $data->__GET('Pte_NumDoc') ?>  ">
                   </div>
-                  <div class="col-sm-6 mb-2">
+                  <div class="col-sm-4 mb-3">
                     <label>Regimen</label>
                     <br>
-                    <label class="col-sm-4"><input type="radio" class="" id="Sv_Complejidad" name="Sv_Complejidad" value="Basico" <?php if($data != NULL && $data->__GET('Sv_Complejidad') == 1) echo "checked"; ?>> Subsidiado</label>
-                    <label class="col-sm-4"><input type="radio" class="" id="Sv_Complejidad" name="Sv_Complejidad" value="Medicalizado" <?php if($data != NULL && $data->__GET('Sv_Complejidad') == 3) echo "checked"; ?>> Contributivo</label>  
+                    <label ><input type="radio" class="" id="Sv_Complejidad" name="Sv_Complejidad" value="Basico" <?php if($data != NULL && $data->__GET('Sv_Complejidad') == 1) echo "checked"; ?>> Subsidiado</label>
+                    <br>
+                    <label ><input type="radio" class="" id="Sv_Complejidad" name="Sv_Complejidad" value="Medicalizado" <?php if($data != NULL && $data->__GET('Sv_Complejidad') == 3) echo "checked"; ?>> Contributivo</label>  
                   </div>
-                  <div class="col-sm-2 mb-4">
+                  <div class="col-sm-4 mb-3">
                     <label>Sexo</label>
                     <br>
                     <label class="col-sm-3"><input type="radio" class="" id="Sv_Complejidad" name="Sv_Complejidad" value="Basico" <?php if($data != NULL && $data->__GET('Sv_Complejidad') == 1) echo "checked"; ?>> F</label>
