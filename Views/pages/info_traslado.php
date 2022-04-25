@@ -264,7 +264,7 @@ $dompdf->loadHtml($html);
 $dompdf->setPaper('A4', 'portrait');
 
 $dompdf->render();
-$dompdf->stream("traslado_.pdf", array("Attachment"=>false))
+$dompdf->stream($data->__GET('Pte_NumDoc').$data->__GET('Pte_Ap1').$data->__GET('PteNom1').'.pdf', array("Attachment"=>false))
 /*$pdf->SetHeader($html);
 $pdf->WriteHTML($content); 
 $pdf->Output();*/
