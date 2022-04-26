@@ -47,21 +47,21 @@ if (isset($_GET['IdServicio'])) {
            <?php echo $ips->__GET('Direccion')?><br>
            <?php echo $ips->__GET('Municipio').' '.$ips->__GET('Departamento')?><br>
            <?php echo "Telefono:".$ips->__GET('Telefono')?>
-        </td>
-        <td colspan="1"><strong>Codigo:</strong></td>
-        <td colspan="1" align="center"></td>
-    </tr>
-    <tr>
-        <td colspan="1"><strong>Version:</strong></td>
-        <td colspan="1" align="center"></td>
-    </tr>
-    <tr>
-        <td colspan="1"><strong>Fecha:</strong></td>
-        <td colspan="1" align="center"><?php echo date('d/m/Y')?></td>
-    </tr>
+          </td>
+          <td colspan="1"><strong>Fecha:</strong></td>
+          <td colspan="1" align="center"><?php echo date('d/m/Y')?></td>
+        </tr>
+        <tr>
+          <td colspan="1"><strong>N° Servicio: </strong></td>
+          <td colspan="1" align="center"><?php echo $data->__GET('IdServicio')?></td>
+        </tr>
+        <tr>
+          <td colspan="1"><strong>Ficha: </strong></td>
+          <td colspan="1" align="center"><?php echo $data->__GET('Ficha')?></td>
+          </tr>
     <tr>
         <td colspan="1"><strong>Pagina:</strong></td>
-        <td colspan="1" align="center"><?php echo  "PAGE_NUM of PAGE_COUNT"?></td>
+        <td colspan="1" align="center"><?php echo  ""?></td>
     </tr>
 </table><br>
 
@@ -80,7 +80,7 @@ if (isset($_GET['IdServicio'])) {
     </tr>
     <tr>
     <td><?php echo "Fecha Nacimiento: " .$data->__GET('Pte_FechaNac')?></td>
-    <td>Entidad:</td>
+    <td><?php echo "Entidad: " .$data->__GET('Entidad')?></td>
     <td><?php echo "Regimen: ".$data->__GET('Pte_Regimen')?></td>
   </tr>
    <tr>
