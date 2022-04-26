@@ -439,6 +439,11 @@ if (isset($_GET['IdServicio'])) {
               </div>
             </div>
           </div>
+          <br>
+
+          <hr>
+          <button type="submit" class="btn btn-primary btn-block" <?php if($data == NULL) echo "disabled title='Guardar Informe'"; ?>> Guardar Informe Paciente</button>
+          <hr>
         </form>
         
             
@@ -470,11 +475,7 @@ if (isset($_GET['IdServicio'])) {
               </div>
             </div>
           </div>-->
-          <br>
-
-          <hr>
-          <button type="submit" class="btn btn-primary btn-block" <?php if($data == NULL) echo "disabled title='Guardar Informe'"; ?>> Guardar Informe Paciente</button>
-          <hr>
+          
 
         <div class="card shadow mb-4">
           <!-- Card Header - Accordion -->

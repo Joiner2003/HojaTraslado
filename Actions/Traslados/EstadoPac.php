@@ -37,10 +37,14 @@ if(!isset($_SESSION["Usuario"])){
 	$Ef_Gin3 = $_POST['Ef_Gin3'];
 	$Ef_Gin4 = $_POST['Ef_Gin4'];
 	$Ef_Gin5 = $_POST['Ef_Gin5'];
-	if(isset($_POST['Convenciones'])){$Convenciones = $_POST['Convenciones'];}else{$Convenciones = 0;}
+	$Conven_1 = $_POST['Conven_1'];
+	$Conven_2 = $_POST['Conven_2'];
+	$Conven_3 = $_POST['Conven_3'];
+	$Conven_4 = $_POST['Conven_4'];
+	$Conven_5 = $_POST['Conven_5'];
+	$Conven_6 = $_POST['Conven_6'];
 	$Obs_conv = $_POST['Obs_conv'];
-	/*if(isset($_POST['Estado_ft'])){$Estado_ft = $_POST['Estado_ft'];}else{$Estado_ft = 0;}
-    $Obs_entrega = $_POST['Obs_entrega'];*/
+
 	
     
 
@@ -82,7 +86,7 @@ if(!isset($_SESSION["Usuario"])){
 
 	// var_dump($Fecha1, $Fecha2, $Pte_NumDoc, $Pte_TipoDoc, $Pte_FechaNac, $Pte_Edad, $Pte_Ap1, $Pte_Ap2, $PteNom1, $Pte_Nom2, $Aco_Nombres, $Aco_Apellidos, $Aco_Documento, $Aco_Perentezco, $Sv_Origen, $Sv_Origen1, $Sv_Origen2, $Sv_Origen3, $Sv_Llegada, $Sv_Llegada1, $Sv_Llegada2, $Sv_Llegada3, $Sv_Salida, $Sv_Salida1, $Sv_Salida2, $Sv_Salida3, $Sv_Complejidad, $Sv_TipoServicio, $Sv_ExamenSolicitado, $Ef_Ta, $Ef_Fr, $Ef_Temp, $Ef_Glasgow, $Ef_Dx1, $Ef_Dx2, $Ef_HallazgoPos1, $Ef_Antecedentes1, $Ef_Gin1, $Ef_Gin2, $Ef_Gin3, $Ef_Gin4, $Ef_Gin5);
 
-	if($HomeController->AgregarOta_Estado_Paciente($IdServicio, $Ef_Ta, $Ef_Fr, $Ef_Temp, $Ef_Glasgow, $Ef_Dx1, $Ef_Dx2, $Ef_HallazgoPos1, $Ef_Antecedentes1, $Ef_Gin1, $Ef_Gin2, $Ef_Gin3, $Ef_Gin4, $Ef_Gin5, $Convenciones,$Obs_conv ) == true){
+	if($HomeController->AgregarOta_Estado_Paciente($IdServicio, $Ef_Ta, $Ef_Fr, $Ef_Temp, $Ef_Glasgow, $Ef_Dx1, $Ef_Dx2, $Ef_HallazgoPos1, $Ef_Antecedentes1, $Ef_Gin1, $Ef_Gin2, $Ef_Gin3, $Ef_Gin4, $Ef_Gin5, $Conven_1,$Conven_2,$Conven_3,$Conven_4,$Conven_5,$Conven_6,$Obs_conv ) == true){
 
 		$msg->success('!Agregado con exito¡');
 	/*	unlink("Sv_Firma_Pte.png");
