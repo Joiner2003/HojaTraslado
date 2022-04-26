@@ -183,30 +183,30 @@ if (isset($_GET['IdServicio'])) {
                 <div class="form-group row">
                   <div class="col-sm-4 mb-3">
                     <label>Entidad</label>
-                    <input type="text" class="form-control" id="Pte_NumDoc" onblur="buscar();" name="Pte_NumDoc" required value="<?php if($data != NULL) echo $data->__GET('Pte_NumDoc') ?>  ">
+                    <input type="text" class="form-control"  name="Entidad" required value="<?php if($data != NULL) echo $data->__GET('Entidad') ?>  ">
                   </div>
                   <div class="col-sm-4 mb-3">
                     <label>Regimen</label>
                     <br>
-                    <label ><input type="radio" class="" id="Regimen" name="Regimen" value="Subsidiado" <?php if($data != NULL && $data->__GET('Regimen') == 1) echo "checked"; ?>> Subsidiado</label>
+                    <label ><input type="radio" class="" id="Pte_Regimen" name="Pte_Regimen" value="Subsidiado" <?php if($data != NULL && $data->__GET('Pte_Regimen') == "Subsidiado") echo "checked"; ?>> Subsidiado</label>
                     <br>
-                    <label ><input type="radio" class="" id="Regimen" name="Regimen" value="Contributivo" <?php if($data != NULL && $data->__GET('Regimen') == 3) echo "checked"; ?>> Contributivo</label>  
+                    <label ><input type="radio" class="" id="Pte_Regimen" name="Pte_Regimen" value="Contributivo" <?php if($data != NULL && $data->__GET('Pte_Regimen') == "Contributivo") echo "checked"; ?>> Contributivo</label>  
                   </div>
                   <div class="col-sm-4 mb-3">
                     <label>Sexo</label>
                     <br>
-                    <label class="col-sm-3"><input type="radio" class="" id="Sexo" name="Sexo" value="Femenino" <?php if($data != NULL && $data->__GET('Sexo') == 1) echo "checked"; ?>> F</label>
-                    <label class="col-sm-3"><input type="radio" class="" id="Sexo" name="Sexo" value="Masculino" <?php if($data != NULL && $data->__GET('Sexo') == 3) echo "checked"; ?>> M</label>  
+                    <label class="col-sm-3"><input type="radio" class="" id="Pte_Sexo" name="Pte_Sexo" value="F" <?php if($data != NULL && $data->__GET('Pte_Sexo') == "F") echo "checked"; ?>> F</label>
+                    <label class="col-sm-3"><input type="radio" class="" id="Pte_Sexo" name="Pte_Sexo" value="M" <?php if($data != NULL && $data->__GET('Pte_Sexo') == "M") echo "checked"; ?>> M</label>  
                   </div>
                 </div>
                 <div class="form-group row">
                   <label class="col-sm-2">Télefono</label>
                   <div class="col-sm-4 mb-3">
-                    <input type="number" class="form-control" id="" name="Tele"  value="<?php if($data != NULL) echo $data->__GET('Tele') ?>">
+                    <input type="number" class="form-control" id="" name="Pte_Telefono"  value="<?php if($data != NULL) echo $data->__GET('Pte_Telefono') ?>">
                   </div>
                   <label class="col-sm-2">Dirección</label>
                   <div class="col-sm-4 mb-3">
-                    <input type="text" class="form-control" id="" name="Direccion" value="<?php if($data != NULL) echo $data->__GET('Direccion') ?>">
+                    <input type="text" class="form-control" id="" name="Pte_Direccion" value="<?php if($data != NULL) echo $data->__GET('Pte_Direccion') ?>">
                   </div>
                 </div>
                 <div class="form-group row">
@@ -286,19 +286,19 @@ if (isset($_GET['IdServicio'])) {
                   <div class="col-sm-12 col-md-12  col-lg-6 my-3 text-center">
                     <label>Complejidad</label>
                     <div class="col-sm-12">
-                      <label class="col-sm-4"><input type="radio" class="" id="Sv_Complejidad" name="Sv_Complejidad" value="Basico" <?php if($data != NULL && $data->__GET('Sv_Complejidad') == 1) echo "checked"; ?>> Basico</label>
-                      <label class="col-sm-4"><input type="radio" class="" id="Sv_Complejidad" name="Sv_Complejidad" value="Medicalizado" <?php if($data != NULL && $data->__GET('Sv_Complejidad') == 3) echo "checked"; ?>> Medicalizado</label>
-                      <label class="col-sm-4"><input type="radio" class="" id="Sv_Complejidad" name="Sv_Complejidad" value="Neonatal" <?php if($data != NULL && $data->__GET('Sv_Complejidad') == 2) echo "checked"; ?>> Neonatal</label>
-                      <label class="col-sm-4"><input type="radio" class="" id="Sv_Complejidad" name="Sv_Complejidad" value="Otro" <?php if($data != NULL && $data->__GET('Sv_Complejidad') == 4) echo "checked"; ?>> Otro</label>
+                      <label class="col-sm-4"><input type="radio" class="" id="Sv_Complejidad" name="Sv_Complejidad" value="Basico" <?php if($data != NULL && $data->__GET('Sv_Complejidad') == "BASICO") echo "checked"; ?>> Basico</label>
+                      <label class="col-sm-4"><input type="radio" class="" id="Sv_Complejidad" name="Sv_Complejidad" value="Medicalizado" <?php if($data != NULL && $data->__GET('Sv_Complejidad') == "MEDICALIZADO") echo "checked"; ?>> Medicalizado</label>
+                      <label class="col-sm-4"><input type="radio" class="" id="Sv_Complejidad" name="Sv_Complejidad" value="Neonatal" <?php if($data != NULL && $data->__GET('Sv_Complejidad') == "NEONATAL") echo "checked"; ?>> Neonatal</label>
+                      <label class="col-sm-4"><input type="radio" class="" id="Sv_Complejidad" name="Sv_Complejidad" value="Otro" <?php if($data != NULL && $data->__GET('Sv_Complejidad') == "OTRO") echo "checked"; ?>> Otro</label>
                     </div>
                   </div>
                   <div class="col-sm-12 col-md-12  col-lg-6 my-3 text-center">
                     <label>Tipo Servicio</label>
                     <div class="col-sm-12">
-                      <label class="col-sm-4"><input type="radio" class="" id="Sv_TipoServicio" name="Sv_TipoServicio" value="Sencillo" <?php if($data != NULL && $data->__GET('Sv_TipoServicio') == 1) echo "checked"; ?>> Sencillo</label>
-                      <label class="col-sm-4"><input type="radio" class="" id="Sv_TipoServicio" name="Sv_TipoServicio" value="Viaje" <?php if($data != NULL && $data->__GET('Sv_TipoServicio') == 3) echo "checked"; ?>> Viaje</label>
-                      <label class="col-sm-4"><input type="radio" class="" id="Sv_TipoServicio" name="Sv_TipoServicio" value="Doble" <?php if($data != NULL && $data->__GET('Sv_TipoServicio') == 2) echo "checked"; ?>> Doble</label>
-                      <label class="col-sm-4"><input type="radio" class="" id="Sv_TipoServicio" name="Sv_TipoServicio" value="Evento" <?php if($data != NULL && $data->__GET('Sv_TipoServicio') == 4) echo "checked"; ?>> Evento</label>
+                      <label class="col-sm-4"><input type="radio" class="" id="Sv_TipoServicio" name="Sv_TipoServicio" value="Sencillo" <?php if($data != NULL && $data->__GET('Sv_TipoServicio') == "SENCILLO") echo "checked"; ?>> Sencillo</label>
+                      <label class="col-sm-4"><input type="radio" class="" id="Sv_TipoServicio" name="Sv_TipoServicio" value="Viaje" <?php if($data != NULL && $data->__GET('Sv_TipoServicio') == "VIAJE") echo "checked"; ?>> Viaje</label>
+                      <label class="col-sm-4"><input type="radio" class="" id="Sv_TipoServicio" name="Sv_TipoServicio" value="Doble" <?php if($data != NULL && $data->__GET('Sv_TipoServicio') == "DOBLE") echo "checked"; ?>> Doble</label>
+                      <label class="col-sm-4"><input type="radio" class="" id="Sv_TipoServicio" name="Sv_TipoServicio" value="Evento" <?php if($data != NULL && $data->__GET('Sv_TipoServicio') == "EVENTO") echo "checked"; ?>> Evento</label>
                     </div>
                   </div>
                 </div>
