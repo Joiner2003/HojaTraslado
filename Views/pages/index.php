@@ -413,12 +413,12 @@ if (isset($_GET['IdServicio'])) {
                   <div class="col-sm-12 col-md-12  ">
                     
                     <div class="col-sm-12">
-                      <label class="col-sm-2"><input type="radio" class="" id="Convenciones" name="Convenciones" value="SATO2" <?php if($data != NULL && $data->__GET('Convenciones') == 1) echo "checked"; ?>> SATO2</label>
-                      <label class="col-sm-2"><input type="radio" class="" id="Convenciones" name="Convenciones" value="SIST" <?php if($data != NULL && $data->__GET('Convenciones') == 3) echo "checked"; ?>> SIST</label>
-                      <label class="col-sm-2"><input type="radio" class="" id="Convenciones" name="Convenciones" value="F.R" <?php if($data != NULL && $data->__GET('Convenciones') == 2) echo "checked"; ?>> F.R</label>
-                      <label class="col-sm-2"><input type="radio" class="" id="Convenciones" name="Convenciones" value="F.C" <?php if($data != NULL && $data->__GET('Convenciones') == 4) echo "checked"; ?>> F.C</label>
-                      <label class="col-sm-2"><input type="radio" class="" id="Convenciones" name="Convenciones" value="TEMP" <?php if($data != NULL && $data->__GET('Convenciones') == 5) echo "checked"; ?>> TEMP</label>
-                      <label class="col-sm-2"><input type="radio" class="" id="Convenciones" name="Convenciones" value="DIAS" <?php if($data != NULL && $data->__GET('Convenciones') == 6) echo "checked"; ?>> DÍAS</label>
+                      <label class="col-sm-2"><input type="radio" class="" id="Convenciones" name="Convenciones" value="SATO2" <?php if($data != NULL && $data->__GET('Convenciones') == "SATO2") echo "checked"; ?>> SATO2</label>
+                      <label class="col-sm-2"><input type="radio" class="" id="Convenciones" name="Convenciones" value="SIST" <?php if($data != NULL && $data->__GET('Convenciones') == "SIST") echo "checked"; ?>> SIST</label>
+                      <label class="col-sm-2"><input type="radio" class="" id="Convenciones" name="Convenciones" value="F.R" <?php if($data != NULL && $data->__GET('Convenciones') == "F.R") echo "checked"; ?>> F.R</label>
+                      <label class="col-sm-2"><input type="radio" class="" id="Convenciones" name="Convenciones" value="F.C" <?php if($data != NULL && $data->__GET('Convenciones') == "F.C") echo "checked"; ?>> F.C</label>
+                      <label class="col-sm-2"><input type="radio" class="" id="Convenciones" name="Convenciones" value="TEMP" <?php if($data != NULL && $data->__GET('Convenciones') == "TEMP") echo "checked"; ?>> TEMP</label>
+                      <label class="col-sm-2"><input type="radio" class="" id="Convenciones" name="Convenciones" value="DIAS" <?php if($data != NULL && $data->__GET('Convenciones') == "DIAS") echo "checked"; ?>> DÍAS</label>
                     </div>
                   </div>
                   </div>
@@ -611,7 +611,7 @@ if (isset($_GET['IdServicio'])) {
             </div>
 
             <br>
-
+      <form action="">
           <div class="card shadow mb-4">
             <!-- Card Header - Accordion -->
             <a href="#collapseCardEstadoPaciente" class="d-block card-header py-3 bg-gradient-light" data-toggle="collapse" role="button" aria-expanded="true" aria-controls="collapseCardEstadoPaciente">
@@ -691,6 +691,7 @@ if (isset($_GET['IdServicio'])) {
           <hr>
           <button type="submit" class="btn btn-primary btn-block" <?php if($data == NULL) echo "disabled title='Finalizar Traslado'"; ?>> Finalizar Traslado</button>
           <hr>
+        </form>
       </div>
       <!-- /.container-fluid -->
 

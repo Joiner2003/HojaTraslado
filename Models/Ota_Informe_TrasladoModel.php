@@ -109,6 +109,7 @@ require_once('../../Models/Conexion/Conexion.php');
 					$entity->__SET('Ef_Gin3',$r->Ef_Gin3);
 					$entity->__SET('Ef_Gin4',$r->Ef_Gin4);
 					$entity->__SET('Ef_Gin5',$r->Ef_Gin5);
+					$entity->__SET('Convenciones',$r->Convenciones);
 					$entity->__SET('Estado_ft',$r->Estado_ft);
 					$entity->__SET('Obs_entrega',$r->Obs_entrega);
 					$entity->__SET('Ef_Modo1',$r->Ef_Modo1);
@@ -195,6 +196,7 @@ require_once('../../Models/Conexion/Conexion.php');
 					$entity->__SET('Ef_Gin3',$r->Ef_Gin3);
 					$entity->__SET('Ef_Gin4',$r->Ef_Gin4);
 					$entity->__SET('Ef_Gin5',$r->Ef_Gin5);
+					$entity->__SET('Convenciones',$r->Convenciones);
 					$entity->__SET('Estado_ft',$r->Estado_ft);
 					$entity->__SET('Obs_entrega',$r->Obs_entrega);
 					$entity->__SET('Ef_Modo1',$r->Ef_Modo1);
@@ -243,10 +245,10 @@ require_once('../../Models/Conexion/Conexion.php');
 				die($e->getMessage()." -> Ota_Informe_TrasladoModel->Maximo()");
 			}
 		}
-		public function AgregarEstPac($IdServicio, $Ef_Ta, $Ef_Fr, $Ef_Temp, $Ef_Glasgow, $Ef_Dx1, $Ef_Dx2, $Ef_HallazgoPos1, $Ef_Antecedentes1, $Ef_Gin1, $Ef_Gin2, $Ef_Gin3, $Ef_Gin4, $Ef_Gin5, $Estado_ft, $Obs_entrega ){
+		public function AgregarEstPac($IdServicio, $Ef_Ta, $Ef_Fr, $Ef_Temp, $Ef_Glasgow, $Ef_Dx1, $Ef_Dx2, $Ef_HallazgoPos1, $Ef_Antecedentes1, $Ef_Gin1, $Ef_Gin2, $Ef_Gin3, $Ef_Gin4, $Ef_Gin5, $Convenciones, $Obs_conv ){
 			try {
-				$sql = ("UPDATE Ota_Informe_Traslado SET Ef_Ta = ?, Ef_Fr = ?, Ef_Temp= ?, Ef_Glasgow = ?, Ef_Dx1 = ?, Ef_Dx2 = ?, Ef_HallazgoPos1 = ?, Ef_Antecedentes1 = ?, Ef_Gin1 = ?, Ef_Gin2 = ?, Ef_Gin3 = ?, Ef_Gin4 = ?, Ef_Gin5 = ?, Estado_ft = ?, Obs_entrega = ? WHERE IdServicio = ?");
-				$stm = $this->pdo->prepare($sql)->execute(array($Ef_Ta, $Ef_Fr, $Ef_Temp, $Ef_Glasgow, $Ef_Dx1, $Ef_Dx2, $Ef_HallazgoPos1, $Ef_Antecedentes1, $Ef_Gin1, $Ef_Gin2, $Ef_Gin3, $Ef_Gin4, $Ef_Gin5, $Estado_ft, $Obs_entrega,$IdServicio ));
+				$sql = ("UPDATE Ota_Informe_Traslado SET Ef_Ta = ?, Ef_Fr = ?, Ef_Temp= ?, Ef_Glasgow = ?, Ef_Dx1 = ?, Ef_Dx2 = ?, Ef_HallazgoPos1 = ?, Ef_Antecedentes1 = ?, Ef_Gin1 = ?, Ef_Gin2 = ?, Ef_Gin3 = ?, Ef_Gin4 = ?, Ef_Gin5 = ?, Convenciones=?, Obs_conv=? WHERE IdServicio = ?");
+				$stm = $this->pdo->prepare($sql)->execute(array($Ef_Ta, $Ef_Fr, $Ef_Temp, $Ef_Glasgow, $Ef_Dx1, $Ef_Dx2, $Ef_HallazgoPos1, $Ef_Antecedentes1, $Ef_Gin1, $Ef_Gin2, $Ef_Gin3, $Ef_Gin4, $Ef_Gin5, $Convenciones,$Obs_conv, $IdServicio ));
 				if($stm){
 					return true;
 				} else {
