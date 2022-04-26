@@ -641,7 +641,7 @@ if (isset($_GET['IdServicio'])) {
             </div>
           </div>
 
-          
+
 <div class="card shadow mb-4">
             <!-- Card Header - Accordion -->
             <a href="#collapseCardTripulacion" class="d-block card-header py-3 bg-gradient-light" data-toggle="collapse" role="button" aria-expanded="true" aria-controls="collapseCardTripulacion">
@@ -688,7 +688,9 @@ if (isset($_GET['IdServicio'])) {
             </div>
           </div>
          
-
+          <hr>
+          <button type="submit" class="btn btn-primary btn-block" <?php if($data == NULL) echo "disabled title='Finalizar Traslado'"; ?>> Finalizar Traslado</button>
+          <hr>
       </div>
       <!-- /.container-fluid -->
 
