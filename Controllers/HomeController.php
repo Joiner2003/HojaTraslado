@@ -84,6 +84,14 @@ spl_autoload_register(function($nombreClase)
 			return $var;
 		}
 
+		
+		public function ModificarOta_Informe_Traslado($IdServicio, $Fecha1, $Ficha, $Pte_NumDoc, $Pte_TipoDoc, $Pte_FechaNac, $Pte_Edad,$Entidad,$Pte_Regimen,$Pte_Sexo,$Pte_Telefono,$Pte_Direccion, $Pte_Ap1, $Pte_Ap2, $PteNom1, $Pte_Nom2, $Aco_Nombres, $Aco_Apellidos, $Aco_Documento, $Aco_Perentezco, $Sv_Origen, $Sv_Origen1, $Sv_Origen2, $Sv_Origen3, $Sv_Llegada, $Sv_Llegada1, $Sv_Llegada2, $Sv_Llegada3, $Sv_Salida, $Sv_Salida1, $Sv_Salida2, $Sv_Salida3, $Sv_Complejidad, $Sv_TipoServicio, $Sv_ExamenSolicitado)
+		{
+			$model = new Ota_Informe_TrasladoModel();
+			$var = $model->Modificar($IdServicio, $Fecha1, $Ficha, $Pte_NumDoc, $Pte_TipoDoc, $Pte_FechaNac, $Pte_Edad,$Entidad,$Pte_Regimen,$Pte_Sexo,$Pte_Telefono,$Pte_Direccion, $Pte_Ap1, $Pte_Ap2, $PteNom1, $Pte_Nom2, $Aco_Nombres, $Aco_Apellidos, $Aco_Documento, $Aco_Perentezco, $Sv_Origen, $Sv_Origen1, $Sv_Origen2, $Sv_Origen3, $Sv_Llegada, $Sv_Llegada1, $Sv_Llegada2, $Sv_Llegada3, $Sv_Salida, $Sv_Salida1, $Sv_Salida2, $Sv_Salida3, $Sv_Complejidad, $Sv_TipoServicio, $Sv_ExamenSolicitado);
+			return $var;
+		}
+		
 		public function AgregarOta_Estado_Paciente($IdServicio, $Ef_Ta, $Ef_Fr, $Ef_Temp, $Ef_Glasgow, $Ef_Dx1, $Ef_Dx2, $Ef_HallazgoPos1, $Ef_Antecedentes1, $Ef_Gin1, $Ef_Gin2, $Ef_Gin3, $Ef_Gin4, $Ef_Gin5,  $Conven_1,$Conven_2,$Conven_3,$Conven_4,$Conven_5,$Conven_6,$Obs_conv )
 		{
 			$model = new Ota_Informe_TrasladoModel();
@@ -91,13 +99,14 @@ spl_autoload_register(function($nombreClase)
 			return $var;
 		}
 
-		public function ModificarOta_Informe_Traslado($IdServicio, $Fecha1, $Ficha, $Pte_NumDoc, $Pte_TipoDoc, $Pte_FechaNac, $Pte_Edad,$Entidad,$Pte_Regimen,$Pte_Sexo,$Pte_Telefono,$Pte_Direccion, $Pte_Ap1, $Pte_Ap2, $PteNom1, $Pte_Nom2, $Aco_Nombres, $Aco_Apellidos, $Aco_Documento, $Aco_Perentezco, $Sv_Origen, $Sv_Origen1, $Sv_Origen2, $Sv_Origen3, $Sv_Llegada, $Sv_Llegada1, $Sv_Llegada2, $Sv_Llegada3, $Sv_Salida, $Sv_Salida1, $Sv_Salida2, $Sv_Salida3, $Sv_Complejidad, $Sv_TipoServicio, $Sv_ExamenSolicitado)
+		public function AgregarOta_Fin_Traslado($IdServicio,$Estado_ft,$Obs_entrega)
 		{
 			$model = new Ota_Informe_TrasladoModel();
-			$var = $model->Modificar($IdServicio, $Fecha1, $Ficha, $Pte_NumDoc, $Pte_TipoDoc, $Pte_FechaNac, $Pte_Edad,$Entidad,$Pte_Regimen,$Pte_Sexo,$Pte_Telefono,$Pte_Direccion, $Pte_Ap1, $Pte_Ap2, $PteNom1, $Pte_Nom2, $Aco_Nombres, $Aco_Apellidos, $Aco_Documento, $Aco_Perentezco, $Sv_Origen, $Sv_Origen1, $Sv_Origen2, $Sv_Origen3, $Sv_Llegada, $Sv_Llegada1, $Sv_Llegada2, $Sv_Llegada3, $Sv_Salida, $Sv_Salida1, $Sv_Salida2, $Sv_Salida3, $Sv_Complejidad, $Sv_TipoServicio, $Sv_ExamenSolicitado);
+			$var = $model->AgregarFinTraslado($IdServicio,$Estado_ft,$Obs_entrega);
 			return $var;
 		}
 
+		
 		public function ListarxIdServicioOta_Informe_SignosVitales($IdServicio)
 		{
 			$model = new Ota_Informe_SignosVitalesModel();

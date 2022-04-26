@@ -267,7 +267,20 @@ require_once('../../Models/Conexion/Conexion.php');
 					return false;
 				}
 			} catch (Exception $e) {
-				die($e->getMessage()." ->Ota_Informe_TrasladoModel->Modificar()");
+				die($e->getMessage()." ->Ota_Informe_TrasladoModel->AgregarEstPac()");
+			} 
+		}
+		public function AgregarFinTraslado($IdServicio,$Estado_ft,$Obs_entrega){
+			try {
+				$sql = ("UPDATE Ota_Informe_Traslado SET Estado_ft = ?, Obs_entrega = ? WHERE IdServicio = ?");
+				$stm = $this->pdo->prepare($sql)->execute(array($Estado_ft,$Obs_entrega,$IdServicio ));
+				if($stm){
+					return true;
+				} else {
+					return false;
+				}
+			} catch (Exception $e) {
+				die($e->getMessage()." ->Ota_Informe_TrasladoModel->AgregarFinTraslado()");
 			} 
 		}
 		// public function Eliminar($IdFormapago) {
