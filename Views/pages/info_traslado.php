@@ -172,6 +172,24 @@ if (isset($_GET['IdServicio'])) {
    <td><?php echo 'V: '.$data->__GET('Ef_Gin5')?></td>
    </tr>
    </table>
+   <table style="width:100% ">
+ <tr>
+   <th colspan="4">Convenciones</th>
+ </tr>
+</table>
+   <table style="width:100% ">
+ <tr>
+   <td><?php echo 'SAT.O2: '.$data->__GET('Conven_1')?></td>
+   <td><?php echo 'SIST: '.$data->__GET('Conven_2')?></td>
+   <td><?php echo 'F.R: '.$data->__GET('Conven_3')?></td>
+   <td><?php echo 'F.C: '.$data->__GET('Conven_4')?></td>
+   <td><?php echo 'TEMP: '.$data->__GET('Conven_5')?></td>
+   <td><?php echo 'Días: '.$data->__GET('Conven_6')?></td>
+   </tr>
+   <tr>
+  <td><?php echo 'Observacoines: '.$data->__GET('Obs_conv')?></td>
+ </tr>
+   </table>
  <table style="width:100% ">
    <tr>
    <th colspan="4">Ventilacion Mecánica</th>
@@ -227,6 +245,7 @@ if (isset($_GET['IdServicio'])) {
                       <?php endforeach ?> 
     </tr>
    </table>
+   
    <table style="width:100% ">
    <tr>
       <th colspan="4">Estado Del Paciente Al Finalizar Traslado</th>
@@ -238,6 +257,7 @@ if (isset($_GET['IdServicio'])) {
       <td><?php echo 'Observaciones Al Momento De La Entrega: '.$data->__GET('Obs_entrega')?></td>
     </tr>
 </table>
+
 <table style="width:100% ">
 <tr>
   <td><?php echo 'Firma Paciente o Acompañante:  <img src='. $data->__GET('Firma1')?>></td>
@@ -245,6 +265,24 @@ if (isset($_GET['IdServicio'])) {
   <td><?php echo 'Firma Médico o Enfermera(o) Que Entrega:  <img src='. $data->__GET('Firma2')?>></td>
    </tr>
     </table>
+    
+    <table style="width:100% ">
+   <tr>
+      <th colspan="4">Tripulación que Realiza Traslado</th>
+    </tr>
+     <tr>
+      <td><?php echo 'Paramédico: '.$data->__GET('Parame')?></td>
+      <td><?php echo 'C.C: '.$data->__GET('cpcarame')?></td>
+    </tr>
+    <tr>
+      <td><?php echo 'Comandante: '.$data->__GET('Coman')?></td>
+      <td><?php echo 'C.C: '.$data->__GET('ccoman')?></td>
+    </tr>
+    <tr>
+      <td><?php echo 'Médico: '.$data->__GET('Medico')?></td>
+      <td><?php echo 'C.C: '.$data->__GET('ccmedico')?></td>
+    </tr>
+</table>
 </body>
 </html>
 

@@ -409,20 +409,28 @@ if (isset($_GET['IdServicio'])) {
             <!-- Card Content - Collapse -->
             <div class="collapse show" id="collapseCardConvenciones">
               <div class="card-body">
-                  <div class="form-group row">
-                  <div class="col-sm-12 col-md-12  ">
-                    
-                    <div class="col-sm-12">
-                      <label class="col-sm-2"><input type="radio" class="" id="Convenciones" name="Convenciones" value="SATO2" <?php if($data != NULL && $data->__GET('Convenciones') == "SATO2") echo "checked"; ?>> SATO2</label>
-                      <label class="col-sm-2"><input type="radio" class="" id="Convenciones" name="Convenciones" value="SIST" <?php if($data != NULL && $data->__GET('Convenciones') == "SIST") echo "checked"; ?>> SIST</label>
-                      <label class="col-sm-2"><input type="radio" class="" id="Convenciones" name="Convenciones" value="F.R" <?php if($data != NULL && $data->__GET('Convenciones') == "F.R") echo "checked"; ?>> F.R</label>
-                      <label class="col-sm-2"><input type="radio" class="" id="Convenciones" name="Convenciones" value="F.C" <?php if($data != NULL && $data->__GET('Convenciones') == "F.C") echo "checked"; ?>> F.C</label>
-                      <label class="col-sm-2"><input type="radio" class="" id="Convenciones" name="Convenciones" value="TEMP" <?php if($data != NULL && $data->__GET('Convenciones') == "TEMP") echo "checked"; ?>> TEMP</label>
-                      <label class="col-sm-2"><input type="radio" class="" id="Convenciones" name="Convenciones" value="DIAS" <?php if($data != NULL && $data->__GET('Convenciones') == "DIAS") echo "checked"; ?>> DÍAS</label>
-                    </div>
+                <div class="form-group row">
+                  <!-- <label class="col-sm-1">G</label> -->
+                  <div class="col-sm-2 mb-3">
+                    <label>SAT.O2<input type="text" class="form-control" id="" name="Conven_1" value="<?php if($data != NULL) echo $data->__GET('Conven_1') ?>"></label>
                   </div>
+                  <div class="col-sm-2 mb-3">
+                    <label>SIST<input type="text" class="form-control" id="" name="Conven_2" value="<?php if($data != NULL) echo $data->__GET('Conven_2') ?>"></label>
                   </div>
-
+                  <div class="col-sm-2 mb-3">
+                    <label>F.R<input type="text" class="form-control" id="" name="Conven_3" value="<?php if($data != NULL) echo $data->__GET('Conven_3') ?>"></label>
+                  </div>
+                  <div class="col-sm-2 mb-3">
+                    <label>F.C<input type="text" class="form-control" id="" name="Conven_4" value="<?php if($data != NULL) echo $data->__GET('Conven_4') ?>"></label>
+                  </div>
+                  <div class="col-sm-2 mb-3">
+                    <label>TEMP<input type="text" class="form-control" id="" name="Conven_5" value="<?php if($data != NULL) echo $data->__GET('Conven_5') ?>"></label>
+                  </div>
+                  <div class="col-sm-2 mb-3">
+                    <label>DÍAS<input type="text" class="form-control" id="" name="Conven_6" value="<?php if($data != NULL) echo $data->__GET('Conven_6') ?>"></label>
+                  </div>
+                </div>
+             
                 <div class="form-group row">
                   <div class="col-sm-12 mb-3 text-center">
                     <textarea class="form-control" name="Obs_conv" rows="4" style="resize: vertical;" placeholder="Observaciones..."><?php if($data != NULL) echo $data->__GET('Obs_conv') ?></textarea>
