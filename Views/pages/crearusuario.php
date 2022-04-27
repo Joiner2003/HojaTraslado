@@ -21,6 +21,8 @@ if (isset($_GET['IdServicio'])) {
   $IdServicio = $HomeController->MaximoOta_Informe_Traslado()->__GET('IdServicio')+1;
   $data = NULL;
 }
+
+$IdU =$HomeController->VerOta_Usuario($_SESSION['IdUsuario'])->__GET('IdUsuario');
 ?>
 <!-- Page Wrapper -->
 <div id="wrapper">
@@ -91,18 +93,7 @@ if (isset($_GET['IdServicio'])) {
                     <li class="nav-item dropdown no-arrow d-sm-none">
                         <a class="nav-link dropdown-toggle" href="#" id="searchDropdown" role="button" data-toggle="dropdown"aria-haspopup="true" aria-expanded="false"><i class="fas fa-search fa-fw"></i></a>
                         <!-- Dropdown - Messages -->
-                        <div class="dropdown-menu dropdown-menu-right p-3 shadow animated--grow-in" aria-labelledby="searchDropdown">
-                            <form class="form-inline mr-auto w-100 navbar-search">
-                                <div class="input-group">
-                                    <input type="text" class="form-control bg-light border-0 small" placeholder="Search for..."aria-label="Search" aria-describedby="basic-addon2">
-                                    <div class="input-group-append">
-                                        <button class="btn btn-primary" type="button">
-                                            <i class="fas fa-search fa-sm"></i>
-                                        </button>
-                                    </div>
-                                </div>
-                            </form>
-                        </div>
+                        
                     </li>
           <!-- Nav Item - Alerts -->
           
@@ -116,9 +107,13 @@ if (isset($_GET['IdServicio'])) {
                         <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"aria-labelledby="userDropdown">
                             <a class="dropdown-item" href="../../Actions/Login/logout.php" ><i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>Cerrar Sesion</a>
                         </div>
+                        <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"aria-labelledby="userDropdown">
+                      
+                        </div>
                     </li>
 
         </ul>
+        
       </nav>
       <!-- End of Topbar -->
 
@@ -169,8 +164,7 @@ if (isset($_GET['IdServicio'])) {
                     <label>Clave</label>
                     <input type="text" class="form-control" id="" name="Clave" required>
                   </div>
-                </div>
-                
+              
                 <hr>
                 <button type="submit" class="btn btn-primary btn-block">CREAR USUARIO</button>
           <hr>
@@ -178,5 +172,10 @@ if (isset($_GET['IdServicio'])) {
             </div>
           </div>
 </form>
-    
+<form action="firma/firmaUsuario.php" method="post" target="_blank">
+              <input type="hidden" name="IdServicio" value="<?= $IdU ?>">
+              <button type="submit" class="btn btn-success">Firma Usuario</button>
+              <br>
+              <img src="<?php if($data != NULL) echo $data->__GET('Firma1'); ?>" alt="">
+</form>
 <?php include '../includes/footer.php'; ?>

@@ -14,6 +14,8 @@ if (!session_id()) @session_start();
 $msg = new \Plasticbrain\FlashMessages\FlashMessages();
 date_default_timezone_set('America/Bogota');
 
+
+$IdU =$HomeController->VerOta_Usuario($_SESSION['IdUsuario'])->__GET('IdUsuario');
 ?>
 <!-- Page Wrapper -->
 <div id="wrapper">
@@ -118,7 +120,7 @@ date_default_timezone_set('America/Bogota');
       <!-- Begin Page Content -->
       <div class="container-fluid">
         <form action="../../Actions/Usuarios/actualizarp.php" method="POST" enctype="multipart/form-data">
-          
+          <input type="hidden" name="IdU" value="<?= $IdU ?>">
           <div class="card shadow mb-4">
             <!-- Card Header - Accordion -->
             <a href="#crearusuario" class="d-block card-header py-3 bg-gradient-light" data-toggle="collapse" role="button" aria-expanded="true" aria-controls="DatosPaciente">

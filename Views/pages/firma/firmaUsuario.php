@@ -6,7 +6,7 @@ include("conexion.php");
  if (isset($_POST['IdServicio'])) {
    # code...
    $Ids = $_POST['IdServicio'];
-
+   
  }
 
 //$Doc_Pac =$_GET['Pte_NumDoc'];

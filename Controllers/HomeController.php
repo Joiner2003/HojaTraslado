@@ -35,10 +35,10 @@ spl_autoload_register(function($nombreClase)
 		}
 		
 
-		public function Modificar_Password($IdUsuario, $C_Nueva)
+		public function Modificar_Password($IdU, $C_Nueva)
 		{
 			$model = new Ota_UsuarioModel();
-			$var = $model->Modificar_Password($IdUsuario, $C_Nueva);
+			$var = $model->Modificar_Password($IdU, $C_Nueva);
 			return $var;
 		}
 

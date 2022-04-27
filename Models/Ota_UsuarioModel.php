@@ -129,11 +129,11 @@ require_once('../../Models/Conexion/Conexion.php');
 		}
 
 
-			public function Modificar_Password ($IdUsuario,$C_Nueva)
+			public function Modificar_Password ($IdU,$C_Nueva)
 		{
 			try {
 				$sql = ("UPDATE Ota_Usuario SET Clave = ? WHERE IdUsuario = ?");
-				$stm = $this->pdo->prepare($sql)->execute(array($C_Nueva, $IdUsuario ));
+				$stm = $this->pdo->prepare($sql)->execute(array($C_Nueva, $IdU ));
 				if($stm){
 					return true;
 				} else {
