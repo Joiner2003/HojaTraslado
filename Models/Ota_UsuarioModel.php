@@ -50,6 +50,7 @@ require_once('../../Models/Conexion/Conexion.php');
 					$entity->__SET('Registro',$r->Registro);
 					$entity->__SET('Usuario',$r->Usuario);
 					$entity->__SET('Clave',$r->Clave);
+					$entity->__SET('FirmaU',$r->FirmaU);
 					return $entity;
 
 				}
@@ -77,6 +78,7 @@ require_once('../../Models/Conexion/Conexion.php');
 					$entity->__SET('Registro',$r->Registro);
 					$entity->__SET('Usuario',$r->Usuario);
 					$entity->__SET('Clave',$r->Clave);
+					$entity->__SET('FirmaU',$r->FirmaU);
 					return $entity;
 
 				}
@@ -105,6 +107,7 @@ require_once('../../Models/Conexion/Conexion.php');
 					$entity->__SET('Registro',$r->Registro);
 					$entity->__SET('Usuario',$r->Usuario);
 					$entity->__SET('Clave',$r->Clave);
+					$entity->__SET('FirmaU',$r->FirmaU);
 					
 					$Array[] = $entity;
 				}

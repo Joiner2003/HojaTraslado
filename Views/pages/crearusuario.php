@@ -23,6 +23,7 @@ if (isset($_GET['IdServicio'])) {
 }
 
 $IdU =$HomeController->VerOta_Usuario($_SESSION['IdUsuario'])->__GET('IdUsuario');
+
 ?>
 <!-- Page Wrapper -->
 <div id="wrapper">
@@ -172,10 +173,12 @@ $IdU =$HomeController->VerOta_Usuario($_SESSION['IdUsuario'])->__GET('IdUsuario'
             </div>
           </div>
 </form>
+
 <form action="firma/firmaUsuario.php" method="post" target="_blank">
-              <input type="hidden" name="IdServicio" value="<?= $IdU ?>">
+              <input type="hidden" name="IdU" value="<?= $IdU ?>">
               <button type="submit" class="btn btn-success">Firma Usuario</button>
               <br>
-              <img src="<?php if($data != NULL) echo $data->__GET('Firma1'); ?>" alt="">
+
+              <img src="<?php $HomeController->VerOta_Usuario($_SESSION['IdUsuario'])->__GET('FirmaU')?>" alt="">         
 </form>
 <?php include '../includes/footer.php'; ?>

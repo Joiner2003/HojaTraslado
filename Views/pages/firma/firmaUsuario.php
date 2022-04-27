@@ -3,9 +3,9 @@
 <?php 
 
 include("conexion.php");
- if (isset($_POST['IdServicio'])) {
+ if (isset($_POST['IdU'])) {
    # code...
-   $Ids = $_POST['IdServicio'];
+   $IdU = $_POST['IdU'];
    
  }
 
@@ -34,11 +34,11 @@ $Idserv[0] = $Ids;
 </canvas>
 
 <!-- creamos el form para el envio -->
-<form id='formCanvas' method='post' action='firma4.php' ENCTYPE='multipart/form-data'>
+<form id='formCanvas' method='post' action='firmaUsuario.php' ENCTYPE='multipart/form-data'>
     <button type='button' onclick='LimpiarTrazado()'>Borrar</button>
     <button type='button' onclick='GuardarTrazado()'>Guardar</button>
     <input type='hidden' name='imagen' id='imagen' />
-    <input type="hidden" name="IdServicio" value="<?= $Ids ?>" id="<?= $Ids ?>">
+    <input type="hidden" name="IdU" value="<?= $IdU ?>" id="<?= $IdU ?>">
 </form>
 
 <script type="text/javascript">
@@ -171,16 +171,16 @@ if (isset($_POST['imagen'])) {
 
     $baseImage = $_POST['imagen'];
 
-    $Ids = $_POST['IdServicio'];
+    $IdU = $_POST['IdU'];
     //echo dato;
-    echo $Ids;
+    echo $IdU;
     echo $baseImage;
   /*  $im1= file_get_contents("En_firma.png");
     $En_firma2 = base64_encode($im1);*/
     //$blobImage = base64_decode($baseImage);
-    $insertar = "UPDATE Ota_Informe_Traslado
-    SET Firma2='$baseImage'
-    WHERE IdServicio= '$Ids'";
+    $insertar = "UPDATE Ota_Usuario
+    SET FirmaU='$baseImage'
+    WHERE IdUsuario= '$IdU'";
     $result = sqlsrv_query($conn,$insertar);
 
     
