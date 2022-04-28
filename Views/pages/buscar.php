@@ -144,6 +144,7 @@ $msg = new \Plasticbrain\FlashMessages\FlashMessages();
                                 <thead>
                                     <tr class="text-center">
                                         <th>IDSERVICIO</th>
+                                        <th>FICHA</th>
                                         <th>FECHA</th>
                                         <th>PACIENTE</th>
                                         <th>DOCUMENTO</th>
@@ -157,6 +158,7 @@ $msg = new \Plasticbrain\FlashMessages\FlashMessages();
                                         <?php if ($key != NULL){ ?>
                                             <tr>
                                                 <td align="center"><?= $key->__GET('IdServicio') ?></td>
+                                                <td align="center"><?= $key->__GET('Ficha') ?></td>
                                                 <td align="center"><?= (new DateTime($key->__GET('Fecha1')))->format('d/m/Y H:i:s') ?></td>
                                                 <td><?= $key->__GET('Pte_Ap1').' '.$key->__GET('Pte_Ap2').' '.$key->__GET('PteNom1').' '.$key->__GET('Pte_Nom2') ?></td>
                                                 <td><?= $key->__GET('Pte_NumDoc') ?></td>
@@ -168,6 +170,7 @@ $msg = new \Plasticbrain\FlashMessages\FlashMessages();
                                         <?php foreach ($HomeController->ListarOta_Informe_Traslado() as $key){ ?>
                                             <tr>
                                                 <td align="center"><?= $key->__GET('IdServicio') ?></td>
+                                                <td align="center"><?= $key->__GET('Ficha') ?></td>
                                                 <td align="center"><?= (new DateTime($key->__GET('Fecha1')))->format('d/m/Y H:i:s') ?></td>
                                                 <td><?= $key->__GET('Pte_Ap1').' '.$key->__GET('Pte_Ap2').' '.$key->__GET('PteNom1').' '.$key->__GET('Pte_Nom2') ?></td>
                                                 <td><?= $key->__GET('Pte_NumDoc') ?></td>

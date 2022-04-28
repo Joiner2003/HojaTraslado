@@ -36,7 +36,7 @@ if(!isset($_SESSION["Usuario"])){
 
 	if($HomeController->AgregarOta_Fin_Traslado($IdServicio,$Estado_ft,$Obs_entrega) == true){
 
-		$msg->success('!Agregado con exito¡');
+		$msg->success('¡Traslado finalizado con exito!');
 	
 		
 		header("location: ../../Views/pages/buscar.php");
