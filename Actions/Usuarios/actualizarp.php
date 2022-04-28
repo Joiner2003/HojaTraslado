@@ -22,13 +22,12 @@ if(!isset($_SESSION["Usuario"])){
 	$msg = new \Plasticbrain\FlashMessages\FlashMessages();
 	date_default_timezone_set('America/Bogota');
 
-	if (isset($_GET['Usuario'])) {
-		$IdUsuario = $_GET['Usuario'];
-		$data = $HomeController->VerOta_Usuario($IdUsuario);
-	  }else{
-		$IdUsuario = $HomeController->VerOta_Usuario($IdUsuario);
-		$data = NULL;
-	  }
+	if ("") {
+		# code...
+	} else {
+		# code...
+	}
+	
 
 	$IdU= $_POST['IdU'];
 	$C_Anterior = $_POST['C_Anterior'];

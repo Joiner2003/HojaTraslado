@@ -257,6 +257,7 @@ require_once('../../Models/Conexion/Conexion.php');
 				die($e->getMessage()." -> Ota_Informe_TrasladoModel->Maximo()");
 			}
 		}
+		
 		public function AgregarEstPac($IdServicio, $Ef_Ta, $Ef_Fr, $Ef_Temp, $Ef_Glasgow, $Ef_Dx1, $Ef_Dx2, $Ef_HallazgoPos1, $Ef_Antecedentes1, $Ef_Gin1, $Ef_Gin2, $Ef_Gin3, $Ef_Gin4, $Ef_Gin5,  $Conven_1,$Conven_2,$Conven_3,$Conven_4,$Conven_5,$Conven_6, $Obs_conv ){
 			try {
 				$sql = ("UPDATE Ota_Informe_Traslado SET Ef_Ta = ?, Ef_Fr = ?, Ef_Temp= ?, Ef_Glasgow = ?, Ef_Dx1 = ?, Ef_Dx2 = ?, Ef_HallazgoPos1 = ?, Ef_Antecedentes1 = ?, Ef_Gin1 = ?, Ef_Gin2 = ?, Ef_Gin3 = ?, Ef_Gin4 = ?, Ef_Gin5 = ?,  Conven_1=?,Conven_2=?,Conven_3=?,Conven_4=?,Conven_5=?,Conven_6=?, Obs_conv=? WHERE IdServicio = ?");

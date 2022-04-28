@@ -12,10 +12,13 @@
     <title>Login</title>
 
     <!-- Custom fonts for this template-->
-    <link href="../Resource/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
-
-    <!-- Custom styles for this template-->
-    <link href="../Resource/css/sb-admin-2.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <link href="../Resource/css/login.css" rel="stylesheet">
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
 </head>
 
@@ -35,53 +38,51 @@ if (!session_id()) @session_start();
 $msg = new \Plasticbrain\FlashMessages\FlashMessages();
 ?>
 
+
 <body class="bg-gradient-primary">
 
-    <div class="container">
-
-        <!-- Outer Row -->
-        <div class="row justify-content-center">
-
-            <div class="col-xl-10 col-lg-12 col-md-9">
-
-                <div class="card o-hidden border-0 shadow-lg my-5">
-                    <div class="card-body p-0">
-                        <!-- Nested Row within Card Body -->
-                        <div class="row">
-                            <div class="col-lg-6 d-none d-lg-block bg-login-image"></div>
-                            
-                            <div class="col-lg-6">
-                                <div class="p-5">
-                                    <div class="text-center">
-                                        <h1 class="h4 text-gray-900 mb-4">BIENVENIDO</h1>
-                                        <?php $msg->display() ?>
-                                    </div>
-
-                                    <form action="../../Actions/Login/LoginAction.php" method="POST" class="user">
-                                        <div class="form-group">
-                                            <input type="text" class="form-control form-control-user" name="usuario" id="" placeholder="Ingrese su usuario..." value="<?php if(isset($_GET['user'])) echo $_GET['user'] ?>" autocomplete="off">
-                                        </div>
-                                        <div class="form-group">
-                                            <input type="password" class="form-control form-control-user" name="password" id="" placeholder="Ingrese su clave">
-                                        </div>
-                                        <div class="form-group">
-                                            <div class="custom-control custom-checkbox small">
-                                                <input type="checkbox" class="custom-control-input" id="customCheck">
-                                                <label class="custom-control-label" for="customCheck">Recordarme</label>
-                                            </div>
-                                        </div>
-                                        <button type="submit" class="btn btn-primary btn-user btn-block">Iniciar Sesion</button>
-                                    </form>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+<div class="container h-100">
+		<div class="d-flex justify-content-center h-100">
+			<div class="user_card">
+				<div class="d-flex justify-content-center">
+					<div class="brand_logo_container">
+						<img src="../Resource/img/logota1.png" class="brand_logo" alt="Logo">
+					</div>
+              
+                </div>  
+               
+               
+				<div class="d-flex justify-content-center form_container">
+                    
+				  <form action="../../Actions/Login/LoginAction.php" method="POST" class="user">
+						<div class="input-group mb-3">
+							<div class="input-group-append">
+								<span class="input-group-text"><i class="fas fa-user"></i></span>
+							</div>
+							<input type="text" class="form-control form-control-user" name="usuario" id="" placeholder="Ingrese su usuario..." value="<?php if(isset($_GET['user'])) echo $_GET['user'] ?>" autocomplete="off">
+						</div>
+						<div class="input-group mb-2">
+							<div class="input-group-append">
+								<span class="input-group-text"><i class="fas fa-key"></i></span>
+							</div>
+						  <input type="password" class="form-control form-control-user" name="password" id="" placeholder="Ingrese su clave">
+						</div>
+						
+							<div class="d-flex justify-content-center mt-3 login_container">
+				    <button type="submit" class="btn btn-success btn-user btn-block">Iniciar Sesion</button>
+				   </div>
+					</form>
+				</div>
+                <div class="mt-4">
+                <div class="d-flex justify-content-center links">
+  
+                        <?php  $msg->display(); ?>
+                  
                 </div>
-
-            </div>
-
-        </div>
-
-    </div>
+					
+				</div>
+			</div>
+		</div>
+	</div>
 
 <?php include '../includes/footer.php'; ?>
