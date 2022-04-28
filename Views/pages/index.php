@@ -21,6 +21,9 @@ if (isset($_GET['IdServicio'])) {
   $IdServicio = $HomeController->MaximoOta_Informe_Traslado()->__GET('IdServicio')+1;
   $data = NULL;
 }
+
+$IdU =$HomeController->VerOta_Usuario($_SESSION['IdUsuario'])->__GET('IdUsuario');
+
 ?>
 <!-- Page Wrapper -->
 <div id="wrapper">
@@ -142,6 +145,7 @@ if (isset($_GET['IdServicio'])) {
             <a href="#DatosPaciente" class="d-block card-header py-3 bg-gradient-light" data-toggle="collapse" role="button" aria-expanded="true" aria-controls="DatosPaciente">
               <h6 class="m-0 font-weight-bold text-primary">INFORMACION GENERAL DEL PACIENTE</h6>
             </a>
+            <input type="hidden" name="IdUsuario" value="<?=$IdU?>">
             <!-- Card Content - Collapse -->
             <div class="collapse show" id="DatosPaciente">
               <div class="card-body">

@@ -56,11 +56,12 @@ if(!isset($_SESSION["Usuario"])){
 	if(isset($_POST['Sv_Complejidad'])){$Sv_Complejidad = $_POST['Sv_Complejidad'];}else{$Sv_Complejidad = 0;}
 	if(isset($_POST['Sv_TipoServicio'])){$Sv_TipoServicio = $_POST['Sv_TipoServicio'];}else{$Sv_TipoServicio = 0;}
 	$Sv_ExamenSolicitado = $_POST['Sv_ExamenSolicitado'];
+	$IdU=($_POST['IdU']);
 
 
 	// var_dump($Fecha1, $Ficha, $Pte_NumDoc, $Pte_TipoDoc, $Pte_FechaNac, $Pte_Edad, $Pte_Ap1, $Pte_Ap2, $PteNom1, $Pte_Nom2, $Aco_Nombres, $Aco_Apellidos, $Aco_Documento, $Aco_Perentezco, $Sv_Origen, $Sv_Origen1, $Sv_Origen2, $Sv_Origen3, $Sv_Llegada, $Sv_Llegada1, $Sv_Llegada2, $Sv_Llegada3, $Sv_Salida, $Sv_Salida1, $Sv_Salida2, $Sv_Salida3, $Sv_Complejidad, $Sv_TipoServicio, $Sv_ExamenSolicitado, $Ef_Ta, $Ef_Fr, $Ef_Temp, $Ef_Glasgow, $Ef_Dx1, $Ef_Dx2, $Ef_HallazgoPos1, $Ef_Antecedentes1, $Ef_Gin1, $Ef_Gin2, $Ef_Gin3, $Ef_Gin4, $Ef_Gin5);
 
-	if($HomeController->AgregarOta_Informe_Traslado($Fecha1, $Ficha, $Pte_NumDoc, $Pte_TipoDoc, $Pte_FechaNac, $Pte_Edad, $Entidad,$Pte_Regimen,$Pte_Sexo, $Pte_Telefono,$Pte_Direccion,$Pte_Ap1, $Pte_Ap2, $PteNom1, $Pte_Nom2, $Aco_Nombres, $Aco_Apellidos, $Aco_Documento, $Aco_Perentezco, $Sv_Origen, $Sv_Origen1, $Sv_Origen2, $Sv_Origen3, $Sv_Llegada, $Sv_Llegada1, $Sv_Llegada2, $Sv_Llegada3, $Sv_Salida, $Sv_Salida1, $Sv_Salida2, $Sv_Salida3, $Sv_Complejidad, $Sv_TipoServicio, $Sv_ExamenSolicitado) == true){
+	if($HomeController->AgregarOta_Informe_Traslado($Fecha1, $Ficha, $Pte_NumDoc, $Pte_TipoDoc, $Pte_FechaNac, $Pte_Edad, $Entidad,$Pte_Regimen,$Pte_Sexo, $Pte_Telefono,$Pte_Direccion,$Pte_Ap1, $Pte_Ap2, $PteNom1, $Pte_Nom2, $Aco_Nombres, $Aco_Apellidos, $Aco_Documento, $Aco_Perentezco, $Sv_Origen, $Sv_Origen1, $Sv_Origen2, $Sv_Origen3, $Sv_Llegada, $Sv_Llegada1, $Sv_Llegada2, $Sv_Llegada3, $Sv_Salida, $Sv_Salida1, $Sv_Salida2, $Sv_Salida3, $Sv_Complejidad, $Sv_TipoServicio, $Sv_ExamenSolicitado, $IdU) == true){
 
 		$msg->success('!Agregado con exito¡');
 	/*	unlink("Sv_Firma_Pte.png");
