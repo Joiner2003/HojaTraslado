@@ -38,7 +38,8 @@ if(!isset($_SESSION["Usuario"])){
 
 		$msg->success('!Agregado con exito¡');
 	
-		header("location: ../../Views/pages/index.php?IdServicio=".$IdServicio);
+		
+		header("location: ../../Views/pages/buscar.php");
 	}else{
 		$msg->error('¡ERROR, no se Agrego!..');
 	
