@@ -186,8 +186,35 @@ $IdR =$HomeController->VerOta_Usuario($_SESSION['IdUsuario'])->__GET('Id_Rol');
                                     <?php } ?>    
                                         
                                     <?php }else{ ?>
-                                        
+                                        <?php if(isset($_SESSION["IdUsuario"])){ ?>
+                                        <?php $key = $HomeController->VerOta_Informe_TrasladoXUsuario($IdU); ?>
+                                        <?php if ($key != NULL){ ?>
+                                            <?php foreach ($HomeController->ListarOta_Informe_TrasladoXUsuario($IdU) as $key){ ?>
+                                            <tr>
+                                                <td align="center"><?= $key->__GET('IdServicio') ?></td>
+                                                <td align="center"><?= $key->__GET('Ficha') ?></td>
+                                                <td align="center"><?= (new DateTime($key->__GET('Fecha1')))->format('d/m/Y H:i:s') ?></td>
+                                                <td><?= $key->__GET('Pte_Ap1').' '.$key->__GET('Pte_Ap2').' '.$key->__GET('PteNom1').' '.$key->__GET('Pte_Nom2') ?></td>
+                                                <td><?= $key->__GET('Pte_NumDoc') ?></td>
+                                                <td><?= $key->__GET('Sv_Origen') ?></td>
+                                                <td align="center" style="padding: 0;"> <a href="index.php?IdServicio=<?= $key->__GET('IdServicio') ?>" title="Ver" class="btn btn-success"><i class="fa fa-eye"></i></a> <a href="info_traslado.php?IdServicio=<?= $key->__GET('IdServicio') ?>" title="Imprimir" class="btn btn-primary" target="_blank"><i class="fa fa-print"></i></a></td>
+                                            </tr>
+                                        <?php } ?>
+                                        <?php } ?>
+                                    <?php }else{ ?>
+                                        <?php foreach ($HomeController->ListarOta_Informe_TrasladoXUsuario($IdU) as $key){ ?>
+                                            <tr>
+                                                <td align="center"><?= $key->__GET('IdServicio') ?></td>
+                                                <td align="center"><?= $key->__GET('Ficha') ?></td>
+                                                <td align="center"><?= (new DateTime($key->__GET('Fecha1')))->format('d/m/Y H:i:s') ?></td>
+                                                <td><?= $key->__GET('Pte_Ap1').' '.$key->__GET('Pte_Ap2').' '.$key->__GET('PteNom1').' '.$key->__GET('Pte_Nom2') ?></td>
+                                                <td><?= $key->__GET('Pte_NumDoc') ?></td>
+                                                <td><?= $key->__GET('Sv_Origen') ?></td>
+                                                <td align="center" style="padding: 0;"> <a href="index.php?IdServicio=<?= $key->__GET('IdServicio') ?>" title="Ver" class="btn btn-success"><i class="fa fa-eye"></i></a> <a href="info_traslado.php?IdServicio=<?= $key->__GET('IdServicio') ?>" title="Imprimir" class="btn btn-primary" target="_blank"><i class="fa fa-print"></i></a></td>
+                                            </tr>
+                                        <?php } ?>
 
+                                <?php } ?>  
                                 <?php } ?>  
                                 <?php } ?> 
                                 </tbody>

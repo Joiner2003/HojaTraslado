@@ -95,7 +95,98 @@ require_once('../../Models/Conexion/Conexion.php');
 					$entity->__SET('Sv_TipoServicio',$r->Sv_TipoServicio);
 					$entity->__SET('Sv_Medico',$r->Sv_Medico);
 					$entity->__SET('Sv_ExamenSolicitado',$r->Sv_ExamenSolicitado);
+					$entity->__SET('IdU',$r->IdU);
+					$entity->__SET('Ef_Ta',$r->Ef_Ta);
+					$entity->__SET('Ef_Fr',$r->Ef_Fr);
+					$entity->__SET('Ef_Temp',$r->Ef_Temp);
+					$entity->__SET('Ef_Glasgow',$r->Ef_Glasgow);
+					$entity->__SET('Ef_Dx1',$r->Ef_Dx1);
+					$entity->__SET('Ef_Dx2',$r->Ef_Dx2);
+					$entity->__SET('Ef_HallazgoPos1',$r->Ef_HallazgoPos1);
+					$entity->__SET('Ef_Antecedentes1',$r->Ef_Antecedentes1);
+					$entity->__SET('Ef_Gin1',$r->Ef_Gin1);
+					$entity->__SET('Ef_Gin2',$r->Ef_Gin2);
+					$entity->__SET('Ef_Gin3',$r->Ef_Gin3);
+					$entity->__SET('Ef_Gin4',$r->Ef_Gin4);
+					$entity->__SET('Ef_Gin5',$r->Ef_Gin5);
+					$entity->__SET('Conven_1',$r->Conven_1);
+					$entity->__SET('Conven_2',$r->Conven_2);
+					$entity->__SET('Conven_3',$r->Conven_3);
+					$entity->__SET('Conven_4',$r->Conven_4);
+					$entity->__SET('Conven_5',$r->Conven_5);
+					$entity->__SET('Conven_6',$r->Conven_6);
+					$entity->__SET('Obs_conv',$r->Obs_conv);
+					$entity->__SET('Estado_ft',$r->Estado_ft);
+					$entity->__SET('Obs_entrega',$r->Obs_entrega);
+					$entity->__SET('Ef_Modo1',$r->Ef_Modo1);
+					$entity->__SET('Ef_Modo2',$r->Ef_Modo2);
+					$entity->__SET('Ef_Modo3',$r->Ef_Modo3);
+					$entity->__SET('Ef_Modo4',$r->Ef_Modo4);
+					$entity->__SET('Ef_Modo5',$r->Ef_Modo5);
+					$entity->__SET('Ef_Modo6',$r->Ef_Modo6);
+					$entity->__SET('Ef_Observaciones',$r->Ef_Observaciones);
+					$entity->__SET('En_Estado',$r->En_Estado);
+					$entity->__SET('En_Observaciones',$r->En_Observaciones);
+					$entity->__SET('En_RecibeNombre',$r->En_RecibeNombre);
+					$entity->__SET('Tp_Paramedico',$r->Tp_Paramedico);
+					$entity->__SET('Tp_Comandante',$r->Tp_Comandante);
+					$entity->__SET('Tp_Medico',$r->Tp_Medico);
 					
+					$Array[] = $entity;
+				}
+				return $Array;
+			}catch(Exception $e){
+				die($e->getMessage()." ->Ota_Informe_TrasladoModel->Listar()");
+			}
+		}
+		public function ListarXUsuario($IdU)
+		{
+			try
+			{
+				$Array = array();
+				$stm = $this->pdo->prepare("SELECT * FROM Ota_Informe_Traslado WHERE IdU = ?");
+				$stm->execute(array($IdU));
+
+				foreach ($stm->fetchAll(PDO::FETCH_OBJ) as $r) {
+					$entity = new Ota_Informe_Traslado();
+
+					$entity->__SET('IdServicio',$r->IdServicio);
+					$entity->__SET('Fecha1',$r->Fecha1);
+					$entity->__SET('Ficha',$r->Ficha);
+					$entity->__SET('Pte_Ap1',$r->Pte_Ap1);
+					$entity->__SET('Pte_Ap2',$r->Pte_Ap2);
+					$entity->__SET('PteNom1',$r->PteNom1);
+					$entity->__SET('Pte_Nom2',$r->Pte_Nom2);
+					$entity->__SET('Pte_TipoDoc',$r->Pte_TipoDoc);
+					$entity->__SET('Pte_NumDoc',$r->Pte_NumDoc);
+					$entity->__SET('Pte_FechaNac',$r->Pte_FechaNac);
+					$entity->__SET('Pte_Edad',$r->Pte_Edad);
+					$entity->__SET('Entidad',$r->Entidad);
+					$entity->__SET('Pte_Regimen',$r->Pte_Regimen);
+					$entity->__SET('Pte_Sexo',$r->Pte_Sexo);
+					$entity->__SET('Pte_Telefono',$r->Pte_Telefono);
+					$entity->__SET('Pte_Direccion',$r->Pte_Direccion);
+					$entity->__SET('Aco_Nombres',$r->Aco_Nombres);
+					$entity->__SET('Aco_Apellidos',$r->Aco_Apellidos);
+					$entity->__SET('Aco_Documento',$r->Aco_Documento);
+					$entity->__SET('Aco_Perentezco',$r->Aco_Perentezco);
+					$entity->__SET('Sv_Origen',$r->Sv_Origen);
+					$entity->__SET('Sv_Llegada',$r->Sv_Llegada);
+					$entity->__SET('Sv_Salida',$r->Sv_Salida);
+					$entity->__SET('Sv_Origen1',$r->Sv_Origen1);
+					$entity->__SET('Sv_Llegada1',$r->Sv_Llegada1);
+					$entity->__SET('Sv_Salida1',$r->Sv_Salida1);
+					$entity->__SET('Sv_Origen2',$r->Sv_Origen2);
+					$entity->__SET('Sv_Llegada2',$r->Sv_Llegada2);
+					$entity->__SET('Sv_Salida2',$r->Sv_Salida2);
+					$entity->__SET('Sv_Origen3',$r->Sv_Origen3);
+					$entity->__SET('Sv_Llegada3',$r->Sv_Llegada3);
+					$entity->__SET('Sv_Salida3',$r->Sv_Salida3);
+					$entity->__SET('Sv_Complejidad',$r->Sv_Complejidad);
+					$entity->__SET('Sv_TipoServicio',$r->Sv_TipoServicio);
+					$entity->__SET('Sv_Medico',$r->Sv_Medico);
+					$entity->__SET('Sv_ExamenSolicitado',$r->Sv_ExamenSolicitado);
+					$entity->__SET('IdU',$r->IdU);
 					$entity->__SET('Ef_Ta',$r->Ef_Ta);
 					$entity->__SET('Ef_Fr',$r->Ef_Fr);
 					$entity->__SET('Ef_Temp',$r->Ef_Temp);
@@ -188,7 +279,7 @@ require_once('../../Models/Conexion/Conexion.php');
 					$entity->__SET('Sv_TipoServicio',$r->Sv_TipoServicio);
 					$entity->__SET('Sv_Medico',$r->Sv_Medico);
 					$entity->__SET('Sv_ExamenSolicitado',$r->Sv_ExamenSolicitado);
-					
+					$entity->__SET('IdU',$r->IdU);	
 					$entity->__SET('Ef_Ta',$r->Ef_Ta);
 					$entity->__SET('Ef_Fr',$r->Ef_Fr);
 					$entity->__SET('Ef_Temp',$r->Ef_Temp);
@@ -236,7 +327,102 @@ require_once('../../Models/Conexion/Conexion.php');
 				die($e->getMessage()." ->Ota_Informe_TrasladoModel->Ver()");
 			}
 		}
+		public function VerXUsuario($IdUsuario)
+		{
+			try{
+				$stm = $this->pdo->prepare("SELECT * FROM Ota_Informe_Traslado WHERE IdU = ?");
+				$stm->execute(array($IdUsuario));
+				$r = $stm->fetch(PDO::FETCH_OBJ);
 
+				if ($r) {
+					$entity = new Ota_Informe_Traslado();
+
+					$entity->__SET('IdServicio',$r->IdServicio);
+					$entity->__SET('Fecha1',$r->Fecha1);
+				//	$entity->__SET('Fecha1Hora',$r->Fecha1Hora);
+					$entity->__SET('Ficha',$r->Ficha);
+				//	$entity->__SET('Fecha2Hora',$r->Fecha2Hora);
+					$entity->__SET('Pte_Ap1',$r->Pte_Ap1);
+					$entity->__SET('Pte_Ap2',$r->Pte_Ap2);
+					$entity->__SET('PteNom1',$r->PteNom1);
+					$entity->__SET('Pte_Nom2',$r->Pte_Nom2);
+					$entity->__SET('Pte_TipoDoc',$r->Pte_TipoDoc);
+					$entity->__SET('Pte_NumDoc',$r->Pte_NumDoc);
+					$entity->__SET('Pte_FechaNac',$r->Pte_FechaNac);
+					$entity->__SET('Pte_Edad',$r->Pte_Edad);
+					$entity->__SET('Entidad',$r->Entidad);
+					$entity->__SET('Pte_Regimen',$r->Pte_Regimen);
+					$entity->__SET('Pte_Sexo',$r->Pte_Sexo);
+					$entity->__SET('Pte_Telefono',$r->Pte_Telefono);
+					$entity->__SET('Pte_Direccion',$r->Pte_Direccion);
+					$entity->__SET('Aco_Nombres',$r->Aco_Nombres);
+					$entity->__SET('Aco_Apellidos',$r->Aco_Apellidos);
+					$entity->__SET('Aco_Documento',$r->Aco_Documento);
+					$entity->__SET('Aco_Perentezco',$r->Aco_Perentezco);
+					$entity->__SET('Sv_Origen',$r->Sv_Origen);
+					$entity->__SET('Sv_Llegada',$r->Sv_Llegada);
+					$entity->__SET('Sv_Salida',$r->Sv_Salida);
+					$entity->__SET('Sv_Origen1',$r->Sv_Origen1);
+					$entity->__SET('Sv_Llegada1',$r->Sv_Llegada1);
+					$entity->__SET('Sv_Salida1',$r->Sv_Salida1);
+					$entity->__SET('Sv_Origen2',$r->Sv_Origen2);
+					$entity->__SET('Sv_Llegada2',$r->Sv_Llegada2);
+					$entity->__SET('Sv_Salida2',$r->Sv_Salida2);
+					$entity->__SET('Sv_Origen3',$r->Sv_Origen3);
+					$entity->__SET('Sv_Llegada3',$r->Sv_Llegada3);
+					$entity->__SET('Sv_Salida3',$r->Sv_Salida3);
+					$entity->__SET('Sv_Complejidad',$r->Sv_Complejidad);
+					$entity->__SET('Sv_TipoServicio',$r->Sv_TipoServicio);
+					$entity->__SET('Sv_Medico',$r->Sv_Medico);
+					$entity->__SET('Sv_ExamenSolicitado',$r->Sv_ExamenSolicitado);
+					$entity->__SET('IdU',$r->IdU);					
+					$entity->__SET('Ef_Ta',$r->Ef_Ta);
+					$entity->__SET('Ef_Fr',$r->Ef_Fr);
+					$entity->__SET('Ef_Temp',$r->Ef_Temp);
+					$entity->__SET('Ef_Glasgow',$r->Ef_Glasgow);
+					$entity->__SET('Ef_Dx1',$r->Ef_Dx1);
+					$entity->__SET('Ef_Dx2',$r->Ef_Dx2);
+					$entity->__SET('Ef_HallazgoPos1',$r->Ef_HallazgoPos1);
+					$entity->__SET('Ef_Antecedentes1',$r->Ef_Antecedentes1);
+					$entity->__SET('Ef_Gin1',$r->Ef_Gin1);
+					$entity->__SET('Ef_Gin2',$r->Ef_Gin2);
+					$entity->__SET('Ef_Gin3',$r->Ef_Gin3);
+					$entity->__SET('Ef_Gin4',$r->Ef_Gin4);
+					$entity->__SET('Ef_Gin5',$r->Ef_Gin5);
+					$entity->__SET('Conven_1',$r->Conven_1);
+					$entity->__SET('Conven_2',$r->Conven_2);
+					$entity->__SET('Conven_3',$r->Conven_3);
+					$entity->__SET('Conven_4',$r->Conven_4);
+					$entity->__SET('Conven_5',$r->Conven_5);
+					$entity->__SET('Conven_6',$r->Conven_6);
+					$entity->__SET('Obs_conv',$r->Obs_conv);
+					$entity->__SET('Estado_ft',$r->Estado_ft);
+					$entity->__SET('Obs_entrega',$r->Obs_entrega);
+					$entity->__SET('Ef_Modo1',$r->Ef_Modo1);
+					$entity->__SET('Ef_Modo2',$r->Ef_Modo2);
+					$entity->__SET('Ef_Modo3',$r->Ef_Modo3);
+					$entity->__SET('Ef_Modo4',$r->Ef_Modo4);
+					$entity->__SET('Ef_Modo5',$r->Ef_Modo5);
+					$entity->__SET('Ef_Modo6',$r->Ef_Modo6);
+					$entity->__SET('Ef_Observaciones',$r->Ef_Observaciones);
+					$entity->__SET('En_Estado',$r->En_Estado);
+					$entity->__SET('En_Observaciones',$r->En_Observaciones);
+					$entity->__SET('En_RecibeNombre',$r->En_RecibeNombre);
+					$entity->__SET('Firma1',$r->Firma1);
+					$entity->__SET('Firma2',$r->Firma2);
+					$entity->__SET('Tp_Paramedico',$r->Tp_Paramedico);
+					$entity->__SET('Tp_Comandante',$r->Tp_Comandante);
+					$entity->__SET('Tp_Medico',$r->Tp_Medico);
+					$entity->__SET('Estado_ft',$r->Estado_ft);
+					$entity->__SET('Obs_entrega',$r->Obs_entrega);
+					return $entity;
+
+				}
+				return NULL;
+			}catch(Exception $e){
+				die($e->getMessage()." ->Ota_Informe_TrasladoModel->Ver()");
+			}
+		}
 		public function Maximo()
 		{
 			try

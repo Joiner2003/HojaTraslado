@@ -69,11 +69,24 @@ spl_autoload_register(function($nombreClase)
 			$var = $model->Listar();
 			return $var;
 		}
+		public function ListarOta_Informe_TrasladoXUsuario($IdU)
+		{
+			$model = new Ota_Informe_TrasladoModel();
+			$var = $model->ListarXUsuario($IdU);
+			return $var;
+		}
 
 		public function VerOta_Informe_Traslado($IdServicio)
 		{
 			$model = new Ota_Informe_TrasladoModel();
 			$var = $model->Ver($IdServicio);
+			return $var;
+		}
+
+		public function VerOta_Informe_TrasladoXUsuario($IdUsuario)
+		{
+			$model = new Ota_Informe_TrasladoModel();
+			$var = $model->VerXUsuario($IdUsuario);
 			return $var;
 		}
 
