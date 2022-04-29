@@ -12,6 +12,9 @@ require '../../Lib/FlashMessages.php';
 if (!session_id()) @session_start();
 // Instantiate the class
 $msg = new \Plasticbrain\FlashMessages\FlashMessages();
+
+$IdU =$HomeController->VerOta_Usuario($_SESSION['IdUsuario'])->__GET('IdUsuario');
+$IdR =$HomeController->VerOta_Usuario($_SESSION['IdUsuario'])->__GET('Id_Rol');
 ?>
 <!-- Page Wrapper -->
 <div id="wrapper">
@@ -153,7 +156,9 @@ $msg = new \Plasticbrain\FlashMessages\FlashMessages();
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    <?php if (isset($_GET['IdServicio'])){ ?>
+                                <?php if(isset($_SESSION["IdUsuario"])){ ?>
+                                    <?php if ($IdR == 1){ ?>
+                                        <?php if (isset($_GET['IdServicio'])){ ?>
                                         <?php $key = $HomeController->VerOta_Informe_Traslado($_GET['IdServicio']); ?>
                                         <?php if ($key != NULL){ ?>
                                             <tr>
@@ -178,7 +183,13 @@ $msg = new \Plasticbrain\FlashMessages\FlashMessages();
                                                 <td align="center" style="padding: 0;"> <a href="index.php?IdServicio=<?= $key->__GET('IdServicio') ?>" title="Ver" class="btn btn-success"><i class="fa fa-eye"></i></a> <a href="info_traslado.php?IdServicio=<?= $key->__GET('IdServicio') ?>" title="Imprimir" class="btn btn-primary" target="_blank"><i class="fa fa-print"></i></a></td>
                                             </tr>
                                         <?php } ?>
-                                    <?php } ?>
+                                    <?php } ?>    
+                                        
+                                    <?php }else{ ?>
+                                        
+
+                                <?php } ?>  
+                                <?php } ?> 
                                 </tbody>
                             </table>
                         </div>
