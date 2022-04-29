@@ -27,7 +27,7 @@ $IdR =$HomeController->VerOta_Usuario($_SESSION['IdUsuario'])->__GET('Id_Rol');
             <div class="sidebar-brand-icon rotate-n-15">
                 <i class="fa fa-plus-square"></i>
             </div>
-            <div class="sidebar-brand-text mx-3">TRASLADOS <sup class="fa fa-car"></sup></div>
+            <div class="sidebar-brand-text mx-3">TRASLADOS <sup class="fa fa-ambulance"></sup></div>
         </a>
 
         <!-- Divider -->
