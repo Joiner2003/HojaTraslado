@@ -1,6 +1,7 @@
 
 <?php
-$Conexion = $_POST['Conexion'];
+
+
 define('DB_HOST', '190.242.112.94');
 define('DB_DATABASE', 'sena');
 define('DB_PORT', '');

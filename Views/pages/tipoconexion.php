@@ -59,8 +59,8 @@ $msg = new \Plasticbrain\FlashMessages\FlashMessages();
                 <div><label>¿Estas Dentro o Fuera de la Empresa?</label></div>
 
                 <div class="col-sm-12 mb-6">
-                    <label class="col-sm-6"><input type="radio" class="" id="Conexion" name="Conexion" value="1" > SI</label>
-                    <label class="col-sm-6"><input type="radio" class="" id="Conexion" name="Conexion" value="2" > NO</label>  
+                    <label class="col-sm-6"><input type="radio" class="" id="Conexion" name="Conexion" value="1" > DENTRO </label>
+                    <label class="col-sm-6"><input type="radio" class="" id="Conexion" name="Conexion" value="2" > FUERA </label>  
                   </div>
         		<div class="d-flex justify-content-center mt-3">
 				    <button type="submit" class="btn btn-success btn-user btn-block">Entrar</button>
