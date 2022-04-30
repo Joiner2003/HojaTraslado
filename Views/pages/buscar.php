@@ -124,7 +124,7 @@ $IdR =$HomeController->VerOta_Usuario($_SESSION['IdUsuario'])->__GET('Id_Rol');
                             <?php } ?>
                             <form action="firma/firmaUsuario.php" method="post" target="_blank">
                                  <input type="hidden" name="IdU" value="<?= $IdU ?>">
-                                 <button type="submit" class="fa fa-pencil-square-o fa-sm fa-fw mr-2 text-gray-400">Crear Firma</button>
+                                 <button type="submit"><i class="fas fa-solid fa-user-plus fa-fw mr-2 text-gray-400"></i>Crear Firma</button>
                                   <br>
                             </form>
                            

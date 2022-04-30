@@ -650,6 +650,7 @@ $IdU =$HomeController->VerOta_Usuario($_SESSION['IdUsuario'])->__GET('IdUsuario'
                     <label>C.C</label>
                     <div class="col-sm-3 mb-3">
                     <input type="number" class="form-control" id="" name="ccoman" style="text-transform:uppercase;" value="<?php if($data != NULL) echo $data->__GET('ccoman') ?>">
+                    <img src="<?php if($data != NULL) echo $data->__GET('Firma2'); ?>" alt="">
                   </div>
                 </div>
               </div>
