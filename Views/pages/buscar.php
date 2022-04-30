@@ -122,9 +122,12 @@ $IdR =$HomeController->VerOta_Usuario($_SESSION['IdUsuario'])->__GET('Id_Rol');
                             <div class="dropdown-divider"></div>
                             
                             <?php } ?>
-                            
-                            <a class="dropdown-item" href="../../Actions/Login/logout.php" ><i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400">Crear Firma</i></a>
-                        
+                            <form action="firma/firmaUsuario.php" method="post" target="_blank">
+                                 <input type="hidden" name="IdU" value="<?= $IdU ?>">
+                                 <button type="submit" class="fa fa-pencil-square-o fa-sm fa-fw mr-2 text-gray-400">Crear Firma</button>
+                                  <br>
+                            </form>
+                           
                             <div class="dropdown-divider"></div>
                             
                             <a class="dropdown-item" href="../../Actions/Login/logout.php" ><i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>Cerrar Sesion</a>
