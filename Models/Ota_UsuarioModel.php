@@ -20,7 +20,7 @@ require_once('../../Models/Conexion/Conexion.php');
 		public function Agregar($Us_Nom1, $Us_Nom2, $Us_Ape1, $Us_Ape2, $Registro, $Usuario, $Clave )
 		{
 			try {
-				$sql = ("INSERT INTO Ota_Usuario (Us_Nom1, Us_Nom2, Us_Ape1, Us_Ape2, Registro, Usuario, Clave) VALUES (?, ?, ?, ?, ?, ?, ?)");
+				$sql = ("INSERT INTO Ota_Usuario (Us_Nom1, Us_Nom2, Us_Ape1, Us_Ape2, Registro, Usuario, Clave, Id_Rol) VALUES (?, ?, ?, ?, ?, ?, ?, 2)");
 				$stm = $this->pdo->prepare($sql)->execute(array($Us_Nom1, $Us_Nom2, $Us_Ape1, $Us_Ape2, $Registro, $Usuario, $Clave));
 				if($stm){
 					return true;
