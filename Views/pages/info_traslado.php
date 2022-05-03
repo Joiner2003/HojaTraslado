@@ -17,11 +17,13 @@ $ips = $HomeController->VerIPS();
 if (isset($_GET['IdServicio'])) {
     $IdServicio = $_GET['IdServicio'];
     $data = $HomeController->VerOta_Informe_Traslado($IdServicio);
+    $Firma=$HomeController->VerOta_Usuario($_SESSION['IdUsuario'])->__GET('FirmaU');
   }else{
     $IdServicio = $HomeController->MaximoOta_Informe_Traslado()->__GET('IdServicio')+1;
     $data = NULL;
   }
 
+ 
   $nombreImagen = "../Resource/img/logoota2.jpg";
   $imagenBase64 = "data:image/png;base64," . base64_encode(file_get_contents($nombreImagen));
 ?>
@@ -273,6 +275,7 @@ if (isset($_GET['IdServicio'])) {
      <tr>
       <td><?php echo 'Paramédico: '.$data->__GET('Parame')?></td>
       <td><?php echo 'C.C: '.$data->__GET('cpcarame')?></td>
+      <img src="<?php  echo $HomeController->VerOta_Usuario($_SESSION['IdUsuario'])->__GET('FirmaU') ?>" alt="">
     </tr>
     <tr>
       <td><?php echo 'Comandante: '.$data->__GET('Coman')?></td>

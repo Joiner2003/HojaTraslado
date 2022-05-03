@@ -20,10 +20,10 @@ spl_autoload_register(function($nombreClase)
 		public function __CONSTRUCT() {
 		}
 
-		public function AgregarOta_Usuario($Us_Nom1, $Us_Nom2, $Us_Ape1, $Us_Ape2, $Registro, $Usuario, $Clave)
+		public function AgregarOta_Usuario($Us_Nom1, $Us_Nom2, $Us_Ape1, $Us_Ape2, $Registro, $Usuario, $Clave, $TipoU)
 		{
 			$model = new Ota_UsuarioModel();
-			$var = $model->Agregar($Us_Nom1, $Us_Nom2, $Us_Ape1, $Us_Ape2, $Registro, $Usuario, $Clave);
+			$var = $model->Agregar($Us_Nom1, $Us_Nom2, $Us_Ape1, $Us_Ape2, $Registro, $Usuario, $Clave, $TipoU);
 			return $var;
 		}
 

@@ -15,6 +15,7 @@ $msg = new \Plasticbrain\FlashMessages\FlashMessages();
 
 $IdU =$HomeController->VerOta_Usuario($_SESSION['IdUsuario'])->__GET('IdUsuario');
 $IdR =$HomeController->VerOta_Usuario($_SESSION['IdUsuario'])->__GET('Id_Rol');
+$Firma=$HomeController->VerOta_Usuario($_SESSION['IdUsuario'])->__GET('FirmaU');
 ?>
 <!-- Page Wrapper -->
 <div id="wrapper">
@@ -122,13 +123,14 @@ $IdR =$HomeController->VerOta_Usuario($_SESSION['IdUsuario'])->__GET('Id_Rol');
                             <div class="dropdown-divider"></div>
                             
                             <?php } ?>
+                            
                             <form action="firma/firmaUsuario.php" method="post" target="_blank">
                                  <input type="hidden" name="IdU" value="<?= $IdU ?>">
-                                 <button type="submit"><i class="fas fa-solid fa-user-plus fa-fw mr-2 text-gray-400"></i>Crear Firma</button>
-                                  <br>
+                                 <button type="submit" class="dropdown-item"><i class="fas fa-edit fa-fw mr-2 text-gray-400"></i>Crear Firma</button> 
                             </form>
-                           
                             <div class="dropdown-divider"></div>
+                            
+                           
                             
                             <a class="dropdown-item" href="../../Actions/Login/logout.php" ><i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>Cerrar Sesion</a>
                             

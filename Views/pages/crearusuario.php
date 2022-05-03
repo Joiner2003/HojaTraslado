@@ -153,15 +153,24 @@ $IdU =$HomeController->VerOta_Usuario($_SESSION['IdUsuario'])->__GET('IdUsuario'
                   </div>
                 <br>
                 <div class="form-group row">
-                  <div class="col-sm-4 mb-4">
+                  <div class="col-sm-3 mb-3">
                     <label>Registro</label>
                     <input type="text" class="form-control" id="" name="Registro" required>
                   </div>
-                  <div class="col-sm-4 mb-4">
+                  <div class="col-sm-3 mb-3">
+                    <label>Tipo de Usuario</label>
+                    <select name ="TipoU" class="form-control" aria-label="Default select example">
+                      <option selected>Seleccione Usuario</option>
+                      <option value="1">Paramédico</option>
+                      <option value="2">Comandante</option>
+                      <option value="3">Médico</option>
+                  </select>
+                  </div>
+                  <div class="col-sm-3 mb-3">
                     <label>Usuario</label>
                     <input type="text" class="form-control" id="" name="Usuario" required>
                   </div>
-                  <div class="col-sm-4 mb-4">
+                  <div class="col-sm-3 mb-3">
                     <label>Clave</label>
                     <input type="text" class="form-control" id="" name="Clave" required>
                   </div>

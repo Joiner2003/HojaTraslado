@@ -17,11 +17,11 @@ require_once('../../Models/Conexion/Conexion.php');
 				die($e->getMessage());
 			}
 		}
-		public function Agregar($Us_Nom1, $Us_Nom2, $Us_Ape1, $Us_Ape2, $Registro, $Usuario, $Clave )
+		public function Agregar($Us_Nom1, $Us_Nom2, $Us_Ape1, $Us_Ape2, $Registro, $Usuario, $Clave, $TipoU )
 		{
 			try {
-				$sql = ("INSERT INTO Ota_Usuario (Us_Nom1, Us_Nom2, Us_Ape1, Us_Ape2, Registro, Usuario, Clave, Id_Rol) VALUES (?, ?, ?, ?, ?, ?, ?, 2)");
-				$stm = $this->pdo->prepare($sql)->execute(array($Us_Nom1, $Us_Nom2, $Us_Ape1, $Us_Ape2, $Registro, $Usuario, $Clave));
+				$sql = ("INSERT INTO Ota_Usuario (Us_Nom1, Us_Nom2, Us_Ape1, Us_Ape2, Registro, Usuario, Clave, Id_Rol, Tipo_U) VALUES (?, ?, ?, ?, ?, ?, ?, ?,?)");
+				$stm = $this->pdo->prepare($sql)->execute(array($Us_Nom1, $Us_Nom2, $Us_Ape1, $Us_Ape2, $Registro, $Usuario, $Clave, 2 ,$TipoU));
 				if($stm){
 					return true;
 				} else {
@@ -51,6 +51,7 @@ require_once('../../Models/Conexion/Conexion.php');
 					$entity->__SET('Usuario',$r->Usuario);
 					$entity->__SET('Clave',$r->Clave);
 					$entity->__SET('Id_Rol',$r->Id_Rol);
+					$entity->__SET('Tipo_U',$r->Tipo_U);
 					$entity->__SET('FirmaU',$r->FirmaU);
 					return $entity;
 
@@ -80,6 +81,7 @@ require_once('../../Models/Conexion/Conexion.php');
 					$entity->__SET('Usuario',$r->Usuario);
 					$entity->__SET('Clave',$r->Clave);
 					$entity->__SET('Id_Rol',$r->Id_Rol);
+					$entity->__SET('Tipo_U',$r->Tipo_U);
 					$entity->__SET('FirmaU',$r->FirmaU);
 					return $entity;
 
@@ -110,6 +112,7 @@ require_once('../../Models/Conexion/Conexion.php');
 					$entity->__SET('Usuario',$r->Usuario);
 					$entity->__SET('Clave',$r->Clave);
 					$entity->__SET('Id_Rol',$r->Id_Rol);
+					$entity->__SET('Tipo_U',$r->Tipo_U);
 					$entity->__SET('FirmaU',$r->FirmaU);
 					
 					$Array[] = $entity;
