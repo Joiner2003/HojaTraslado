@@ -35,15 +35,13 @@ if(!isset($_SESSION["Usuario"])){
 				if($HomeController->Modificar_Password($IdU, $C_Nueva) == true){
 
 					$msg->success('!Se ha actualizado correctamente¡');
-				/*	unlink("Sv_Firma_Pte.png");
-					unlink("En_Firma.png");
-					unlink("Sv_Firma_Entrega.png");*/
+				
+					
 					header("location: ../../Views/pages/buscar.php");
 				}else{
 					$msg->error('¡ERROR, no se pudo actualizar!..');
-				/*	unlink("Sv_Firma_Pte.png");
-					unlink("En_Firma.png");
-					unlink("Sv_Firma_Entrega.png");*/
+				
+					
 					header("location: ../../Views/pages/buscar.php");
 				}
 			} else {
