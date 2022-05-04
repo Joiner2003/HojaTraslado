@@ -128,6 +128,7 @@ $IdU =$HomeController->VerOta_Usuario($_SESSION['IdUsuario'])->__GET('IdUsuario'
             </a>
             <!-- Card Content - Collapse -->
             <div class="collapse show" id="cambiarcontraseña">
+            <?php $msg->display() ?>
               <div class="card-body">
                 <div class="form-group row">
                   <div class="col-sm-4 mb-4">

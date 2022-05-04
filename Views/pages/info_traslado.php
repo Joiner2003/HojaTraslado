@@ -63,7 +63,7 @@ if (isset($_GET['IdServicio'])) {
           </tr>
     <tr>
         <td colspan="1"><strong>Pagina:</strong></td>
-        <td colspan="1" align="center"><?php echo  ""?></td>
+        <td colspan="1" align="center"><?php echo ""?></td>
     </tr>
 </table><br>
 
