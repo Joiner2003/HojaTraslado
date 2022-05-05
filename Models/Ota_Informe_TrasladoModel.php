@@ -427,7 +427,7 @@ require_once('../../Models/Conexion/Conexion.php');
 		{
 			try
 			{
-				$stm = $this->pdo->prepare("SELECT MAX(IdServicio) AS IdServicio FROM Ota_Informe_Traslado");
+				$stm = $this->pdo->prepare("SELECT COUNT(IdServicio) AS IdServicio FROM Ota_Informe_Traslado");
 				$stm->execute(array());
 				$r = $stm->fetch(PDO::FETCH_OBJ);
 
