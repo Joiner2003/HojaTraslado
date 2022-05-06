@@ -17,7 +17,11 @@ $ips = $HomeController->VerIPS();
 if (isset($_GET['IdServicio'])) {
     $IdServicio = $_GET['IdServicio'];
     $data = $HomeController->VerOta_Informe_Traslado($IdServicio);
-    $Firma=$HomeController->VerOta_Usuario($_SESSION['IdUsuario'])->__GET('FirmaU');
+  //  $Firma=$HomeController->VerOta_Usuario($_SESSION['IdUsuario'])->__GET('FirmaU');
+   $Paramedico= $HomeController->VerOta_Usuario($data->__GET('Tp_Paramedico'));
+   $Medico= $HomeController->VerOta_Usuario($data->__GET('Tp_Medico'));
+   $Comandante= $HomeController->VerOta_Usuario($data->__GET('Tp_Comandante'));
+
   }else{
     $IdServicio = $HomeController->MaximoOta_Informe_Traslado()->__GET('IdServicio')+1;
     $data = NULL;
@@ -273,17 +277,20 @@ if (isset($_GET['IdServicio'])) {
       <th colspan="4">Tripulación que Realiza Traslado</th>
     </tr>
      <tr>
-      <td><?php echo 'Paramédico: '.$data->__GET('Tp_Paramedico')?></td>
-      <td><?php echo 'C.C: '.$data->__GET('cpcarame')?></td>
-      <img src="<?php  echo $HomeController->VerOta_Usuario($_SESSION['IdUsuario'])->__GET('FirmaU') ?>" alt="">
+     
+      <td><?php echo 'Paramédico: '.$Paramedico->__GET('Us_Nom1').' '.$Paramedico->__GET('Us_Ape1')?></td>
+      <td><?php echo 'C.C: '.$Paramedico->__GET('Registro')?></td>
+      <img src="<?php  echo $Paramedico->__GET('FirmaU') ?>" alt="">
     </tr>
     <tr>
-      <td><?php echo 'Comandante: '.$data->__GET('Tp_Comandante')?></td>
-      <td><?php echo 'C.C: '.$data->__GET('ccoman')?></td>
+    <td><?php echo 'Médico: '.$Medico->__GET('Us_Nom1').' '.$Medico->__GET('Us_Ape1')?></td>
+      <td><?php echo 'C.C: '.$Medico->__GET('Registro')?></td>
+      <img src="<?php  echo $Medico->__GET('FirmaU') ?>" alt="">
     </tr>
     <tr>
-      <td><?php echo 'Médico: '.$data->__GET('Tp_Medico')?></td>
-      <td><?php echo 'C.C: '.$data->__GET('ccmedico')?></td>
+    <td><?php echo 'Comandante: '.$Comandante->__GET('Us_Nom1').' '.$Comandante->__GET('Us_Ape1')?></td>
+      <td><?php echo 'C.C: '.$Comandante->__GET('Registro')?></td> <br>
+      <img src="<?php  echo $Comandante->__GET('FirmaU') ?>" alt="">
     </tr>
 </table>
 </body>
