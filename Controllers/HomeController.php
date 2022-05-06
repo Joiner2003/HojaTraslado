@@ -112,10 +112,10 @@ spl_autoload_register(function($nombreClase)
 			return $var;
 		}
 
-		public function AgregarOta_Fin_Traslado($IdServicio,$Estado_ft,$Obs_entrega)
+		public function AgregarOta_Fin_Traslado($IdServicio,$Estado_ft,$Obs_entrega,$Tp_Comandante, $Tp_Paramedico, $Tp_Medico)
 		{
 			$model = new Ota_Informe_TrasladoModel();
-			$var = $model->AgregarFinTraslado($IdServicio,$Estado_ft,$Obs_entrega);
+			$var = $model->AgregarFinTraslado($IdServicio,$Estado_ft,$Obs_entrega,$Tp_Comandante, $Tp_Paramedico, $Tp_Medico);
 			return $var;
 		}
 

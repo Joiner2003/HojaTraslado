@@ -457,10 +457,10 @@ require_once('../../Models/Conexion/Conexion.php');
 				die($e->getMessage()." ->Ota_Informe_TrasladoModel->AgregarEstPac()");
 			} 
 		}
-		public function AgregarFinTraslado($IdServicio,$Estado_ft,$Obs_entrega){
+		public function AgregarFinTraslado($IdServicio,$Estado_ft,$Obs_entrega,$Tp_Comandante, $Tp_Paramedico, $Tp_Medico){
 			try {
-				$sql = ("UPDATE Ota_Informe_Traslado SET Estado_ft = ?, Obs_entrega = ? WHERE IdServicio = ?");
-				$stm = $this->pdo->prepare($sql)->execute(array($Estado_ft,$Obs_entrega,$IdServicio ));
+				$sql = ("UPDATE Ota_Informe_Traslado SET Estado_ft = ?, Obs_entrega = ?,Tp_Comandante = ?, Tp_Paramedico = ?, Tp_Medico =? WHERE IdServicio = ?");
+				$stm = $this->pdo->prepare($sql)->execute(array($Estado_ft,$Obs_entrega,$Tp_Comandante, $Tp_Paramedico, $Tp_Medico,$IdServicio ));
 				if($stm){
 					return true;
 				} else {
