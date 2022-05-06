@@ -16,6 +16,8 @@
 		private $Usuario;
 		private $Clave;
 		private $Id_Rol;
+		
+
 
 		public function __GET($k)
 		{

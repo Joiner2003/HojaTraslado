@@ -633,11 +633,11 @@ $IdU =$HomeController->VerOta_Usuario($_SESSION['IdUsuario'])->__GET('IdUsuario'
               <div class="form-group row">
                     <label>Paramédico</label>
                     <div class="col-sm-3 mb-3">
-                    <input type="text" class="form-control" id="" name="Parame" style="text-transform:uppercase;" required value="<?php if($data != NULL) echo $data->__GET('Parame') ?>">
+                   <select name="NomParamedico" id="NomParamedico" class="form-control"></select>
                   </div>     
                     <label>C.C</label>
                     <div class="col-sm-3 mb-3">
-                    <input type="number" class="form-control" id="" name="ccparame" style="text-transform:uppercase;" value="<?php if($data != NULL) echo $data->__GET('ccparame') ?>">
+                    <input type="number" class="form-control" id="CcParamedico"  onblur="BuscarParamedico();" name="ccparame" style="text-transform:uppercase;" value="<?php if($data != NULL) echo $data->__GET('ccparame') ?>">
                   </div>
                 </div>
               </div>
@@ -645,12 +645,12 @@ $IdU =$HomeController->VerOta_Usuario($_SESSION['IdUsuario'])->__GET('IdUsuario'
               <div class="form-group row">
                     <label>Comandante</label>
                     <div class="col-sm-3 mb-3">
-                    <input type="text" class="form-control" id="" name="Coman" style="text-transform:uppercase;" required value="<?php if($data != NULL) echo $data->__GET('Coman') ?>">
-                  </div>     
+                    <select name="NomComandante" id="NomComandante" class="form-control"></select>
+                   </div>     
                     <label>C.C</label>
                     <div class="col-sm-3 mb-3">
                     <input type="number" class="form-control" id="" name="ccoman" style="text-transform:uppercase;" value="<?php if($data != NULL) echo $data->__GET('ccoman') ?>">
-                    <img src="<?php if($data != NULL) echo $Firma ?>" alt="">
+                  
                   </div>
                 </div>
               </div>
@@ -658,8 +658,8 @@ $IdU =$HomeController->VerOta_Usuario($_SESSION['IdUsuario'])->__GET('IdUsuario'
               <div class="form-group row">
                     <label>Médico</label>
                     <div class="col-sm-3 mb-3">
-                    <input type="text" class="form-control" id="" name="Medico" style="text-transform:uppercase;" required value="<?php if($data != NULL) echo $data->__GET('Medico') ?>">
-                  </div>     
+                    <select name="NomMedico" id="NomMedico" class="form-control"></select>
+                      </div>     
                     <label>C.C</label>
                     <div class="col-sm-3 mb-3">
                     <input type="number" class="form-control" id="" name="ccmedico" style="text-transform:uppercase;" value="<?php if($data != NULL) echo $data->__GET('ccmedico') ?>">
@@ -700,33 +700,6 @@ $IdU =$HomeController->VerOta_Usuario($_SESSION['IdUsuario'])->__GET('IdUsuario'
   <i class="fas fa-angle-up"></i>
 </a>
 
-<script type="text/javascript">
-	function buscar() 
-  {
-    Pte_NumDoc = $("#Pte_NumDoc").val();
-   // variable_2 = $("#id_campo2").val();
-    
-    var parametros = 
-    {
-      "buscar": "1",
-      "Pte_NumDoc" : Pte_NumDoc
-     // "variable_2" : variable_2
-    };
-    $.ajax(
-    {
-      data:  parametros,
-      url:   '../../Actions/buscardoc/buscardoc.php',
-      type:  'post',
-      beforeSend: function() 
-      {alert("enviando");}, 
-      error: function()
-      {alert("Error");},
-      complete: function() 
-      {alert("¡Listo!");},
-      success:  function (mensaje) 
-      {$('.resultados').html(mensaje);}
-    }) 
-  }
-</script>
+
 
 <?php include '../includes/footer.php'; ?>

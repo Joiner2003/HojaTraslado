@@ -16,6 +16,63 @@
 </body>
 
 </html>
+<script> 
+$(document).ready(function(){
+
+    $.ajax({
+        type: 'POST',
+        url: '../../Actions/buscardoc/buscarparamedico.php',
+        data: {'peticion': 'buscarparamedico'}    
+    })
+    .done(function(listar_paramedico){
+        $('#NomParamedico').html(listar_paramedico)
+    })
+    .fail(function(){
+        alert('Error')
+    })
+})
+
+
+</script>
+
+<script> 
+$(document).ready(function(){
+
+    $.ajax({
+        type: 'POST',
+        url: '../../Actions/buscardoc/buscarmedico.php',
+        data: {'peticion': 'buscarmedico'}    
+    })
+    .done(function(listar_Medico){
+        $('#NomMedico').html(listar_Medico)
+    })
+    .fail(function(){
+        alert('Error')
+    })
+})
+
+
+</script>
+
+<script> 
+$(document).ready(function(){
+
+    $.ajax({
+        type: 'POST',
+        url: '../../Actions/buscardoc/buscarcomandante.php',
+        data: {'peticion': 'buscarcomandante'}    
+    })
+    .done(function(listar_Comandante){
+        $('#NomComandante').html(listar_Comandante)
+    })
+    .fail(function(){
+        alert('Error')
+    })
+})
+
+
+</script>
+
 <script>
     $(function() {
         $('#tablaFiltro').DataTable();
@@ -27,3 +84,4 @@
         },6000);
     });
 </script>
+

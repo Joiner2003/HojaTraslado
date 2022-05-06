@@ -1,5 +1,6 @@
 <?php
 
+
 $serverName = "190.242.112.94";
 $connectionOptions = array("Database"=>"sena","Uid"=>"Ota", "PWD"=>"Sena2022", "CharacterSet"=>"UTF-8");
 

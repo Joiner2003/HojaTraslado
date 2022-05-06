@@ -18,10 +18,18 @@
 
 	if ($Usuario = $HomeController->VerxUsuarioOta_Usuario($usuario)) {
 		if ($Usuario->__GET('Clave') == ($_POST['password'])) {
-			$_SESSION['IdUsuario'] = $Usuario->__GET('IdUsuario');
-			$_SESSION['Usuario'] = $Usuario->__GET('Usuario');
+			if ( $Usuario->__GET('Usuario') == $usuario) {
+				$_SESSION['IdUsuario'] = $Usuario->__GET('IdUsuario');
+				$_SESSION['Usuario'] = $Usuario->__GET('Usuario');
+
+				header("location: ../../Views/pages/buscar.php");
+				$msg->success('Bienvanido '.$usuario);
+			} else {
+				$msg->error('ERROR, El Usuario es incorrecto..!');
+				echo("<script language='javascript'>location.href='../../Views/pages/login.php?user=".$usuario."';</script>");		
 			
-			header("location: ../../Views/pages/index.php");
+			}
+			
 		}else{
 			$msg->error('ERROR, La contraseña no es valida..!');
 			echo("<script language='javascript'>location.href='../../Views/pages/login.php?user=".$usuario."';</script>");
