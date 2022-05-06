@@ -105,10 +105,10 @@ spl_autoload_register(function($nombreClase)
 			return $var;
 		}
 		
-		public function AgregarOta_Estado_Paciente($IdServicio, $Ef_Ta, $Ef_Fr, $Ef_Temp, $Ef_Glasgow, $Ef_Dx1, $Ef_Dx2, $Ef_HallazgoPos1, $Ef_Antecedentes1, $Ef_Gin1, $Ef_Gin2, $Ef_Gin3, $Ef_Gin4, $Ef_Gin5,  $Conven_1,$Conven_2,$Conven_3,$Conven_4,$Conven_5,$Conven_6,$Obs_conv )
+		public function AgregarOta_Estado_Paciente($IdServicio, $Ef_Ta, $Ef_Fr, $Ef_Temp, $Ef_Glasgow, $Ef_Dx1, $Ef_Dx2, $Ef_HallazgoPos1, $Ef_Antecedentes1, $Ef_Gin1, $Ef_Gin2, $Ef_Gin3, $Ef_Gin4, $Ef_Gin5, $Oxigeno, $VOL, $PEEP, $Inotropia, $FR, $FIOZ, $Conven_1,$Conven_2,$Conven_3,$Conven_4,$Conven_5,$Conven_6,$Obs_conv )
 		{
 			$model = new Ota_Informe_TrasladoModel();
-			$var = $model->AgregarEstPac($IdServicio, $Ef_Ta, $Ef_Fr, $Ef_Temp, $Ef_Glasgow, $Ef_Dx1, $Ef_Dx2, $Ef_HallazgoPos1, $Ef_Antecedentes1, $Ef_Gin1, $Ef_Gin2, $Ef_Gin3, $Ef_Gin4, $Ef_Gin5,  $Conven_1,$Conven_2,$Conven_3,$Conven_4,$Conven_5,$Conven_6,$Obs_conv );
+			$var = $model->AgregarEstPac($IdServicio, $Ef_Ta, $Ef_Fr, $Ef_Temp, $Ef_Glasgow, $Ef_Dx1, $Ef_Dx2, $Ef_HallazgoPos1, $Ef_Antecedentes1, $Ef_Gin1, $Ef_Gin2, $Ef_Gin3, $Ef_Gin4, $Ef_Gin5, $Oxigeno, $VOL, $PEEP, $Inotropia, $FR, $FIOZ, $Conven_1,$Conven_2,$Conven_3,$Conven_4,$Conven_5,$Conven_6,$Obs_conv );
 			return $var;
 		}
 

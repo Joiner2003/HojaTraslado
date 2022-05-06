@@ -165,7 +165,7 @@ $IdU =$HomeController->VerOta_Usuario($_SESSION['IdUsuario'])->__GET('IdUsuario'
                 <div class="form-group row">
                   <div class="col-sm-4 mb-3">
                     <label>Numero Doc</label>
-                    <input type="text" class="form-control" id="Pte_NumDoc" onblur="buscar();" name="Pte_NumDoc" required value="<?php if($data != NULL) echo $data->__GET('Pte_NumDoc') ?>  ">
+                    <input type="number" class="form-control" id="Pte_NumDoc" onblur="buscar();" name="Pte_NumDoc" required value="<?php if($data != NULL) echo $data->__GET('Pte_NumDoc') ?>  ">
                   </div>
                   <div class="col-sm-2 mb-3">
                     <label>Tipo Doc</label>
@@ -379,8 +379,10 @@ $IdU =$HomeController->VerOta_Usuario($_SESSION['IdUsuario'])->__GET('IdUsuario'
                     <textarea class="form-control" name="Ef_Antecedentes1" rows="4" style="resize: vertical;" placeholder="Describa aqui los antecedentes..."><?php if($data != NULL) echo $data->__GET('Ef_Antecedentes1') ?></textarea>
                   </div>
                 </div>
+                <br>
+                <label class="col-sm-2">GINECOLOGICOS</label>
                 <div class="form-group row">
-                  <label class="col-sm-2">GINECOLOGICOS</label>
+                  
                   <!-- <label class="col-sm-1">G</label> -->
                   <div class="col-sm-2 mb-3">
                     <label>G<input type="text" class="form-control" id="" name="Ef_Gin1" value="<?php if($data != NULL) echo $data->__GET('Ef_Gin1') ?>"></label>
@@ -396,6 +398,29 @@ $IdU =$HomeController->VerOta_Usuario($_SESSION['IdUsuario'])->__GET('IdUsuario'
                   </div>
                   <div class="col-sm-2 mb-3">
                     <label>V<input type="text" class="form-control" id="" name="Ef_Gin5" value="<?php if($data != NULL) echo $data->__GET('Ef_Gin5') ?>"></label>
+                  </div>
+                </div>
+              <br>
+              <label class="col-sm-12">VENTILACION MECANICA</label>
+              <div class="form-group row">
+                  <!-- <label class="col-sm-1">G</label> -->
+                  <div class="col-sm-2 mb-3">
+                    <label>OXIGENO:<input type="text" class="form-control" id="" name="Oxigeno" value="<?php if($data != NULL) echo $data->__GET('Oxigeno') ?>"></label>
+                  </div>
+                  <div class="col-sm-2 mb-3">
+                    <label>VOL:<input type="text" class="form-control" id="" name="VOL" value="<?php if($data != NULL) echo $data->__GET('VOL') ?>"></label>
+                  </div>
+                  <div class="col-sm-2 mb-3">
+                    <label>P.E.E.P:<input type="text" class="form-control" id="" name="PEEP" value="<?php if($data != NULL) echo $data->__GET('PEEP') ?>"></label>
+                  </div>
+                  <div class="col-sm-2 mb-3">
+                    <label>INOTROPIA<input type="text" class="form-control" id="" name="Inotropia" value="<?php if($data != NULL) echo $data->__GET('Inotropia') ?>"></label>
+                  </div>
+                  <div class="col-sm-2 mb-3">
+                    <label>F.R<input type="text" class="form-control" id="" name="F.R" value="<?php if($data != NULL) echo $data->__GET('FR') ?>"></label>
+                  </div>
+                  <div class="col-sm-2 mb-3">
+                    <label>FIOZ<input type="text" class="form-control" id="" name="FIOZ" value="<?php if($data != NULL) echo $data->__GET('FIOZ') ?>"></label>
                   </div>
                 </div>
               </div>

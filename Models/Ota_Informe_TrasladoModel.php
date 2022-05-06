@@ -109,6 +109,12 @@ require_once('../../Models/Conexion/Conexion.php');
 					$entity->__SET('Ef_Gin3',$r->Ef_Gin3);
 					$entity->__SET('Ef_Gin4',$r->Ef_Gin4);
 					$entity->__SET('Ef_Gin5',$r->Ef_Gin5);
+					$entity->__SET ('Oxigeno', $r->Oxigeno);
+					$entity->__SET ('VOL', $r->VOL);
+					$entity->__SET ('PEEP', $r->PEEP);
+					$entity->__SET ('Inotropia', $r->Inotropia);
+					$entity->__SET ('FR', $r->FR);
+					$entity->__SET ('FIOZ', $r->FIOZ);
 					$entity->__SET('Conven_1',$r->Conven_1);
 					$entity->__SET('Conven_2',$r->Conven_2);
 					$entity->__SET('Conven_3',$r->Conven_3);
@@ -200,6 +206,12 @@ require_once('../../Models/Conexion/Conexion.php');
 					$entity->__SET('Ef_Gin3',$r->Ef_Gin3);
 					$entity->__SET('Ef_Gin4',$r->Ef_Gin4);
 					$entity->__SET('Ef_Gin5',$r->Ef_Gin5);
+					$entity->__SET ('Oxigeno', $r->Oxigeno);
+					$entity->__SET ('VOL', $r->VOL);
+					$entity->__SET ('PEEP', $r->PEEP);
+					$entity->__SET ('Inotropia', $r->Inotropia);
+					$entity->__SET ('FR', $r->FR);
+					$entity->__SET ('FIOZ', $r->FIOZ);
 					$entity->__SET('Conven_1',$r->Conven_1);
 					$entity->__SET('Conven_2',$r->Conven_2);
 					$entity->__SET('Conven_3',$r->Conven_3);
@@ -293,6 +305,12 @@ require_once('../../Models/Conexion/Conexion.php');
 					$entity->__SET('Ef_Gin3',$r->Ef_Gin3);
 					$entity->__SET('Ef_Gin4',$r->Ef_Gin4);
 					$entity->__SET('Ef_Gin5',$r->Ef_Gin5);
+					$entity->__SET ('Oxigeno', $r->Oxigeno);
+					$entity->__SET ('VOL', $r->VOL);
+					$entity->__SET ('PEEP', $r->PEEP);
+					$entity->__SET ('Inotropia', $r->Inotropia);
+					$entity->__SET ('FR', $r->FR);
+					$entity->__SET ('FIOZ', $r->FIOZ);
 					$entity->__SET('Conven_1',$r->Conven_1);
 					$entity->__SET('Conven_2',$r->Conven_2);
 					$entity->__SET('Conven_3',$r->Conven_3);
@@ -389,6 +407,12 @@ require_once('../../Models/Conexion/Conexion.php');
 					$entity->__SET('Ef_Gin3',$r->Ef_Gin3);
 					$entity->__SET('Ef_Gin4',$r->Ef_Gin4);
 					$entity->__SET('Ef_Gin5',$r->Ef_Gin5);
+					$entity->__SET ('Oxigeno', $r->Oxigeno);
+					$entity->__SET ('VOL', $r->VOL);
+					$entity->__SET ('PEEP', $r->PEEP);
+					$entity->__SET ('Inotropia', $r->Inotropia);
+					$entity->__SET ('FR', $r->FR);
+					$entity->__SET ('FIOZ', $r->FIOZ);
 					$entity->__SET('Conven_1',$r->Conven_1);
 					$entity->__SET('Conven_2',$r->Conven_2);
 					$entity->__SET('Conven_3',$r->Conven_3);
@@ -444,10 +468,10 @@ require_once('../../Models/Conexion/Conexion.php');
 			}
 		}
 		
-		public function AgregarEstPac($IdServicio, $Ef_Ta, $Ef_Fr, $Ef_Temp, $Ef_Glasgow, $Ef_Dx1, $Ef_Dx2, $Ef_HallazgoPos1, $Ef_Antecedentes1, $Ef_Gin1, $Ef_Gin2, $Ef_Gin3, $Ef_Gin4, $Ef_Gin5,  $Conven_1,$Conven_2,$Conven_3,$Conven_4,$Conven_5,$Conven_6, $Obs_conv ){
+		public function AgregarEstPac($IdServicio, $Ef_Ta, $Ef_Fr, $Ef_Temp, $Ef_Glasgow, $Ef_Dx1, $Ef_Dx2, $Ef_HallazgoPos1, $Ef_Antecedentes1, $Ef_Gin1, $Ef_Gin2, $Ef_Gin3, $Ef_Gin4, $Ef_Gin5, $Oxigeno, $VOL, $PEEP, $Inotropia, $FR, $FIOZ, $Conven_1,$Conven_2,$Conven_3,$Conven_4,$Conven_5,$Conven_6, $Obs_conv ){
 			try {
-				$sql = ("UPDATE Ota_Informe_Traslado SET Ef_Ta = ?, Ef_Fr = ?, Ef_Temp= ?, Ef_Glasgow = ?, Ef_Dx1 = ?, Ef_Dx2 = ?, Ef_HallazgoPos1 = ?, Ef_Antecedentes1 = ?, Ef_Gin1 = ?, Ef_Gin2 = ?, Ef_Gin3 = ?, Ef_Gin4 = ?, Ef_Gin5 = ?,  Conven_1=?,Conven_2=?,Conven_3=?,Conven_4=?,Conven_5=?,Conven_6=?, Obs_conv=? WHERE IdServicio = ?");
-				$stm = $this->pdo->prepare($sql)->execute(array($Ef_Ta, $Ef_Fr, $Ef_Temp, $Ef_Glasgow, $Ef_Dx1, $Ef_Dx2, $Ef_HallazgoPos1, $Ef_Antecedentes1, $Ef_Gin1, $Ef_Gin2, $Ef_Gin3, $Ef_Gin4, $Ef_Gin5, $Conven_1,$Conven_2,$Conven_3,$Conven_4,$Conven_5,$Conven_6,$Obs_conv, $IdServicio ));
+				$sql = ("UPDATE Ota_Informe_Traslado SET Ef_Ta = ?, Ef_Fr = ?, Ef_Temp= ?, Ef_Glasgow = ?, Ef_Dx1 = ?, Ef_Dx2 = ?, Ef_HallazgoPos1 = ?, Ef_Antecedentes1 = ?, Ef_Gin1 = ?, Ef_Gin2 = ?, Ef_Gin3 = ?, Ef_Gin4 = ?, Ef_Gin5 = ?, Oxigeno = ?, VOL = ?, PEEP = ?, Inotropia = ?, FR = ?, FIOZ = ?,  Conven_1=?,Conven_2=?,Conven_3=?,Conven_4=?,Conven_5=?,Conven_6=?, Obs_conv=? WHERE IdServicio = ?");
+				$stm = $this->pdo->prepare($sql)->execute(array($Ef_Ta, $Ef_Fr, $Ef_Temp, $Ef_Glasgow, $Ef_Dx1, $Ef_Dx2, $Ef_HallazgoPos1, $Ef_Antecedentes1, $Ef_Gin1, $Ef_Gin2, $Ef_Gin3, $Ef_Gin4, $Ef_Gin5, $Oxigeno, $VOL, $PEEP, $Inotropia, $FR, $FIOZ, $Conven_1,$Conven_2,$Conven_3,$Conven_4,$Conven_5,$Conven_6,$Obs_conv, $IdServicio ));
 				if($stm){
 					return true;
 				} else {
