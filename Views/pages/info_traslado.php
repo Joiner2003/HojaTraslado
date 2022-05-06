@@ -273,16 +273,16 @@ if (isset($_GET['IdServicio'])) {
       <th colspan="4">Tripulación que Realiza Traslado</th>
     </tr>
      <tr>
-      <td><?php echo 'Paramédico: '.$data->__GET('Parame')?></td>
+      <td><?php echo 'Paramédico: '.$data->__GET('Tp_Paramedico')?></td>
       <td><?php echo 'C.C: '.$data->__GET('cpcarame')?></td>
       <img src="<?php  echo $HomeController->VerOta_Usuario($_SESSION['IdUsuario'])->__GET('FirmaU') ?>" alt="">
     </tr>
     <tr>
-      <td><?php echo 'Comandante: '.$data->__GET('Coman')?></td>
+      <td><?php echo 'Comandante: '.$data->__GET('Tp_Comandante')?></td>
       <td><?php echo 'C.C: '.$data->__GET('ccoman')?></td>
     </tr>
     <tr>
-      <td><?php echo 'Médico: '.$data->__GET('Medico')?></td>
+      <td><?php echo 'Médico: '.$data->__GET('Tp_Medico')?></td>
       <td><?php echo 'C.C: '.$data->__GET('ccmedico')?></td>
     </tr>
 </table>
