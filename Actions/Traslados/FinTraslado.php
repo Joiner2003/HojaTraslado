@@ -26,7 +26,11 @@ if(!isset($_SESSION["Usuario"])){
     $IdServicio = $_POST['IdServicio'];
 	if(isset($_POST['Estado_ft'])){$Estado_ft = $_POST['Estado_ft'];}else{$Estado_ft = 0;}
     $Obs_entrega = $_POST['Obs_entrega'];
-
+	
+	$Tp_Comandante= $_POST['NomComandante'];
+	$Tp_Paramedico= $_POST['NomParamedico'];
+	$Tp_Medico= $_POST['NomMedico'];
+	
     
 	
 
@@ -34,7 +38,7 @@ if(!isset($_SESSION["Usuario"])){
 
 	// var_dump($Fecha1, $Fecha2, $Pte_NumDoc, $Pte_TipoDoc, $Pte_FechaNac, $Pte_Edad, $Pte_Ap1, $Pte_Ap2, $PteNom1, $Pte_Nom2, $Aco_Nombres, $Aco_Apellidos, $Aco_Documento, $Aco_Perentezco, $Sv_Origen, $Sv_Origen1, $Sv_Origen2, $Sv_Origen3, $Sv_Llegada, $Sv_Llegada1, $Sv_Llegada2, $Sv_Llegada3, $Sv_Salida, $Sv_Salida1, $Sv_Salida2, $Sv_Salida3, $Sv_Complejidad, $Sv_TipoServicio, $Sv_ExamenSolicitado, $Ef_Ta, $Ef_Fr, $Ef_Temp, $Ef_Glasgow, $Ef_Dx1, $Ef_Dx2, $Ef_HallazgoPos1, $Ef_Antecedentes1, $Ef_Gin1, $Ef_Gin2, $Ef_Gin3, $Ef_Gin4, $Ef_Gin5);
 
-	if($HomeController->AgregarOta_Fin_Traslado($IdServicio,$Estado_ft,$Obs_entrega) == true){
+	if($HomeController->AgregarOta_Fin_Traslado($IdServicio,$Estado_ft,$Obs_entrega, $Tp_Comandante, $Tp_Paramedico, $Tp_Medico) == true){
 
 		$msg->success('¡Traslado finalizado con exito!');
 	
