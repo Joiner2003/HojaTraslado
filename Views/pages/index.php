@@ -158,14 +158,13 @@ $IdU =$HomeController->VerOta_Usuario($_SESSION['IdUsuario'])->__GET('IdUsuario'
                 <div class="col-sm-4 mb-3">
                   <label>Ficha</label>
                   <input type="text" class="form-control" id="" name="Ficha" value="<?php if($data != NULL && $data->__GET('Ficha') != NULL) echo $data->__GET('Ficha')?>">
-                </div>
-                        
+                </div>      
                 </div>
 
                 <div class="form-group row">
                   <div class="col-sm-4 mb-3">
                     <label>Numero Doc</label>
-                    <input type="number" class="form-control" id="Pte_NumDoc" onblur="buscar();" name="Pte_NumDoc" required value="<?php if($data != NULL) echo $data->__GET('Pte_NumDoc') ?>  ">
+                    <input type="number" class="form-control" id="Pte_NumDoc" name="Pte_NumDoc" required value="<?php if($data != NULL) echo $data->__GET('Pte_NumDoc') ?>  ">
                   </div>
                   <div class="col-sm-2 mb-3">
                     <label>Tipo Doc</label>
@@ -417,7 +416,7 @@ $IdU =$HomeController->VerOta_Usuario($_SESSION['IdUsuario'])->__GET('IdUsuario'
                     <label>INOTROPIA<input type="text" class="form-control" id="" name="Inotropia" value="<?php if($data != NULL) echo $data->__GET('Inotropia') ?>"></label>
                   </div>
                   <div class="col-sm-2 mb-3">
-                    <label>F.R<input type="text" class="form-control" id="" name="F.R" value="<?php if($data != NULL) echo $data->__GET('FR') ?>"></label>
+                    <label>F.R<input type="text" class="form-control" id="" name="FR" value="<?php if($data != NULL) echo $data->__GET('FR') ?>"></label>
                   </div>
                   <div class="col-sm-2 mb-3">
                     <label>FIOZ<input type="text" class="form-control" id="" name="FIOZ" value="<?php if($data != NULL) echo $data->__GET('FIOZ') ?>"></label>
@@ -657,38 +656,25 @@ $IdU =$HomeController->VerOta_Usuario($_SESSION['IdUsuario'])->__GET('IdUsuario'
               <div class="card-body">
               <div class="form-group row">
                     <label>Paramédico</label>
-                    <div class="col-sm-3 mb-3">
+                    <div class="col-sm-12 mb-12">
                    <select name="NomParamedico" id="NomParamedico" class="form-control"></select>
                   </div>     
-                    <label>C.C</label>
-                    <div class="col-sm-3 mb-3">
-                    <input type="number" class="form-control" id="CcParamedico"  onblur="BuscarParamedico();" name="ccparame" style="text-transform:uppercase;" value="<?php if($data != NULL) echo $data->__GET('ccparame') ?>">
-                  </div>
                 </div>
               </div>
               <div class="card-body">
               <div class="form-group row">
                     <label>Comandante</label>
-                    <div class="col-sm-3 mb-3">
+                    <div class="col-sm-12 mb-12">
                     <select name="NomComandante" id="NomComandante" class="form-control"></select>
                    </div>     
-                    <label>C.C</label>
-                    <div class="col-sm-3 mb-3">
-                    <input type="number" class="form-control" id="" name="ccoman" style="text-transform:uppercase;" value="<?php if($data != NULL) echo $data->__GET('ccoman') ?>">
-                  
-                  </div>
                 </div>
               </div>
               <div class="card-body">
               <div class="form-group row">
                     <label>Médico</label>
-                    <div class="col-sm-3 mb-3">
+                    <div class="col-sm-12 mb-12">
                     <select name="NomMedico" id="NomMedico" class="form-control"></select>
-                      </div>     
-                    <label>C.C</label>
-                    <div class="col-sm-3 mb-3">
-                    <input type="number" class="form-control" id="" name="ccmedico" style="text-transform:uppercase;" value="<?php if($data != NULL) echo $data->__GET('ccmedico') ?>">
-                  </div>
+                      </div>  
                 </div>
               </div>
             </div>

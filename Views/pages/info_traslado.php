@@ -279,17 +279,17 @@ if (isset($_GET['IdServicio'])) {
      <tr>
      
       <td><?php echo 'Paramédico: '.$Paramedico->__GET('Us_Nom1').' '.$Paramedico->__GET('Us_Ape1')?></td>
-      <td><?php echo 'C.C: '.$Paramedico->__GET('Registro')?></td>
+      <td><?php echo 'C.C: '.$Paramedico->__GET('Documento')?></td>
       <img src="<?php  echo $Paramedico->__GET('FirmaU') ?>" alt="">
     </tr>
     <tr>
     <td><?php echo 'Médico: '.$Medico->__GET('Us_Nom1').' '.$Medico->__GET('Us_Ape1')?></td>
-      <td><?php echo 'C.C: '.$Medico->__GET('Registro')?></td>
+      <td><?php echo 'C.C: '.$Medico->__GET('Documento')?></td>
       <img src="<?php  echo $Medico->__GET('FirmaU') ?>" alt="">
     </tr>
     <tr>
     <td><?php echo 'Comandante: '.$Comandante->__GET('Us_Nom1').' '.$Comandante->__GET('Us_Ape1')?></td>
-      <td><?php echo 'C.C: '.$Comandante->__GET('Registro')?></td> <br>
+      <td><?php echo 'C.C: '.$Comandante->__GET('Documento')?></td> <br>
       <img src="<?php  echo $Comandante->__GET('FirmaU') ?>" alt="">
     </tr>
 </table>

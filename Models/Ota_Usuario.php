@@ -12,7 +12,7 @@
 		private $Us_Nom2;
 		private $Us_Ape1;
 		private $Us_Ape2;
-		private $Registro;
+		private $Documento;
 		private $Usuario;
 		private $Clave;
 		private $Id_Rol;

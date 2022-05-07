@@ -154,8 +154,8 @@ $IdU =$HomeController->VerOta_Usuario($_SESSION['IdUsuario'])->__GET('IdUsuario'
                 <br>
                 <div class="form-group row">
                   <div class="col-sm-3 mb-3">
-                    <label>Registro</label>
-                    <input type="text" class="form-control" id="" name="Registro" required>
+                    <label>Numero Documento</label>
+                    <input type="number" class="form-control" id="" name="Documento" required>
                   </div>
                   <div class="col-sm-3 mb-3">
                     <label>Tipo de Usuario</label>

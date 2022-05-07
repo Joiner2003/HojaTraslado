@@ -17,11 +17,11 @@ require_once('../../Models/Conexion/Conexion.php');
 				die($e->getMessage());
 			}
 		}
-		public function Agregar($Us_Nom1, $Us_Nom2, $Us_Ape1, $Us_Ape2, $Registro, $Usuario, $Clave, $TipoU )
+		public function Agregar($Us_Nom1, $Us_Nom2, $Us_Ape1, $Us_Ape2, $Documento, $Usuario, $Clave, $TipoU )
 		{
 			try {
-				$sql = ("INSERT INTO Ota_Usuario (Us_Nom1, Us_Nom2, Us_Ape1, Us_Ape2, Registro, Usuario, Clave, Id_Rol, Tipo_U) VALUES (?, ?, ?, ?, ?, ?, ?, ?,?)");
-				$stm = $this->pdo->prepare($sql)->execute(array($Us_Nom1, $Us_Nom2, $Us_Ape1, $Us_Ape2, $Registro, $Usuario, $Clave, 2 ,$TipoU));
+				$sql = ("INSERT INTO Ota_Usuario (Us_Nom1, Us_Nom2, Us_Ape1, Us_Ape2, Documento, Usuario, Clave, Id_Rol, Tipo_U) VALUES (?, ?, ?, ?, ?, ?, ?, ?,?)");
+				$stm = $this->pdo->prepare($sql)->execute(array($Us_Nom1, $Us_Nom2, $Us_Ape1, $Us_Ape2, $Documento, $Usuario, $Clave, 2 ,$TipoU));
 				if($stm){
 					return true;
 				} else {
@@ -47,7 +47,7 @@ require_once('../../Models/Conexion/Conexion.php');
 					$entity->__SET('Us_Nom2',$r->Us_Nom2);
 					$entity->__SET('Us_Ape1',$r->Us_Ape1);
 					$entity->__SET('Us_Ape2',$r->Us_Ape2);
-					$entity->__SET('Registro',$r->Registro);
+					$entity->__SET('Documento',$r->Documento);
 					$entity->__SET('Usuario',$r->Usuario);
 					$entity->__SET('Clave',$r->Clave);
 					$entity->__SET('Id_Rol',$r->Id_Rol);
@@ -77,7 +77,7 @@ require_once('../../Models/Conexion/Conexion.php');
 					$entity->__SET('Us_Nom2',$r->Us_Nom2);
 					$entity->__SET('Us_Ape1',$r->Us_Ape1);
 					$entity->__SET('Us_Ape2',$r->Us_Ape2);
-					$entity->__SET('Registro',$r->Registro);
+					$entity->__SET('Documento',$r->Documento);
 					$entity->__SET('Usuario',$r->Usuario);
 					$entity->__SET('Clave',$r->Clave);
 					$entity->__SET('Id_Rol',$r->Id_Rol);
@@ -108,7 +108,7 @@ require_once('../../Models/Conexion/Conexion.php');
 					$entity->__SET('Us_Nom2',$r->Us_Nom2);
 					$entity->__SET('Us_Ape1',$r->Us_Ape1);
 					$entity->__SET('Us_Ape2',$r->Us_Ape2);
-					$entity->__SET('Registro',$r->Registro);
+					$entity->__SET('Documento',$r->Documento);
 					$entity->__SET('Usuario',$r->Usuario);
 					$entity->__SET('Clave',$r->Clave);
 					$entity->__SET('Id_Rol',$r->Id_Rol);
