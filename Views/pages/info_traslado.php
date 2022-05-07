@@ -267,34 +267,47 @@ if (isset($_GET['IdServicio'])) {
       <td><?php echo 'Observaciones Al Momento De La Entrega: '.$data->__GET('Obs_entrega')?></td>
     </tr>
 </table>
-
+<hr>
 <table style="width:100% ">
 <tr>
-  <td><?php echo 'Firma Paciente o Acompañante:  <img src='. $data->__GET('Firma1')?>></td>
-  <td></td>
-  <td><?php echo 'Firma Médico o Enfermera(o) Que Entrega:  <img src='. $data->__GET('Firma2')?>></td>
+  <td><?php echo '<img src='. $data->__GET('Firma1')?>></td>
+  <td><?php echo '<img src='. $data->__GET('Firma2')?>></td>
+</tr>
+<tr>
+  <td> Firma Paciente o Acompañante</td>
+  <td>Firma Médico o Enfermera(o) Que Recibe</td>
    </tr>
     </table>
-    
+
+    <br>
+
     <table style="width:100% ">
    <tr>
       <th colspan="4">Tripulación que Realiza Traslado</th>
     </tr>
-     <tr>
-     <td><?php echo 'Paramédico: '.$Paramedico->__GET('Us_Nom1').' '.$Paramedico->__GET('Us_Ape1')?></td>
-      <td><?php echo 'C.C: '.$Paramedico->__GET('Documento')?></td>
-      <img src="<?php  echo $Paramedico->__GET('FirmaU') ?>" alt="">
-    </tr>
+    <br>
     <tr>
-    <td><?php echo 'Médico: '.$Medico->__GET('Us_Nom1').' '.$Medico->__GET('Us_Ape1')?></td>
-      <td><?php echo 'C.C: '.$Medico->__GET('Documento')?></td>
-      <img src="<?php  echo $Medico->__GET('FirmaU') ?>" alt="">
+      <td>Paramedico</td>
+      <td>Medico</td>
+      <td>Comandante</td>
     </tr>
+    <br>
     <tr>
-    <td><?php echo 'Comandante: '.$Comandante->__GET('Us_Nom1').' '.$Comandante->__GET('Us_Ape1')?></td>
-      <td><?php echo 'C.C: '.$Comandante->__GET('Documento')?></td> <br>
-      <img src="<?php  echo $Comandante->__GET('FirmaU') ?>" alt="">
+    <td><img src="<?php  echo $Paramedico->__GET('FirmaU') ?>" alt=""></td>
+    <td><img src="<?php  echo $Medico->__GET('FirmaU') ?>" alt=""></td> 
+    <td><img src="<?php  echo $Comandante->__GET('FirmaU') ?>" alt=""></td>
+    </tr>
 
+     <tr>
+     <td><?php echo $Paramedico->__GET('Us_Nom1').' '.$Paramedico->__GET('Us_Ape1')?></td>
+     <td><?php echo $Medico->__GET('Us_Nom1').' '.$Medico->__GET('Us_Ape1')?></td>
+     <td><?php echo $Comandante->__GET('Us_Nom1').' '.$Comandante->__GET('Us_Ape1')?></td>
+      
+    </tr>
+    <tr>
+    <td><?php echo 'C.C: '.$Paramedico->__GET('Documento')?></td>
+      <td><?php echo 'C.C: '.$Medico->__GET('Documento')?></td>
+      <td><?php echo 'C.C: '.$Comandante->__GET('Documento')?></td> <br>
     </tr>
 </table>
 </body>
