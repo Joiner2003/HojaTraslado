@@ -25,6 +25,10 @@ if (isset($_GET['IdServicio'])) {
   }else{
     $IdServicio = $HomeController->MaximoOta_Informe_Traslado()->__GET('IdServicio')+1;
     $data = NULL;
+    $Paramedico= NULL;
+    $Medico= NULL;
+    $Comandante= NULL;
+
   }
 
  
@@ -277,8 +281,7 @@ if (isset($_GET['IdServicio'])) {
       <th colspan="4">Tripulación que Realiza Traslado</th>
     </tr>
      <tr>
-     
-      <td><?php echo 'Paramédico: '.$Paramedico->__GET('Us_Nom1').' '.$Paramedico->__GET('Us_Ape1')?></td>
+     <td><?php echo 'Paramédico: '.$Paramedico->__GET('Us_Nom1').' '.$Paramedico->__GET('Us_Ape1')?></td>
       <td><?php echo 'C.C: '.$Paramedico->__GET('Documento')?></td>
       <img src="<?php  echo $Paramedico->__GET('FirmaU') ?>" alt="">
     </tr>
@@ -291,6 +294,7 @@ if (isset($_GET['IdServicio'])) {
     <td><?php echo 'Comandante: '.$Comandante->__GET('Us_Nom1').' '.$Comandante->__GET('Us_Ape1')?></td>
       <td><?php echo 'C.C: '.$Comandante->__GET('Documento')?></td> <br>
       <img src="<?php  echo $Comandante->__GET('FirmaU') ?>" alt="">
+
     </tr>
 </table>
 </body>
