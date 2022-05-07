@@ -594,7 +594,7 @@ $IdU =$HomeController->VerOta_Usuario($_SESSION['IdUsuario'])->__GET('IdUsuario'
             <div class="col mb-6">
             <form action="firma/firma3.php" method="post" target="_blank">
               <input type="hidden" name="IdServicio" value="<?= $IdServicio ?>">
-              <button type="submit" class="btn btn-success">Firma Paciente</button>
+              <button type="submit" class="btn btn-success"  <?php if($data == NULL) echo "disabled title='Guarde el Informe'"; ?>>Firma Paciente</button>
               <br>
               <img src="<?php if($data != NULL) echo $data->__GET('Firma1'); ?>" alt="">
             </form>
@@ -605,7 +605,7 @@ $IdU =$HomeController->VerOta_Usuario($_SESSION['IdUsuario'])->__GET('IdUsuario'
             <div class="col mb-6">
             <form action="firma/firma4.php" method="post" target="_blank">
               <input type="hidden" name="IdServicio" value="<?= $IdServicio ?>">
-              <button type="submit" class="btn btn-success">Firma Médico y/o Paramédico</button>
+              <button type="submit" class="btn btn-success"  <?php if($data == NULL) echo "disabled title='Guardar el Informe'"; ?>>Firma Médico y/o Paramédico</button>
               <br>
               <img src="<?php if($data != NULL) echo $data->__GET('Firma2'); ?>" alt="">
             </form>
