@@ -122,6 +122,27 @@ require_once('../../Models/Conexion/Conexion.php');
 				die($e->getMessage()." ->Ota_UsuarioModel->Listar()");
 			}
 		}
+
+		public function Conteo()
+		{
+			try
+			{
+				$stm = $this->pdo->prepare("SELECT COUNT(IdUsuario) AS IdUsuario FROM Ota_Usuario");
+				$stm->execute(array());
+				$r = $stm->fetch(PDO::FETCH_OBJ);
+
+				if ($r) {
+					$entity = new Ota_Usuario();
+
+					$entity->__SET('IdUsuario', $r->IdUsuario);
+					return $entity;
+				}
+				return NULL;
+			}catch(Exception $e)
+			{
+				die($e->getMessage()." -> Ota_UsuarioModel->Conteo()");
+			}
+		}
 		
 		public function Eliminar($IdUsuario) {
 			try {
