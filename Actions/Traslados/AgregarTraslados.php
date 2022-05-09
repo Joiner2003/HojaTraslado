@@ -6,7 +6,7 @@
 <?php 
 /**
 	* Author:
-	* Ing Alberto Rodriguez
+	* Ing Joiner Escorcia - Juan Gomez
 *
 **/
 session_start();
@@ -64,15 +64,11 @@ if(!isset($_SESSION["Usuario"])){
 	if($HomeController->AgregarOta_Informe_Traslado($Fecha1, $Ficha, $Pte_NumDoc, $Pte_TipoDoc, $Pte_FechaNac, $Pte_Edad, $Entidad,$Pte_Regimen,$Pte_Sexo, $Pte_Telefono,$Pte_Direccion,$Pte_Ap1, $Pte_Ap2, $PteNom1, $Pte_Nom2, $Aco_Nombres, $Aco_Apellidos, $Aco_Documento, $Aco_Perentezco, $Sv_Origen, $Sv_Origen1, $Sv_Origen2, $Sv_Origen3, $Sv_Llegada, $Sv_Llegada1, $Sv_Llegada2, $Sv_Llegada3, $Sv_Salida, $Sv_Salida1, $Sv_Salida2, $Sv_Salida3, $Sv_Complejidad, $Sv_TipoServicio, $Sv_ExamenSolicitado, $IdU) == true){
 
 		$msg->success('!Agregado con exito¡');
-	/*	unlink("Sv_Firma_Pte.png");
-		unlink("En_Firma.png");
-		unlink("Sv_Firma_Entrega.png");*/
+
 		header("location: ../../Views/pages/index.php?IdServicio=".$IdServicio);
 	}else{
 		$msg->error('¡ERROR, no se Agrego!..');
-	/*	unlink("Sv_Firma_Pte.png");
-		unlink("En_Firma.png");
-		unlink("Sv_Firma_Entrega.png");*/
+	
 		header("location: ../../Views/pages/buscar.php");
 	}
 }
