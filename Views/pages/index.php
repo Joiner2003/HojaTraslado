@@ -17,6 +17,9 @@ date_default_timezone_set('America/Bogota');
 if (isset($_GET['IdServicio'])) {
   $IdServicio = $_GET['IdServicio'];
   $data = $HomeController->VerOta_Informe_Traslado($IdServicio);
+  $Paramedico= $HomeController->VerOta_Usuario($data->__GET('Tp_Paramedico'));
+  $Medico= $HomeController->VerOta_Usuario($data->__GET('Tp_Medico'));
+  $Comandante= $HomeController->VerOta_Usuario($data->__GET('Tp_Comandante'));
 }else{
   $IdServicio = $HomeController->MaximoOta_Informe_Traslado()->__GET('IdServicio')+1;
   $data = NULL;
@@ -164,7 +167,7 @@ $IdU =$HomeController->VerOta_Usuario($_SESSION['IdUsuario'])->__GET('IdUsuario'
                 <div class="form-group row">
                   <div class="col-sm-4 mb-3">
                     <label>Numero Doc</label>
-                    <input type="number" class="form-control" id="Pte_NumDoc" name="Pte_NumDoc" required value="<?php if($data != NULL) echo $data->__GET('Pte_NumDoc') ?>  ">
+                    <input type="text" class="form-control" id="Pte_NumDoc" name="Pte_NumDoc" required value="<?php if($data != NULL) echo $data->__GET('Pte_NumDoc') ?>  ">
                   </div>
                   <div class="col-sm-2 mb-3">
                     <label>Tipo Doc</label>
@@ -657,15 +660,21 @@ $IdU =$HomeController->VerOta_Usuario($_SESSION['IdUsuario'])->__GET('IdUsuario'
               <div class="form-group row">
                     <label>Paramédico</label>
                     <div class="col-sm-12 mb-12">
-                   <select name="NomParamedico" id="NomParamedico" class="form-control"></select>
+                   <select name="NomParamedico" id="NomParamedico" class="form-control" value="<?php if($data != NULL) echo $data->__GET('Tp_Paramedico') ?>">
+                    </select>
+                    <option > <?php if($Paramedico != NULL) echo  $Paramedico->__GET('Us_Nom1').' '.$Paramedico->__GET('Us_Ape1')?></option>      
+                  
                   </div>     
                 </div>
               </div>
               <div class="card-body">
               <div class="form-group row">
                     <label>Comandante</label>
-                    <div class="col-sm-12 mb-12">
-                    <select name="NomComandante" id="NomComandante" class="form-control"></select>
+                    <div class="col-sm-12 mb-12"> 
+                    <select name="NomComandante" id="NomComandante"   class="form-control" value="<?php if($data != NULL) echo $data->__GET('Tp_Comandante') ?>">
+                     </select>  
+                     <option > <?php if($Comandante != NULL) echo $Comandante->__GET('Us_Nom1').' '.$Comandante->__GET('Us_Ape1')?></option>      
+                   
                    </div>     
                 </div>
               </div>
@@ -673,7 +682,9 @@ $IdU =$HomeController->VerOta_Usuario($_SESSION['IdUsuario'])->__GET('IdUsuario'
               <div class="form-group row">
                     <label>Médico</label>
                     <div class="col-sm-12 mb-12">
-                    <select name="NomMedico" id="NomMedico" class="form-control"></select>
+                    <select name="NomMedico" id="NomMedico" class="form-control" value="<?php if($data != NULL) echo $data->__GET('Tp_Medico') ?>">
+                    <option > <?php if($Medico != NULL) echo $Medico->__GET('Us_Nom1').' '.$Medico->__GET('Us_Ape1')?></option>      
+                   </select>
                       </div>  
                 </div>
               </div>
