@@ -200,21 +200,23 @@ if (isset($_GET['IdServicio'])) {
   <td><?php echo 'Observacoines: '.$data->__GET('Obs_conv')?></td>
  </tr>
    </table>
+
  <table style="width:100% ">
    <tr>
    <th colspan="4">Ventilacion Mecánica</th>
  </tr>
    <tr>
-  <td><?php echo 'Oxígeno: '.$data->__GET('Ef_Modo1')?></td>
-   <td><?php echo 'VOL:'?></td>
-   <td><?php echo 'P.E.E.P.: '.$data->__GET('Ef_Modo2')?></td>
+  <td><?php echo 'Oxígeno: '.$data->__GET('Oxigeno')?></td>
+   <td><?php echo 'VOL:'.$data->__GET('VOL')?></td>
+   <td><?php echo 'P.E.E.P.: '.$data->__GET('PEEP')?></td>
    </tr>
    <tr>
-   <td><?php echo 'Inotropia: '.$data->__GET('Ef_Modo3')?></td>
-   <td><?php echo 'FR: '.$data->__GET('Ef_Modo4')?></td>
-   <td><?php echo 'FIOZ: '.$data->__GET('Ef_Modo5')?></td>
+   <td><?php echo 'Inotropia: '.$data->__GET('Inotropia')?></td>
+   <td><?php echo 'FR: '.$data->__GET('FR')?></td>
+   <td><?php echo 'FIOZ: '.$data->__GET('FIOZ')?></td>
    </tr>
    </table>
+
    <table style="width:100% ">
      <tr>
       <th colspan="4">Signos Vitales</th>
@@ -224,14 +226,14 @@ if (isset($_GET['IdServicio'])) {
     <tr>
     <?php foreach ($HomeController->ListarxIdServicioOta_Informe_SignosVitales($IdServicio) as $key): ?>
                         <tr class="text-center">
-                          <td><?= print("Fecha: ").(new DateTime($key->__GET('FechaHora')))->format('d/m/Y') ?></td>
-                          <td><?= print("Hora: ").(new DateTime($key->__GET('FechaHora')))->format('H:i') ?></td>
-                          <td><?= print("TA: ").$key->__GET('TA') ?></td>
-                          <td><?= print("FC: ").$key->__GET('FC') ?></td>
-                          <td><?= print("FR: ").$key->__GET('FR') ?></td>
-                          <td><?= print("TEMP: ").$key->__GET('Temp') ?></td>
-                          <td><?= print("GLASGOW: ").$key->__GET('Glasgow') ?></td>
-                          <td><?= print("SAT02: ").$key->__GET('SatO2') ?></td>
+                          <td><?php echo ("Fecha: ").(new DateTime($key->__GET('FechaHora')))->format('d/m/Y') ?></td>
+                          <td><?php echo ("Hora: ").(new DateTime($key->__GET('FechaHora')))->format('H:i') ?></td>
+                          <td><?php echo "TA: " .$key->__GET('TA') ?></td>
+                          <td><?php echo "FC: ".$key->__GET('FC') ?></td>
+                          <td><?php echo "FR: ".$key->__GET('FR') ?></td>
+                          <td><?php echo "TEMP: ".$key->__GET('Temp') ?></td>
+                          <td><?php echo "GLASGOW: ".$key->__GET('Glasgow') ?></td>
+                          <td><?php echo "SAT02: ".$key->__GET('SatO2') ?></td>
                          </tr>
                       <?php endforeach ?>
     </tr>
@@ -245,12 +247,12 @@ if (isset($_GET['IdServicio'])) {
     <tr>
     <?php foreach ($HomeController->ListarxIdServicioOta_Informe_Liquidos($IdServicio) as $key): ?>
                         <tr class="text-center">
-                          <td><?=  print("LEV: ").$key->__GET('LEV') ?></td>
-                          <td><?=  print("Goteo: ").$key->__GET('Goteo') ?></td>
-                          <td><?=  print("Cantidad: ").$key->__GET('Cantidad') ?></td>
-                          <td><?=  print("Inotropico: ").$key->__GET('Inotropico') ?></td>
-                          <td><?=  print("Goteo2: ").$key->__GET('Goteo2') ?></td>
-                          <td><?=  print("Cantidad2: ").$key->__GET('Cantidad2') ?></td>
+                          <td><?php  echo("LEV: ").$key->__GET('LEV') ?></td>
+                          <td><?php  echo("Goteo: ").$key->__GET('Goteo') ?></td>
+                          <td><?php  echo("Cantidad: ").$key->__GET('Cantidad') ?></td>
+                          <td><?php  echo("Inotropico: ").$key->__GET('Inotropico') ?></td>
+                          <td><?php  echo("Goteo2: ").$key->__GET('Goteo2') ?></td>
+                          <td><?php  echo("Cantidad2: ").$key->__GET('Cantidad2') ?></td>
                           </tr>
                       <?php endforeach ?> 
     </tr>

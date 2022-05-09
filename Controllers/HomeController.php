@@ -63,6 +63,13 @@ spl_autoload_register(function($nombreClase)
 			return $var;
 		}
 
+		public function ConteoOta_Usuario()
+		{
+			$model = new Ota_UsuarioModel();
+			$var = $model->Conteo();
+			return $var;
+		}
+
 		public function ListarOta_Informe_Traslado()
 		{
 			$model = new Ota_Informe_TrasladoModel();
