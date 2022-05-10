@@ -49,6 +49,13 @@ spl_autoload_register(function($nombreClase)
 			return $var;
 		}
 
+		public function VerXTipoOta_Usuario($Tipo_U)
+		{
+			$model = new Ota_UsuarioModel();
+			$var = $model->VerXTipoOta_Usuario($Tipo_U);
+			return $var;
+		}
+
 		public function VerxUsuarioOta_Usuario($Usuario)
 		{
 			$model = new Ota_UsuarioModel();

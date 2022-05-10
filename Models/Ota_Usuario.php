@@ -16,6 +16,7 @@
 		private $Usuario;
 		private $Clave;
 		private $Id_Rol;
+		private $Tipo_U;
 		
 
 

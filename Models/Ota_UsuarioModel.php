@@ -62,6 +62,36 @@ require_once('../../Models/Conexion/Conexion.php');
 			}
 		}
 
+		public function VerXTipoOta_Usuario($Tipo_U)
+		{
+			try{
+				$stm = $this->pdo->prepare("SELECT * FROM Ota_Usuario WHERE Tipo_U = ?");
+				$stm->execute(array($Tipo_U));
+				$r = $stm->fetch(PDO::FETCH_OBJ);
+
+				if ($r) {
+					$entity = new Ota_Usuario();
+
+					$entity->__SET('IdUsuario',$r->IdUsuario);
+					$entity->__SET('Us_Nom1',$r->Us_Nom1);
+					$entity->__SET('Us_Nom2',$r->Us_Nom2);
+					$entity->__SET('Us_Ape1',$r->Us_Ape1);
+					$entity->__SET('Us_Ape2',$r->Us_Ape2);
+					$entity->__SET('Documento',$r->Documento);
+					$entity->__SET('Usuario',$r->Usuario);
+					$entity->__SET('Clave',$r->Clave);
+					$entity->__SET('Id_Rol',$r->Id_Rol);
+					$entity->__SET('Tipo_U',$r->Tipo_U);
+					$entity->__SET('FirmaU',$r->FirmaU);
+					return $entity;
+
+				}
+				return NULL;
+			}catch(Exception $e){
+				die($e->getMessage()." ->Ota_UsuarioModel->VerXTipoOta_Usuario()");
+			}
+		}
+
 		public function VerxUsuario($Usuario)
 		{
 			try{
