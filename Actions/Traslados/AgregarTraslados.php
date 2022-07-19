@@ -22,6 +22,8 @@ if(!isset($_SESSION["Usuario"])){
 	$msg = new \Plasticbrain\FlashMessages\FlashMessages();
 	date_default_timezone_set('America/Bogota');
 
+	
+	
 	$Fecha1 = $_POST['Fecha1'].' '.$_POST['Fecha1Hora'].':00';
 	$Ficha = $_POST['Ficha'];
 	$Pte_NumDoc = $_POST['Pte_NumDoc'];

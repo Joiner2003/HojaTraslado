@@ -57,6 +57,7 @@ if(!isset($_SESSION["Usuario"])){
 	$Sv_Complejidad = strtoupper($_POST['Sv_Complejidad']);
 	$Sv_TipoServicio = strtoupper($_POST['Sv_TipoServicio']);
 	$Sv_ExamenSolicitado = strtoupper($_POST['Sv_ExamenSolicitado']);
+	
 
 
 
