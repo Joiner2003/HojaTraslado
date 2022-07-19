@@ -54,7 +54,7 @@ $msg = new \Plasticbrain\FlashMessages\FlashMessages();
                
 				<div class="d-flex justify-content-center form_container">
                     
-				  <form action="../../Config/Conexion.config.php" method="POST">
+				  <form action="../../Views/pages/login.php" method="POST">
                        
                 <div><label>¿Estas Dentro o Fuera de la Empresa?</label></div>
 

@@ -1,12 +1,11 @@
-
 <?php
 
 
-define('DB_HOST', '190.242.112.94');
-define('DB_DATABASE', 'sena');
+define('DB_HOST', '192.168.2.199');
+define('DB_DATABASE', 'Sena');
 define('DB_PORT', '');
-define('DB_USERNAME', 'Ota');
-define('DB_PASSWORD', 'Sena2022');
+define('DB_USERNAME', 'sa');
+define('DB_PASSWORD', 'Dayan1001*');
 
 
 

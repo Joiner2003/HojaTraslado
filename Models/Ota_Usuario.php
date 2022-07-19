@@ -2,7 +2,8 @@
 
 	/**
 		* Author:
-		* Ing Alberto Rodriguez
+		* Juan Gomez
+		* Joiner Escorcia
 	*
 	**/
 	class Ota_Usuario
