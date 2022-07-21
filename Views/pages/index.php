@@ -23,6 +23,10 @@ if (isset($_GET['IdServicio'])) {
 }else{
   $IdServicio = $HomeController->MaximoOta_Informe_Traslado()->__GET('IdServicio')+1;
   $data = NULL;
+  $Paramedico = NULL;
+  $Medico= NULL;
+  $Comandante = null;
+
 }
 
 $IdU =$HomeController->VerOta_Usuario($_SESSION['IdUsuario'])->__GET('IdUsuario');

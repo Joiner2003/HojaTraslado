@@ -1,8 +1,8 @@
 <?php
 function Conexion(){
 
-    $serverName = "190.242.112.94";
-    $connectionOptions = array("Database"=>"sena","Uid"=>"Ota", "PWD"=>"Sena2022", "CharacterSet"=>"UTF-8");
+    $serverName = "192.168.2.199";
+    $connectionOptions = array("Database"=>"Sena","Uid"=>"sa", "PWD"=>"Dayan1001*", "CharacterSet"=>"UTF-8");
     
     $conn = sqlsrv_connect($serverName, $connectionOptions);
 
