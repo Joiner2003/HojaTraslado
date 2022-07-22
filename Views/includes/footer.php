@@ -28,7 +28,7 @@ $(document).ready(function(){
         $('#NomParamedico').html(listar_paramedico)
     })
     .fail(function(){
-        alert('Error')
+       // alert('Error')
     })
 })
 
@@ -44,7 +44,7 @@ $(document).ready(function(){
         $('#NomMedico').html(listar_Medico)
     })
     .fail(function(){
-        alert('Error')
+        //alert('Error')
     })
 })
 
@@ -60,7 +60,7 @@ $(document).ready(function(){
         $('#NomComandante').html(listar_Comandante)
     })
     .fail(function(){
-        alert('Error')
+       // alert('Error')
     })
 })
 
@@ -69,10 +69,10 @@ $(document).ready(function(){
         $('#tablaFiltro').DataTable();
     });
 
-    $(document).ready(function() {
+   /* $(document).ready(function() {
         setTimeout(function() {
             $(".alert").fadeOut(1500);
         },6000);
-    });
+    });*/
 </script>
 
