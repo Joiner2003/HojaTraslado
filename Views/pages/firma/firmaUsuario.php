@@ -3,6 +3,7 @@
 <?php 
 
 include("conexion.php");
+
  if (isset($_POST['IdU'])) {
    # code...
    $IdU = $_POST['IdU'];
@@ -181,7 +182,7 @@ if (isset($_POST['imagen'])) {
     $insertar = "UPDATE Ota_Usuario
     SET FirmaU='$baseImage'
     WHERE IdUsuario= '$IdU'";
-    $result = sqlsrv_query($conn,$insertar);
+    $result = mysqli_query($conn,$insertar);
 
     
     

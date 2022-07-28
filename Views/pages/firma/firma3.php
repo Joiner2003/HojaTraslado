@@ -181,7 +181,7 @@ if (isset($_POST['imagen'])) {
     $insertar = "UPDATE Ota_Informe_Traslado
     SET Firma1='$baseImage'
     WHERE IdServicio= '$Ids'";
-    $result = sqlsrv_query($conn,$insertar);
+    $result = mysqli_query($conn,$insertar);
 
     
     

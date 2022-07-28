@@ -1,10 +1,10 @@
 <?php
 
 
-$serverName = "192.168.2.199";
-$connectionOptions = array("Database"=>"Sena","Uid"=>"sa", "PWD"=>"Dayan1001*", "CharacterSet"=>"UTF-8");
+$conn = mysqli_connect("localhost", "root", "Otatraslado2022", "sena", "3307");
 
-$conn = sqlsrv_connect($serverName, $connectionOptions);
+//return $conn;
+
 /*if($conn ){
     echo "Conexion establecida";
 }
@@ -15,7 +15,7 @@ else{
 }*/
 
 
-return $conn; 
+
 
 
 
