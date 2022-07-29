@@ -15,7 +15,7 @@ function getListaParamedico(){
     $result = mysqli_query($conn,$query);
     $listas = '<option value="0"> Seleccione Paramedico </option>';
 
-    while ($row = mysqli_fetch_array($result, mysqli_fetch_assoc)) {
+    while ($row =  mysqli_fetch_assoc($result)) {
         $listas .= "<option value= '$row[IdUsuario]'> $row[Us_Nom1] $row[Us_Ape1] $row[Us_Ape2] </option>";
     }
     return $listas;
