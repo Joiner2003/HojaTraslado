@@ -218,6 +218,16 @@ if (isset($_GET['IdServicio'])) {
    </table>
 
    <table style="width:100% ">
+<tr>
+  <td><?php echo '<img src='. $data->__GET('Firma1')?>></td>
+  <td><?php echo '<img src='. $data->__GET('Firma2')?>></td>
+</tr>
+<tr>
+  <td> Firma Paciente o Acompañante</td>
+  <td>Firma Médico o Enfermera(o) Que Recibe</td>
+   </tr>
+    </table>
+   <table style="width:100% ">
      <tr>
       <th colspan="4">Signos Vitales</th>
     </tr>
@@ -269,20 +279,7 @@ if (isset($_GET['IdServicio'])) {
       <td><?php echo 'Observaciones Al Momento De La Entrega: '.$data->__GET('Obs_entrega')?></td>
     </tr>
 </table>
-<hr>
-<table style="width:100% ">
-<tr>
-  <td><?php echo '<img src='. $data->__GET('Firma1')?>></td>
-  <td><?php echo '<img src='. $data->__GET('Firma2')?>></td>
-</tr>
-<tr>
-  <td> Firma Paciente o Acompañante</td>
-  <td>Firma Médico o Enfermera(o) Que Recibe</td>
-   </tr>
-    </table>
-
     <br>
-
     <table style="width:100% ">
    <tr>
       <th colspan="4">Tripulación que Realiza Traslado</th>
@@ -328,7 +325,7 @@ $options->set(array('isRemoteEnabled' => true));
 $dompdf->setOptions($options);
 
 $dompdf->loadHtml($html);
-$dompdf->setPaper('A4', 'portrait');
+$dompdf->setPaper('letter', 'portrait');
 
 $dompdf->render();
 $dompdf->stream($data->__GET('Pte_NumDoc').$data->__GET('Pte_Ap1').$data->__GET('PteNom1').'.pdf', array("Attachment"=>false))
