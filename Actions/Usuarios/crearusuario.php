@@ -22,12 +22,12 @@ if(!isset($_SESSION["Usuario"])){
 	$msg = new \Plasticbrain\FlashMessages\FlashMessages();
 	date_default_timezone_set('America/Bogota');
 
-	$Us_Nom1 = $_POST['Us_Nom1'];
-	$Us_Nom2 = $_POST['Us_Nom2'];
-	$Us_Ape1 = $_POST['Us_Ape1'];
-	$Us_Ape2 = $_POST['Us_Ape2'];
+	$Us_Nom1 = strtoupper($_POST['Us_Nom1']);
+	$Us_Nom2 = strtoupper($_POST['Us_Nom2']);
+	$Us_Ape1 = strtoupper($_POST['Us_Ape1']);
+	$Us_Ape2 = strtoupper($_POST['Us_Ape2']);
 	$Documento = $_POST['Documento'];
-	$Usuario = $_POST['Usuario'];
+	$Usuario =  strtoupper($_POST['Usuario']);
 	$Clave = $_POST['Clave'];
 	$TipoU = $_POST['TipoU'];
 
