@@ -1,6 +1,6 @@
 <?php
 function Conexion(){
-    $conn = mysqli_connect("localhost", "root", "Otatraslado2022", "sena", "3307");
+    $conn = mysqli_connect("localhost", "root", "Otatraslado2022", "sena", "3306");
 
 return $conn;
 
