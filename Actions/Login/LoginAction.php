@@ -22,7 +22,8 @@
 				$_SESSION['IdUsuario'] = $Usuario->__GET('IdUsuario');
 				$_SESSION['Usuario'] = $Usuario->__GET('Usuario');
 
-				header("location: ../../Views/pages/buscar.php");
+				//header("location: ../../Views/pages/buscar.php");
+				echo '<script>window.location="../../Views/pages/buscar.php"</script>';
 				$msg->success('Bienvanido '.$usuario);
 			} else {
 				$msg->error('ERROR, El Usuario es incorrecto..!');
