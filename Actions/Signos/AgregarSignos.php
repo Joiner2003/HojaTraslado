@@ -22,6 +22,7 @@ if(!isset($_SESSION["Usuario"])){
 	$msg = new \Plasticbrain\FlashMessages\FlashMessages();
 	date_default_timezone_set('America/Bogota');
 
+	$IdConsecutivo = $_POST['IdConsecutivo'];
 	$IdServicio = $_POST['IdServicio'];
 	$FechaHora = $_POST['FechaHora'].'T'.$_POST['FechaHora2'].':00';
 	$TA = $_POST['Sv_TA'];
@@ -31,7 +32,7 @@ if(!isset($_SESSION["Usuario"])){
 	$Glasgow = $_POST['Sv_Glasgow'];
 	$SatO2 = $_POST['Sv_SatO2'];
 
-	if($HomeController->AgregarOta_Informe_SignosVitales($IdServicio, $FechaHora, $TA, $FC, $FR, $Temp, $Glasgow, $SatO2) == true){
+	if($HomeController->AgregarOta_Informe_SignosVitales($IdConsecutivo, $IdServicio, $FechaHora, $TA, $FC, $FR, $Temp, $Glasgow, $SatO2) == true){
 
 		$msg->success('!Agregado con exito¡');
 		header("location: ../../Views/pages/index.php?IdServicio=".$IdServicio);

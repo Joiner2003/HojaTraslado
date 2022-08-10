@@ -241,7 +241,9 @@ $Firma=$HomeController->VerOta_Usuario($_SESSION['IdUsuario'])->__GET('FirmaU');
 
             </div>
             <!-- End of Main Content -->
-
+            <?php if ($IdR == 1){ 
+                  include 'grafica/grafica.php';               
+             } ?>
             <!-- Footer -->
             <footer class="sticky-footer bg-white">
                 <div class="container my-auto">
