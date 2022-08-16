@@ -6,7 +6,7 @@
 <?php 
 /**
 	* Author:
-	* Ing Alberto Rodriguez
+	* Joiner Escorcia - Juan Gomez
 *
 **/
 session_start();
